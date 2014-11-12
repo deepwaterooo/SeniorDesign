@@ -5,19 +5,25 @@
 
 * Statement
   
-It was a four day short project that I have just worked on during the passed weekend. This isn't any project to show off, but rather a review of a project and to review the process of practising myself into a professional software engineer. Besides the most fundamental knowledge that we need to learn on campus, student should also focus on the problem-solving skills so that eventually without any instructor or mentor, we could still learn new knowledges and succeed any project or requirements that we initially don't have at all.
+It was a four day short project that I have just worked on during the passed weekend. This isn't any project to show off, but rather a review of the project, a review of the process practising and cultivating myself into a professional software engineer. Besides the most fundamental knowledge that we are supposed to learn on campus, students should also focus on the problem-solving skills so that, after graduation eventually we would be capable to learn cutting-edge knowledge, survive and succeed any project or requirements that we don't have any background, even without any instructor or mentor.
   
 * Course Introduction
 ** Reason for choosing this Course
-   This fall semester I didn't have many course to choose at all. I targeted for the <Android App Programming> course, and I introduce my self to the instructor and says that I need some envoironmental force, like by taking a couse even I only register for one credit to help me stay on schedule and learn some new knowledge. I mean to register one credit, but the instructor asked me to register 3. 
-   
-   I felt clear that this fall semester don't have many choice for courses, like usual engineer outreach courses are not opening at all. After a week they confirmed that we are ok to choose parallel Programming, I registered a 500 level. Both 500 level and 400 level requires a project, just the difficulty will be slightly different. I registered 500 level, but as the registation deadline went closer and closer, I realized more and more that with all the difficulties that I have, together with the instructor in another campus, I can be dead easily without noticing anything. So the dealine day last night, I tried to chagne it back to 400 level, but I failed. So I will have to chose the followed <Software Design>.
-   
-   My other choices includes computer forensics, I attended couple of class, but the so many term I can never guess the meaning without google translate. So it left only <Fault Tolerance> and this <Senior Design>. I took software engineer from a small class, and from my intern experience, I realize that as a software engineer, I should at least get some engineering idea common sense before I make any mistake. As I also lack design experience, that forms the reason I want to register this course for the fall semester when I have no any other better choices. 
-   
+   This fall semester I didn't have many course to choose at all. The all choices for me possible includes: 
+  - Android App Programming
+  - Fault Tolerance
+  - Computer Networs Forensics
+  - Paralell Programming
+  - Software Design
+I targeted for the <Android App Programming> course, and wanted to make it happen. I introduced myself to the instructor and said that I need some environmental force, like taking a 1 credit course to help me stay on schedule and learn some cutting-edge knowledge. I wanted to register 1 credit, but the instructor asked me to register 3 credits instead because I am a graduate student. 
+
+My other choices included computer forensics. I attended couple of class, but there were so many terms that I could never guess the meaning without google translate. Initially the usual engineer outreach course - Parallel Programming was not open for our campus for this fall semester. After a week the department office confirmed that we were ok to choose parallel Programming, and I registered a 500 level. Both 500 level and 400 level required a project, just the project difficulty will be slightly different. I did registered 500 level, but as the registration deadline came closer and closer, I realized more and more that without any solid background, and the instructor being on another campus, I can be dead easily without even noticing anything. So the deadline day last night, I tried to change it back to 400 level, but I failed. So I will have to choose the followed <Software Design>.
+
+I took software engineering course from a small scale one, and from my intern experience, I realized that as a software engineer, I should at least get some engineering idea common sense before I make any mistake. As I also lack design experience, that forms the reason I have to register this course for the fall semester when I have no any other better choice. 
+      
 ** Expectations
-   I don't have much team working experience except that I have worked in industry for quite some time. Just that I lack some computer science majored team working experience. And I thought maybe I can benefit a lot from working in a team envoironment together with some talented students. 
-   
+  I don't have much team working experience except that I have worked in industry for quite some time. Just that I lack some computer science major team working experience. And I thought maybe I can benefit a lot from working in a team environment together with some talented students. 
+
 * Project Introduction
 ** Project Selection
    It was not our choice who works on which project, but rather, assigned by the department course instructor, or by the department. Each of the student can list four choices, and will be assigned one. I have specific students that I want to work with the most, but I was not able to be assigned to his team. And I was left in this team's traditional old project "Tower Lights Animator".
@@ -27,21 +33,21 @@ It was a four day short project that I have just worked on during the passed wee
    [[./pic/oldVersion.png]]
    
 ** Team Members and Contributions
-   We have five members, and one of them is going to graduate this semester. Except me, all other students are undergraduates. Since I am the only graduate student here, I know that I am supposed to chanlge all the difficulties if we could have any. 
-   
+   We have five members, and one of them is going to graduate this semester. Except me, all other students are undergraduates. Since I am the only graduate student here, I know that I am supposed to challenge all the difficulties if we could have any. 
+
 * The Project Process
   
   I felt I must be in a lazy team or something, our team's performance is always just-so-so. The team manager seems to be assigned randomly within team, and I thought a female manager may just make the other gender happier, and that's all. I understand that all four of them are currently in compiler class, but still it was slowly. 
   
-  We meet almost twice a week, but doesn't seem to be as efficient as it seems to be. Most of the time, we split into couple fo subgroups without even noticing it. 
+  We meet almost twice a week, but doesn't seem to be as efficient as it seems to be. Most of the time, we split into couple of subgroups without even noticing it. 
   
 ** Initial Point
-   During one meeting, one of our team member has helped us with Qt Creator installation and setup. They all are using Windows right now for the project, but I like Linux too much and I just sticked to Linux and installed Qt Creator there, and with that team member's sample program, it seemed that my linux version of Qt Creator worked just fine. 
-   
-   In the team member's sample program, a button menu bar "File" button was created, but during that meeting, with Qt Creator installed already, I wasn't able to compile and execute the program without the team member's help. At that point, I began to think that I should keep up with the teammates. But still, with the other course's homeworks and exam, I didn't really start to do anything at all. 
+During one meeting, one of our team member has helped us with Qt Creator installation and set-up. They all are using Windows right now for the project, but I like Linux too much and I just steak to Linux and installed Qt Creator there, and with that team member's sample program, it seemed that my Linux version of Qt Creator worked just fine. 
+
+In the team member's sample program, a button menu bar "File" button was created, but during that meeting, with Qt Creator installed already, I wasn't able to compile and execute the program without the team member's help. At that point, I began to think that I should keep up with the team-mates. But still, with the other course's homework and exam, I didn't really start to do anything at all. 
    
 ** Snapshot Day
-   The coming tuesday will be this course's snapshot day, I felt like the whole team should meet together and we do well preparation for the snapshot day. So after Friday's TA meeting, I tried to get an old verion of Animator software interface, so that I can spent some hours on the Qt to see how far I can reach from there. 
+   The coming Tuesday will be this course's snapshot day, I felt like the whole team should meet together and we do well preparation for the snapshot day. So after Friday's TA meeting, I tried to get an old version of Animator software interface, so that I can spent some hours on the Qt to see how far I can reach from there. 
    
 *** Qt call: "try me~!"
     From: me
@@ -77,28 +83,27 @@ It was a four day short project that I have just worked on during the passed wee
     
     I states I worked two hours on the Qt, but actually I did work from 4:52pm ~ 8:06 pm three hours on the Qt, just that the first two hours are efficient, I used codes to implement the menubar. But the third hour was quite frustrating, because the wired Qt kept telling me layers on layers, blah...blah...blah... 
     
-    I wrote to teammates call for trial on GUI interface, but actually I was frustrated that evening and gave it up when nobody responded to me at all, and I never touched the "Qt" thing ever since that evening. 
+    I wrote to team-mates call for trial on GUI interface, but actually I was frustrated that evening and gave it up when nobody responded to me at all, and I never touched the "Qt" thing ever since that evening. 
     
 *** Snapshot Day performance
-    I thought we would meet and prepare for tuesday's meeting, but all other team member's doesn't have any reply to my email at all, and the team mamager was not saying anything. Then I just let it go. And tuesday they said it was p and e prepared several pages of print out, and p used his graphics and vedio skills prepared a graphics interface design. 
-    
+    I thought we would meet and prepare for Tuesday's meeting, but all other team member's doesn't have any reply to my email at all, and the team manager was not saying anything. Then I just let it go. And Tuesday they said it was p and e prepared several pages of print out, and p used his graphics and video skills prepared a graphics interface design.    
     [[./pic/GUI.png]]
     
-    There were barely any visitors in front of our brooth, and really hoped if we had meet before, we should have performed better. But since they took the initive to work on it, maybe I should just keep quiet. 
+    There were barely any visitors in front of our broth, and really hoped if we had meet before, we should have performed better. But since they took the initiative to work on it, maybe I should just keep quiet. 
     
 * New Assignments
 ** Team meeting
-   On 10/23/2014, we have a team meet. There are several things that we needs to do, and these assignments are assigned to individual students as well. b was working on State diagram, e and r were going to work on class diagram, I chosed to work on GUI, and paul chosed to join me to work on GUI design and documentation. The reason why I chosed gui? I don't really remember, maybe I considered that I am the graduate one, and I should work on the most difficult part, and Qt Creator at that time was a really bad experience for me. 
-   
+   On 10/23/2014, we have a team meet. There are several things that we needs to do, and these assignments are assigned to individual students as well. b was working on State diagram, e and r were going to work on class diagram, I chose to work on GUI, and p chose to join me to work on GUI design and documentation. The reason why I chose GUI? I don't really remember, maybe I considered that I am the graduate one, and I should work on the most difficult part, and Qt Creator at that time was a really bad experience for me. 
+
 ** Progress
-   b's state diagram was finished pretty fast. I felt we didn't really review his diagram, but I knew he finished it already. I must be horrible experience trying to use code to separate frames. I barely made any progress, and meanwhile, my subteammate p tought me how to use qt form to create interface, I tried to add couple of them, and it did work easily! And I have spent about 1-2 hours on 10/31 Friday at noon to have some fun creating the form interface. On that Friday, when it's 1pm, I went home to have rest and didn't continue. 
-   
-   11/11 today will be the design review day. As dealine came closer and closer, my teammates and I got to settle this GUI. On 11/7 afternoon, in the end of the team meeting, some teammate asked if our interface is ready, and I answered my form interface hurts people's eyes. *Warning:* The form interface does hurt people's eyes, so be prepared~!
+   b's state diagram was finished pretty fast. I felt we didn't really review his diagram, but I knew he finished it already. I must be horrible experience trying to use code to separate frames. I barely made any progress, and meanwhile, my sub team-mate p taught me how to use qt form to create interface, I tried to add couple of them, and it did work easily! And I have spent about 1-2 hours on 10/31 Friday at noon to have some fun creating the form interface. On that Friday, when it's 1 pm, I went home to have rest and didn't continue. 
+
+11/11 today will be the design review day. As deadline came closer and closer, my team-mates and I got to settle this GUI. On 11/7 afternoon, in the end of the team meeting, some team-mate asked if our interface is ready, and I answered my form interface hurts people's eyes. *Warning:* The form interface does hurt people's eyes, so be prepared~!
    
    [[./pic/form.png]]
    
-   After team meeting, my subteammate and I went to CSAC, and I asked him some questions about using form how to add imagebutton images, but both of us failed to search any obvious answer. As frustrated as I was, he decided to make a telephone call to our team manager, and team manager told him we could still simply use graphics tools and MS powerpoint to make some fake graphics, as far as it's slightly better than the last version from snapshot day. He used his laptop tought me how to make a upleft arrow, and we agreed that I would work on it, and we would meet on Monday 2:30 to review and clear what's left. 
-   
+   After team meeting, my sub team-mate and I went to CSAC, and I asked him some questions about using form how to add image-button images, but both of us failed to search any obvious answer. As frustrated as I was, he decided to make a telephone call to our team manager, and team manager told him we could still simply use graphics tools and MS power-point to make some fake graphics, as far as it's slightly better than the last version from snapshot day. He used his laptop taught me how to make a up-left arrow, and we agreed that I would work on it, and we would meet on Monday 2:30 to review and clear what's left. 
+
 * Software Engineer's Hurt
   
   If you were not a software engineer, you won't be able to understand software engineer's pain when he has to use some graphics tools to get an interface image while he was supposed to use the correct software or codes to implement it, yet even when he was a computer science majored student, and supposed to be passionate on projects as well as supposed to learn any programming language without any difficulty (according to my small scale software engineer course instructor). 
@@ -115,11 +120,11 @@ It was a four day short project that I have just worked on during the passed wee
   
   I built left hand side grid in the morning, and I worked on searing directories images and adding buttons for "Grid Motion Menu" before, during and after Friday's TA meeting. I have worked about five hours (8~12~1-1class, 1-3pm I went home have rest) on Qt and up to 8:00pm before I went home, I was pretty much sure that I can do it ~~!! 
 
-  At this point, I was very confortable with c++ programming with more than 2 years programming experience. Then recall the GUI I designed last summer during the internship, I had barely used Python before yet, it must be my mentor's great guide, team environment, together with my problem-solving skills, and passionate on projects that helped me to survive my very first GUI without understanding interface beforehands. How comfortable I was feeling rigth now with c++/Qt Creator programming, to the same extent how uncomfortable I was with Andriod App Programming course ~ I am not able to understand Andriod, still have minor Java programming uncomfortable, which resulted that I always dependes on examples, and have barely any capability to develop my own code and project. How could I know what's the correct/good method to learn it?
+  At this point, I was very comfortable with c++ programming with more than 2 years programming experience. Then recall the GUI I designed last summer during the intern-ship, I had barely used Python before yet, it must be my mentor's great guide, team environment, together with my problem-solving skills, and passionate on projects that helped me to survive my very first GUI without understanding interface beforehand. How comfortable I was feeling right now with c++/Qt Creator programming, to the same extent how uncomfortable I was with Android App Programming course ~ I am not able to understand Android, still have minor Java programming uncomfortable, which resulted that I always depended on examples, and have barely any capability to develop my own code and project. How could I know what's the correct/good method to learn it?
+
+I worked most of the time continuous on this project on Saturday, Sunday and Monday, and yet on each of these three days, I spent some time to work on my Android App Paint project for some hour so that I could finish my course priority on time. All the rest time, I was on this project. I felt drunk.  
   
-  I worked most of the time continuous on this project on Saturday, Sunday and Monday, and yet on each of these three days, I spent some time to work on my Andriod app Paint project for some hour so that I could finish my course priority on time. All the rest time, I was on this project. I felt drunk. 
-  
-* problem-solving skill practise
+* Problem-solving Skill Practise
    I have good problem-solving skills, yet on this project, I practised this capability even more. 
    
    I built all the easy ones first, and left only color-wheel and grid preview 5 frames undone. 
@@ -150,7 +155,16 @@ I labored and typed on Saturday until 1am; Sunday midnight, I didn't ride. I wal
 ** Up to Monday evening
 [[./pic/latest.png]]
    
-* Benefits
+* First GUI of Career
+  I have never shown any picture of my first GUI during my internship any where except one instructor on current campus, but I did take couple of picture of them. It was my last day's afternoon, after I was finish done with my project, I took them. That GUI could plots several lines on the same plot, just I didn't pay enough attention to take a picture of a series curve plot. 
+
+  After I came back from internship, I told the instructor that I had suffered all kinds of failure psychologically because of the lack of enough engineering practise. And I showed the GUI I made to him so that he knew what I did during summer, at least for one project. And I appreciated the opportunity to be able to get mentored and practised and lead me into this computer science world. 
+
+[[./pic/IMG_0169.JPG]]
+
+[[./pic/IMG_0167.JPG]]
+
+* Project Benefits
 ** Programming skills
 a very good practis of new libraries and problem-solving skills
 ** OOD
