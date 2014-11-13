@@ -156,7 +156,10 @@ I labored and typed on Saturday until 1am; Sunday midnight, I didn't ride. I wal
 [[./pic/latest.png]]
    
 * First GUI of Career
-  I have never shown any picture of my first GUI during my internship any where except one instructor on current campus, but I did take couple of picture of them. It was my last day's afternoon, after I was finish done with my project, I took them. That GUI could plots several lines on the same plot, just I didn't pay enough attention to take a picture of a series curve plot. 
+
+  My first GUI in my career was during my internship last summer. And I was required to use *Python Tkinter* module to implement a simple GUI interface for my previous mentor so that when she needs to extract data and plot the graphics, she could simply log my tiny software. It was a one week short project, and the interface has only five buttons. The "Select File" button triggle popup Windows to select from Windows system the series ".csv" file, multiple files can be selected, and the selected files would be listed on main frame; Then similarly select one x variable, one y variable, selected variables will be listed on main frame as well; "plot" button triggles graphics window, and "Exit" for quit. 
+
+  I have never shown any picture of my first GUI during my internship any where before except one instructor on current campus, but I did take couple of picture of them. It was my last day's afternoon, after I was finish done with my project, I took them. That GUI could plots several lines on the same plot, just I didn't pay enough attention to take a picture of a series curve plot. 
 
   After I came back from internship, I told the instructor that I had suffered all kinds of failure psychologically because of the lack of enough engineering practise. And I showed the GUI I made to him so that he knew what I did during summer, at least for one project. And I appreciated the opportunity to be able to get mentored and practised and lead me into this computer science world. 
 
