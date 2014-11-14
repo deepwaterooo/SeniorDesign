@@ -8,7 +8,9 @@
 It was a four day short project that I have just worked on during the passed weekend. This isn't any project to show off, but rather a review of the project, a review of the process practising and cultivating myself into a professional software engineer. Besides the most fundamental knowledge that we are supposed to learn on campus, students should also focus on the problem-solving skills so that, after graduation eventually we would be capable to learn cutting-edge knowledge, survive and succeed any project or requirements that we don't have any background, even without any instructor or mentor.
   
 * Updates
-  I kept an original version of my *buttons_bk.h* and *buttons_bk.cpp* file for reference as they are the best indication of my problem-solving skills, because I didn't remove any trial that I have tried in order to solve my Problems.
+  I kept an original version of my *buttons_bk.h*, *buttons_bk.cpp*, and *main_bk.cpp* files for reference as they are the best indication of my problem-solving skills, because I didn't remove any trial that I have tried in order to solve my problems.
+
+  Since after this point, it will be a team project, I will always make my updates here in my repository first with updated contents in this README, then I will git update to https://github.com/PaulCode/Tower-iLLuminati team project repository.
 ** version 0.2 11/13/2014, updates include
 - *clean code* - removed all unnecessary conments, methods and variables;
 - "*pre*" button stores the latest used color, and it's clickable;
