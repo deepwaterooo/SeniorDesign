@@ -1,4 +1,4 @@
-% Created 2014-11-13 Thu 12:01
+% Created 2014-11-13 Thu 22:38
 \documentclass[9pt,b5paper]{article}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -38,10 +38,23 @@
 
 It was a four day short project that I have just worked on during the passed weekend. This isn't any project to show off, but rather a review of the project, a review of the process practising and cultivating myself into a professional software engineer. Besides the most fundamental knowledge that we are supposed to learn on campus, students should also focus on the problem-solving skills so that, after graduation eventually we would be capable to learn cutting-edge knowledge, survive and succeed any project or requirements that we don't have any background, even without any instructor or mentor.
 
-\section{Course Introduction}
+\section{Updates}
 \label{sec-2}
-\subsection{Reason for choosing this Course}
+I kept an original version of my \textbf{buttons$_{\text{bk}}$.h} and \textbf{buttons$_{\text{bk}}$.cpp} file for reference as they are the best indication of my problem-solving skills, because I didn't remove any trial that I have tried in order to solve my Problems.
+\subsection{version 0.2 11/13/2014, updates include}
 \label{sec-2-1}
+\begin{itemize}
+\item \textbf{clean code} - removed all unnecessary conments, methods and variables;
+\item "\textbf{pre}" button stores the latest used color, and it's clickable;
+\item "\textbf{cur}" button stores the latest previewed color, and it's clickable;
+\item Red Green Blue spinBoxes are able to show the corresponding QColor r g b values;
+\item Modified setColor 5 functions to use setStyleSheet(\ldots{}) method to set colors (instead of previous QPalette setColor(\ldots{}) and setAutoFillBackground(true) method.); Solved Windows not showing color problem;
+\end{itemize}
+
+\section{Course Introduction}
+\label{sec-3}
+\subsection{Reason for choosing this Course}
+\label{sec-3-1}
 This fall semester I didn't have many course to choose at all. The all choices for me possible includes: 
 \begin{itemize}
 \item Android App Programming
@@ -57,42 +70,42 @@ My other choices included computer forensics. I attended couple of class, but th
 I took software engineering course from a small scale one, and from my intern experience, I realized that as a software engineer, I should at least get some engineering idea common sense before I make any mistake. As I also lack design experience, that forms the reason I have to register this course for the fall semester when I have no any other better choice. 
 
 \subsection{Expectations}
-\label{sec-2-2}
+\label{sec-3-2}
 I don't have much team working experience except that I have worked in industry for quite some time. Just that I lack some computer science major team working experience. And I thought maybe I can benefit a lot from working in a team environment together with some talented students. 
 
 \section{Project Introduction}
-\label{sec-3}
+\label{sec-4}
 \subsection{Project Selection}
-\label{sec-3-1}
+\label{sec-4-1}
 It was not our choice who works on which project, but rather, assigned by the department course instructor, or by the department. Each of the student can list four choices, and will be assigned one. I have specific students that I want to work with the most, but I was not able to be assigned to his team. And I was left in this team's traditional old project "Tower Lights Animator".
 
 It's a old project that repeats each year maybe just for us students to get practised. Our current version of project was pretty much a fully functioning one, and it was writen by one ACM student who graduated already, and it was writen in C\# with his own interest. 
 
-\includegraphics[width=.9\linewidth]{./pic/oldVersion.png}
+\includegraphics[width=.6\linewidth]{./pic/oldVersion.png}
 
 \subsection{Team Members and Contributions}
-\label{sec-3-2}
+\label{sec-4-2}
 We have five members, and one of them is going to graduate this semester. Except me, all other students are undergraduates. Since I am the only graduate student here, I know that I am supposed to challenge all the difficulties if we could have any. 
 
 \section{The Project Process}
-\label{sec-4}
+\label{sec-5}
 
 I felt I must be in a lazy team or something, our team's performance is always just-so-so. The team manager seems to be assigned randomly within team, and I thought a female manager may just make the other gender happier, and that's all. I understand that all four of them are currently in compiler class, but still it was slowly. 
 
 We meet almost twice a week, but doesn't seem to be as efficient as it seems to be. Most of the time, we split into couple of subgroups without even noticing it. 
 
 \subsection{Initial Point}
-\label{sec-4-1}
+\label{sec-5-1}
 During one meeting, one of our team member has helped us with Qt Creator installation and set-up. They all are using Windows right now for the project, but I like Linux too much and I just steak to Linux and installed Qt Creator there, and with that team member's sample program, it seemed that my Linux version of Qt Creator worked just fine. 
 
 In the team member's sample program, a button menu bar "File" button was created, but during that meeting, with Qt Creator installed already, I wasn't able to compile and execute the program without the team member's help. At that point, I began to think that I should keep up with the team-mates. But still, with the other course's homework and exam, I didn't really start to do anything at all. 
 
 \subsection{Snapshot Day}
-\label{sec-4-2}
+\label{sec-5-2}
 The coming Tuesday will be this course's snapshot day, I felt like the whole team should meet together and we do well preparation for the snapshot day. So after Friday's TA meeting, I tried to get an old version of Animator software interface, so that I can spent some hours on the Qt to see how far I can reach from there. 
 
 \subsubsection{Qt call: "try me\textasciitilde{}!"}
-\label{sec-4-2-1}
+\label{sec-5-2-1}
 From: me
 Sent: Friday, October 10, 2014 4:52 PM
 To: E, B, P, R 
@@ -108,7 +121,7 @@ thanks,
 me
 
 \subsubsection{Frustrating}
-\label{sec-4-2-2}
+\label{sec-5-2-2}
 RE: Tower Animator \_ Simple GUI Interface
 Sent:        Friday, October 10, 2014 8:06 PM
 To: e, b, p, r
@@ -123,37 +136,37 @@ Let me know any ideas you have about interface, and according to your response, 
 thanks,
 me
 
-\includegraphics[width=.9\linewidth]{./pic/Initial.png}
+\includegraphics[width=.6\linewidth]{./pic/Initial.png}
 
 I states I worked two hours on the Qt, but actually I did work from 4:52pm \textasciitilde{} 8:06 pm three hours on the Qt, just that the first two hours are efficient, I used codes to implement the menubar. But the third hour was quite frustrating, because the wired Qt kept telling me layers on layers, blah\ldots{}blah\ldots{}blah\ldots{} 
 
 I wrote to team-mates call for trial on GUI interface, but actually I was frustrated that evening and gave it up when nobody responded to me at all, and I never touched the "Qt" thing ever since that evening. 
 
 \subsubsection{Snapshot Day performance}
-\label{sec-4-2-3}
+\label{sec-5-2-3}
 I thought we would meet and prepare for Tuesday's meeting, but all other team member's doesn't have any reply to my email at all, and the team manager was not saying anything. Then I just let it go. And Tuesday they said it was p and e prepared several pages of print out, and p used his graphics and video skills prepared a graphics interface design.    
-\includegraphics[width=.9\linewidth]{./pic/GUI.png}
+\includegraphics[width=.6\linewidth]{./pic/GUI.png}
 
 There were barely any visitors in front of our broth, and really hoped if we had meet before, we should have performed better. But since they took the initiative to work on it, maybe I should just keep quiet. 
 
 \section{New Assignments}
-\label{sec-5}
+\label{sec-6}
 \subsection{Team meeting}
-\label{sec-5-1}
+\label{sec-6-1}
 On 10/23/2014, we have a team meet. There are several things that we needs to do, and these assignments are assigned to individual students as well. b was working on State diagram, e and r were going to work on class diagram, I chose to work on GUI, and p chose to join me to work on GUI design and documentation. The reason why I chose GUI? I don't really remember, maybe I considered that I am the graduate one, and I should work on the most difficult part, and Qt Creator at that time was a really bad experience for me. 
 
 \subsection{Progress}
-\label{sec-5-2}
+\label{sec-6-2}
 b's state diagram was finished pretty fast. I felt we didn't really review his diagram, but I knew he finished it already. I must be horrible experience trying to use code to separate frames. I barely made any progress, and meanwhile, my sub team-mate p taught me how to use qt form to create interface, I tried to add couple of them, and it did work easily! And I have spent about 1-2 hours on 10/31 Friday at noon to have some fun creating the form interface. On that Friday, when it's 1 pm, I went home to have rest and didn't continue. 
 
 11/11 today will be the design review day. As deadline came closer and closer, my team-mates and I got to settle this GUI. On 11/7 afternoon, in the end of the team meeting, some team-mate asked if our interface is ready, and I answered my form interface hurts people's eyes. \textbf{Warning:} The form interface does hurt people's eyes, so be prepared\textasciitilde{}!
 
-\includegraphics[width=.9\linewidth]{./pic/form.png}
+\includegraphics[width=.6\linewidth]{./pic/form.png}
 
 After team meeting, my sub team-mate and I went to CSAC, and I asked him some questions about using form how to add image-button images, but both of us failed to search any obvious answer. As frustrated as I was, he decided to make a telephone call to our team manager, and team manager told him we could still simply use graphics tools and MS power-point to make some fake graphics, as far as it's slightly better than the last version from snapshot day. He used his laptop taught me how to make a up-left arrow, and we agreed that I would work on it, and we would meet on Monday 2:30 to review and clear what's left. 
 
 \section{Software Engineer's Hurt}
-\label{sec-6}
+\label{sec-7}
 
 If you were not a software engineer, you won't be able to understand software engineer's pain when he has to use some graphics tools to get an interface image while he was supposed to use the correct software or codes to implement it, yet even when he was a computer science majored student, and supposed to be passionate on projects as well as supposed to learn any programming language without any difficulty (according to my small scale software engineer course instructor). 
 
@@ -164,7 +177,7 @@ Even after 10 hour's continuous hard work on Qt, if I still failed, I would stil
 Form will always make interface ugly, I want to code the interface. "Tomorrow morning, I am going to code this gui, junk by junk, piece by piece, I must be able to do it\textasciitilde{}!" That evening, lying on the bed, I made up my mind that I must do it \textasciitilde{}~!!
 
 \section{I can do it \textasciitilde{}~!}
-\label{sec-7}
+\label{sec-8}
 
 Next morning Friday morning at 8:00am, I started from the left hand side grid. It seems like projects hate people to make up their mind, cause once people has a mind, nothing can break it except human being themselves\textasciitilde{}!
 
@@ -175,7 +188,7 @@ At this point, I was very comfortable with c++ programming with more than 2 year
 I worked most of the time continuous on this project on Saturday, Sunday and Monday, and yet on each of these three days, I spent some time to work on my Android App Paint project for some hour so that I could finish my course priority on time. All the rest time, I was on this project. I felt drunk.  
 
 \section{Problem-solving Skill Practise}
-\label{sec-8}
+\label{sec-9}
 I have good problem-solving skills, yet on this project, I practised this capability even more. 
 
 I built all the easy ones first, and left only color-wheel and grid preview 5 frames undone. 
@@ -195,25 +208,25 @@ It was Sunday evening, and I need get this done on time so that my subteammate c
 I labored and typed on Saturday until 1am; Sunday midnight, I didn't ride. I walked all the way home, on the way somewhere the old song came into my mind, "who you are, where are you from , what do you do? \textasciitilde{}~"
 
 \section{Review Updates}
-\label{sec-9}
+\label{sec-10}
 \subsection{first version}
-\label{sec-9-1}
-\includegraphics[width=.9\linewidth]{./pic/tower.png}
+\label{sec-10-1}
+\includegraphics[width=.6\linewidth]{./pic/tower.png}
 \subsection{open file}
-\label{sec-9-2}
-\includegraphics[width=.9\linewidth]{./pic/tower2.png}
+\label{sec-10-2}
+\includegraphics[width=.6\linewidth]{./pic/tower2.png}
 \subsection{colors}
-\label{sec-9-3}
-\includegraphics[width=.9\linewidth]{./pic/tower3.png}
+\label{sec-10-3}
+\includegraphics[width=.6\linewidth]{./pic/tower3.png}
 \subsection{frame label version}
-\label{sec-9-4}
-\includegraphics[width=.9\linewidth]{./pic/tower_12_58.png}
+\label{sec-10-4}
+\includegraphics[width=.6\linewidth]{./pic/tower_12_58.png}
 \subsection{Up to Monday evening}
-\label{sec-9-5}
-\includegraphics[width=.9\linewidth]{./pic/latest.png}
+\label{sec-10-5}
+\includegraphics[width=.6\linewidth]{./pic/latest.png}
 
 \section{First GUI of Career}
-\label{sec-10}
+\label{sec-11}
 
 My first GUI in my career was during my internship last summer. And I was required to use \textbf{Python Tkinter} module to implement a simple GUI interface for my previous mentor so that when she needs to extract data and plot the graphics, she could simply log my tiny software. It was a one week short project, and the interface has only five buttons. The "Select File" button triggle popup Windows to select from Windows system the series ".csv" file, multiple files can be selected, and the selected files would be listed on main frame; Then similarly select one x variable, one y variable, selected variables will be listed on main frame as well; "plot" button triggles graphics window, and "Exit" for quit. 
 
@@ -221,20 +234,20 @@ I have never shown any picture of my first GUI during my internship any where be
 
 After I came back from internship, I told the instructor that I had suffered all kinds of failure psychologically because of the lack of enough engineering practise. And I showed the GUI I made to him so that he knew what I did during summer, at least for one project. And I appreciated the opportunity to be able to get mentored and practised and lead me into this computer science world. 
 
-\includegraphics[width=.9\linewidth]{./pic/IMG_0169.JPG}
+\includegraphics[width=.6\linewidth]{./pic/IMG_0169.JPG}
 
-\includegraphics[width=.9\linewidth]{./pic/IMG_0167.JPG}
+\includegraphics[width=.6\linewidth]{./pic/IMG_0167.JPG}
 
 \section{Project Benefits}
-\label{sec-11}
+\label{sec-12}
 \subsection{Programming skills}
-\label{sec-11-1}
+\label{sec-12-1}
 a very good practis of new libraries and problem-solving skills
 \subsection{OOD}
-\label{sec-11-2}
+\label{sec-12-2}
 a good practis of OOD, though quite a few of them still didn't design well, and I still needs review with teammates in order to well design and implement review scrolling. 
 \subsection{Functions}
-\label{sec-11-3}
+\label{sec-12-3}
 \begin{itemize}
 \item Last color used could be preserved;
 \item New picked color can be previewed;
@@ -243,7 +256,7 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
 \end{itemize}
 
 \section{Easy Undone Parts for Fall semester}
-\label{sec-12}
+\label{sec-13}
 \begin{itemize}
 \item Color Wheel was a plugin, and haven't link/activiate color-picking yet;
 \item "Frame Start Time" \& "Increment Amout" needs to be in format of "00:00.000";
@@ -254,46 +267,46 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
 \end{itemize}
 
 \section{Reference}
-\label{sec-13}
+\label{sec-14}
 \subsection{Basic layouts}
-\label{sec-13-1}
+\label{sec-14-1}
 \begin{itemize}
 \item \url{http://qt-project.org/doc/qt-4.8/layouts-basiclayouts.html}-
 \end{itemize}
 \subsection{layout example}
-\label{sec-13-2}
+\label{sec-14-2}
 \begin{itemize}
 \item \url{http://zetcode.com/gui/qt4/layoutmanagement/}
 \end{itemize}
 \subsection{my$_{\text{grid}}$$_{\text{layout}}$}
-\label{sec-13-3}
+\label{sec-14-3}
 \begin{itemize}
 \item \url{http://stackoverflow.com/questions/9660080/how-does-one-fill-a-qgridlayout-from-top-left-to-right}
 \item \url{http://stackoverflow.com/questions/8685005/qt-making-a-splitter-horizontal-and-vertical-at-same-time}
 \end{itemize}
 \subsection{Layout management: find file, directories and subdirectories}
-\label{sec-13-4}
+\label{sec-14-4}
 \begin{itemize}
 \item \url{http://www.informit.com/articles/article.aspx?p=1405543}
 \end{itemize}
 \subsection{subclass for buttons}
-\label{sec-13-5}
+\label{sec-14-5}
 \begin{itemize}
 \item \url{http://qt-articles.blogspot.com/2010/06/how-to-customize-button-in-qt.html}
 \item \url{http://stackoverflow.com/questions/3137805/how-to-set-image-on-qpushbutton}
 \end{itemize}
 \subsection{float spin box}
-\label{sec-13-6}
+\label{sec-14-6}
 \begin{itemize}
 \item \url{http://www.qtforum.org/article/12505/qspinbox-with-float-values.html?s=b97a1086f89c740edca22c410bdfec398bb41f5d}
 \end{itemize}
 \subsection{QGraphicsView}
-\label{sec-13-7}
+\label{sec-14-7}
 \begin{itemize}
 \item \url{http://stackoverflow.com/questions/1357960/qt-jpg-image-display}
 \end{itemize}
 \subsection{RGB Color}
-\label{sec-13-8}
+\label{sec-14-8}
 \begin{itemize}
 \item \url{http://help.dottoro.com/labpxqqe.php}
 \end{itemize}

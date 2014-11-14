@@ -1,9 +1,9 @@
-#include "colorwheel.h"
 #include <QPainter>
 #include <QResizeEvent>
 #include <QStyleOption>
 #include <QtCore/qmath.h>
 #include <QDebug>
+#include "colorwheel.h"
 
 ColorWheel::ColorWheel(QWidget *parent) :
     QWidget(parent),

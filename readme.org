@@ -7,6 +7,15 @@
   
 It was a four day short project that I have just worked on during the passed weekend. This isn't any project to show off, but rather a review of the project, a review of the process practising and cultivating myself into a professional software engineer. Besides the most fundamental knowledge that we are supposed to learn on campus, students should also focus on the problem-solving skills so that, after graduation eventually we would be capable to learn cutting-edge knowledge, survive and succeed any project or requirements that we don't have any background, even without any instructor or mentor.
   
+* Updates
+  I kept an original version of my *buttons_bk.h* and *buttons_bk.cpp* file for reference as they are the best indication of my problem-solving skills, because I didn't remove any trial that I have tried in order to solve my Problems.
+** version 0.2 11/13/2014, updates include
+- *clean code* - removed all unnecessary conments, methods and variables;
+- "*pre*" button stores the latest used color, and it's clickable;
+- "*cur*" button stores the latest previewed color, and it's clickable;
+- Red Green Blue spinBoxes are able to show the corresponding QColor r g b values;
+- Modified setColor 5 functions to use setStyleSheet(...) method to set colors (instead of previous QPalette setColor(...) and setAutoFillBackground(true) method.); Solved Windows not showing color problem;
+
 * Course Introduction
 ** Reason for choosing this Course
    This fall semester I didn't have many course to choose at all. The all choices for me possible includes: 
