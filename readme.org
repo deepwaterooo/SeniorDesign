@@ -15,7 +15,7 @@ It was a four day short project that I have just worked on during the passed wee
 ** version 0.3 11/15/2014, updates include
 - fixed the mistake of setting default color to be (211,211,211), but actually should be (239,235,231);
 - modified predefined slot for pushing button down, trial;
-- design plan
+- my refactor and design plan
 
 ** version 0.2 11/13/2014, updates include
 - *clean code* - removed all unnecessary conments, methods and variables;
