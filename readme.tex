@@ -1,4 +1,4 @@
-% Created 2014-11-13 Thu 23:29
+% Created 2014-11-15 Sat 11:13
 \documentclass[9pt,b5paper]{article}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -38,19 +38,28 @@
 
 It was a four day short project that I have just worked on during the passed weekend. This isn't any project to show off, but rather a review of the project, a review of the process practising and cultivating myself into a professional software engineer. Besides the most fundamental knowledge that we are supposed to learn on campus, students should also focus on the problem-solving skills so that, after graduation eventually we would be capable to learn cutting-edge knowledge, survive and succeed any project or requirements that we don't have any background, even without any instructor or mentor.
 
-\section{Updates}
-\label{sec-2}
 I kept an original version of my \textbf{buttons$_{\text{bk}}$.h}, \textbf{buttons$_{\text{bk}}$.cpp}, and \textbf{main$_{\text{bk}}$.cpp} files for reference as they are the best indication of my problem-solving skills, because I didn't remove any trial that I have tried in order to solve my problems.
 
+\section{Updates}
+\label{sec-2}
 Since \textbf{after this point} (after today, after version \textbf{0.2}), it will be a team project, I will always make my updates here in my repository first with updated contents in this README, then I will git update to \url{https://github.com/PaulCode/Tower-iLLuminati} team project repository.
-\subsection{version 0.2 11/13/2014, updates include}
+
+\subsection{version 0.3 11/14/2014, updates include}
 \label{sec-2-1}
+\begin{itemize}
+\item fixed the mistake of setting default color to be (211,211,211), but actually should be (239,235,231);
+\item modified predefined slot for pushing button down, trial;
+\item design plan
+\end{itemize}
+
+\subsection{version 0.2 11/13/2014, updates include}
+\label{sec-2-2}
 \begin{itemize}
 \item \textbf{clean code} - removed all unnecessary conments, methods and variables;
 \item "\textbf{pre}" button stores the latest used color, and it's clickable;
 \item "\textbf{cur}" button stores the latest previewed color, and it's clickable;
 \item Red Green Blue spinBoxes are able to show the corresponding QColor r g b values;
-\item Modified setColor 5 functions to use setStyleSheet(\ldots{}) method to set colors (instead of previous QPalette setColor(\ldots{}) and setAutoFillBackground(true) method.); Solved Windows not showing color problem;
+\item Modified setColor 5 functions to use setStyleSheet(\ldots{}) method to set colors (instead of previous QPalette setColor(\ldots{}) and setAutoFillBackground(true) method.); Solved Windows not showing color problem; (details: I have tried the setStyleSheet(\ldots{}) method for my 17 predefined colors, but when I needed to get the color, I failed my basic test with the mistake used string instead of \textbf{QString}, so later on need to pay more attention to details.)
 \end{itemize}
 
 \section{Course Introduction}

@@ -1,0 +1,136 @@
+% Created 2014-11-15 Sat 11:10
+\documentclass[9pt,b5paper]{article}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{xeCJK}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{geometry}
+\geometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{latexsym}
+\usepackage{natbib}
+\usepackage{fancyhdr}
+\usepackage[xetex,colorlinks=true,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
+
+
+\lstset{language=c++,numbers=left,numberstyle=\tiny,basicstyle=\ttfamily\small,tabsize=4,frame=none,escapeinside=``,extendedchars=false,keywordstyle=\color{blue!70},commentstyle=\color{red!55!green!55!blue!55!},rulesepcolor=\color{red!20!green!20!blue!20!}}
+\author{Jenny Huang}
+\date{\today}
+\title{CS480 Senior Design Proposal}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.3.1 (Org mode 8.2.7c)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+Meeting time: 11/15/2014 Saturday 11:00
+
+\section{Goal:}
+\label{sec-1}
+Try to organize the outline, so that we can make sure we have a feasible/practical outline/plan for later on implement module by module.
+
+\section{\textbf{QPushButton} instead of original class design \textbf{Pixel}}
+\label{sec-2}
+functions that we are going to use: 
+\begin{itemize}
+\item setCheckable(true);
+\item setAutoExclusive(false);
+\end{itemize}
+
+\section{Keyboard key sets}
+\label{sec-3}
+\subsection{keyset define}
+\label{sec-3-1}
+\begin{center}
+\begin{tabular}{ll}
+\hline
+Keys & Functions\\
+\hline
+Ctrl & select multiple buttons\\
+Shift & select buttons in the middle\\
+Ctrl + c & copy frames selcted\\
+Ctrl + v & paste frames selected\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{reading keyset reference}
+\label{sec-3-2}
+\begin{itemize}
+\item \url{http://qt-project.org/doc/qt-4.8/qml-keyevent.html}
+\item \url{http://qt-project.org/doc/qt-4.8/qkeysequence.html}
+\begin{verbatim}
+QKeyEvent* ke;
+QString modifier = QString::null;
+if (ke->modifiers() & Qt::ShiftModifier)
+    modifier += "Shift+";
+if (ke->modifiers() & Qt::ControlModifier)
+    modifier += "Ctrl+";
+if (ke->modifiers() & Qt::AltModifier)
+    modifier += "Alt+";
+if (ke->modifiers() & Qt::MetaModifier)
+    modifier += "Meta+";
+QString key = (QString)QKeySequence(ke->key());
+QKeySequence result(modifier + key);
+\end{verbatim}
+\item \url{http://qtdocs.narod.ru/4.1.0/doc/html/qkeysequence.html}
+\item \url{http://stackoverflow.com/questions/12830788/handle-key-events-ctrltab-and-ctrlshifttab}
+\begin{verbatim}
+Item {
+    width: 100
+    height: 100
+    focus: true
+    Keys.onPressed: {
+        if(event.modifiers && Qt.ControlModifier) {
+            if(event.key === Qt.Key_Tab) {
+                console.log('forward')
+                event.accepted = true;
+            } else if(event.key === Qt.Key_Backtab) {            
+                console.log('backward')
+                event.accepted = true;
+            }
+        }
+    }
+}
+\end{verbatim}
+
+\item \url{http://stackoverflow.com/questions/17204142/capturing-modifier-keys-qt}
+\begin{verbatim}
+void MainWindow::wheelEvent( QWheelEvent *wheelEvent )
+{
+    if( wheelEvent->modifiers() & Qt::ShiftModifier )
+    {
+        // do something awesome
+    }
+    else if( wheelEvent->modifiers() & Qt::ControlModifier )
+    {
+        // do something even awesomer!
+    }
+}
+\end{verbatim}
+\item \url{http://www.qtcentre.org/archive/index.php/t-28754.html}
+\item python \url{http://forums.opensuse.org/showthread.php/436964-How-to-catch-Shift-Ctrl-key-in-keyPressEvent}
+\item \url{http://linux.die.net/man/3/qkeysequence}
+\item \url{http://www.codeproject.com/Articles/7305/Keyboard-Events-Simulation-using-keybd-event-funct}
+\item \url{http://forums.codeguru.com/showthread.php?447587-Detecting-if-Control-or-Shift-key-was-down-when-key-pressed}
+\item win32 \url{http://www.codeproject.com/Articles/6819/SendKeys-in-C}
+\item \url{http://alleg.sourceforge.net/stabledocs/en/alleg006.html}
+\end{itemize}
+
+\section{myGridLayout for left-handside grid and preview}
+\label{sec-4}
+
+\section{repository update history record}
+\label{sec-5}
+volunteer myself to do the record;  
+% Emacs 24.3.1 (Org mode 8.2.7c)
+\end{document}

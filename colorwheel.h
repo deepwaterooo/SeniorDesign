@@ -3,8 +3,7 @@
 
 #include <QWidget>
 
-class ColorWheel : public QWidget
-{
+class ColorWheel : public QWidget {
     Q_OBJECT
  public:
     explicit ColorWheel(QWidget *parent = 0);

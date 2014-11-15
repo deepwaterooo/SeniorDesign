@@ -28,12 +28,12 @@ class Buttons : public QWidget {
         void curBtnClicked(){newColor = getPreCurColor(cur);setColor(cur);setSpinBoxValue();}
         
         // for 17 predefined color slots
-        void preColorClicked0() {newColor = getPreColor(0);setColor(cur);setSpinBoxValue();}
-        void preColorClicked1() {newColor = getPreColor(1);setColor(cur);setSpinBoxValue();}
-        void preColorClicked2() {newColor = getPreColor(2);setColor(cur);setSpinBoxValue();}
-        void preColorClicked3() {newColor = getPreColor(3);setColor(cur);setSpinBoxValue();}
-        void preColorClicked4() {newColor = getPreColor(4);setColor(cur);setSpinBoxValue();}
-        void preColorClicked5() {newColor = getPreColor(5);setColor(cur);setSpinBoxValue();}
+        void preColorClicked0() {newColor = getPreColor(0);setColor(cur);setSpinBoxValue();mButton[0]->setCheckable(true);mButton[0]->setAutoExclusive(false);}
+        void preColorClicked1() {newColor = getPreColor(1);setColor(cur);setSpinBoxValue();mButton[1]->setCheckable(true);mButton[1]->setAutoExclusive(false);}
+        void preColorClicked2() {newColor = getPreColor(2);setColor(cur);setSpinBoxValue();mButton[2]->setCheckable(true);mButton[2]->setAutoExclusive(false);}
+        void preColorClicked3() {newColor = getPreColor(3);setColor(cur);setSpinBoxValue();mButton[3]->setCheckable(true);mButton[3]->setAutoExclusive(false);}
+        void preColorClicked4() {newColor = getPreColor(4);setColor(cur);setSpinBoxValue();mButton[4]->setCheckable(true);mButton[3]->setAutoExclusive(false);}
+        void preColorClicked5() {newColor = getPreColor(5);setColor(cur);setSpinBoxValue();mButton[5]->setCheckable(true);mButton[3]->setAutoExclusive(false);}
         void preColorClicked6() {newColor = getPreColor(6);setColor(cur);setSpinBoxValue();}
         void preColorClicked7() {newColor = getPreColor(7);setColor(cur);setSpinBoxValue();}
         void preColorClicked8() {newColor = getPreColor(8);setColor(cur);setSpinBoxValue();}

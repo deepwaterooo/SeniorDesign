@@ -1,0 +1,90 @@
+#+latex_class: cn-article
+#+latex_header: \lstset{language=c++,numbers=left,numberstyle=\tiny,basicstyle=\ttfamily\small,tabsize=4,frame=none,escapeinside=``,extendedchars=false,keywordstyle=\color{blue!70},commentstyle=\color{red!55!green!55!blue!55!},rulesepcolor=\color{red!20!green!20!blue!20!}}
+#+title: CS480 Senior Design Proposal
+#+author: Jenny Huang
+
+Meeting time: 11/15/2014 Saturday 11:00
+
+* Goal:
+  Try to organize the outline, so that we can make sure we have a feasible/practical outline/plan for later on implement module by module.
+
+* *QPushButton* instead of original class design *Pixel*
+functions that we are going to use: 
+- setCheckable(true);
+- setAutoExclusive(false);
+
+* Keyboard key sets
+** keyset define
+  |----------+------------------------------|
+  | Keys     | Functions                    |
+  |----------+------------------------------|
+  | Ctrl     | select multiple buttons      |
+  | Shift    | select buttons in the middle |
+  | Ctrl + c | copy frames selcted          |
+  | Ctrl + v | paste frames selected        |
+  |----------+------------------------------|
+
+** reading keyset reference
+- http://qt-project.org/doc/qt-4.8/qml-keyevent.html
+- http://qt-project.org/doc/qt-4.8/qkeysequence.html
+  #+begin_src
+QKeyEvent* ke;
+QString modifier = QString::null;
+if (ke->modifiers() & Qt::ShiftModifier)
+    modifier += "Shift+";
+if (ke->modifiers() & Qt::ControlModifier)
+    modifier += "Ctrl+";
+if (ke->modifiers() & Qt::AltModifier)
+    modifier += "Alt+";
+if (ke->modifiers() & Qt::MetaModifier)
+    modifier += "Meta+";
+QString key = (QString)QKeySequence(ke->key());
+QKeySequence result(modifier + key);
+  #+end_src
+- http://qtdocs.narod.ru/4.1.0/doc/html/qkeysequence.html
+- http://stackoverflow.com/questions/12830788/handle-key-events-ctrltab-and-ctrlshifttab
+  #+begin_src
+Item {
+    width: 100
+    height: 100
+    focus: true
+    Keys.onPressed: {
+        if(event.modifiers && Qt.ControlModifier) {
+            if(event.key === Qt.Key_Tab) {
+                console.log('forward')
+                event.accepted = true;
+            } else if(event.key === Qt.Key_Backtab) {            
+                console.log('backward')
+                event.accepted = true;
+            }
+        }
+    }
+}
+  #+end_src
+
+- http://stackoverflow.com/questions/17204142/capturing-modifier-keys-qt
+  #+begin_src
+void MainWindow::wheelEvent( QWheelEvent *wheelEvent )
+{
+    if( wheelEvent->modifiers() & Qt::ShiftModifier )
+    {
+        // do something awesome
+    }
+    else if( wheelEvent->modifiers() & Qt::ControlModifier )
+    {
+        // do something even awesomer!
+    }
+}
+  #+end_src
+- http://www.qtcentre.org/archive/index.php/t-28754.html
+- python http://forums.opensuse.org/showthread.php/436964-How-to-catch-Shift-Ctrl-key-in-keyPressEvent
+- http://linux.die.net/man/3/qkeysequence
+- http://www.codeproject.com/Articles/7305/Keyboard-Events-Simulation-using-keybd-event-funct
+- http://forums.codeguru.com/showthread.php?447587-Detecting-if-Control-or-Shift-key-was-down-when-key-pressed
+- win32 http://www.codeproject.com/Articles/6819/SendKeys-in-C
+- http://alleg.sourceforge.net/stabledocs/en/alleg006.html
+
+* myGridLayout for left-handside grid and preview
+
+* repository update history record
+  volunteer myself to do the record;  

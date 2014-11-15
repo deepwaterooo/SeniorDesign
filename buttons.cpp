@@ -267,7 +267,7 @@ Buttons::Buttons(QWidget *parent)
     hboxRgb->addLayout(vboxRgb);
     hboxRgb->addLayout(vbox3);
     QHBoxLayout *hbox11 = new QHBoxLayout();
-    ColorWheel* color = new ColorWheel();
+    ColorWheel* color = new ColorWheel();  
     vbox2->addLayout(hboxRgb); // R G B preview hbox
 
     // added a line in between the two part
@@ -421,8 +421,8 @@ Buttons::Buttons(QWidget *parent)
     QFrame* line[28];
     for (int i = 0; i < 28; ++i) {        
         line[i] = new QFrame(); 
-        line[i]->setLineWidth(3);
-        line[i]->setMidLineWidth(2);
+        line[i]->setLineWidth(4);
+        line[i]->setMidLineWidth(3);
         line[i]->setFrameShadow(QFrame::Raised);
         line[i]->setFrameShape(QFrame::VLine);
     }
@@ -493,11 +493,11 @@ void Buttons::setColor(QPushButton* ptrBtn[][6], int i, int j) {
     curColor = newColor;
 }
 
-void Buttons::setColorToDefault(QPushButton* ptrBtn) {
+void Buttons::setColorToDefault(QPushButton* ptrBtn) { // 239,235,231
     QString temp = "QPushButton{color:red;background-color:rgb(";
-    QString tempr = QString::number(211);
-    QString tempg = QString::number(211);
-    QString tempb = QString::number(211);
+    QString tempr = QString::number(239);
+    QString tempg = QString::number(235);
+    QString tempb = QString::number(231);
     temp = temp + tempr + "," + tempg + "," + tempb + ")}";
     ptrBtn->setStyleSheet(temp); 
 }
