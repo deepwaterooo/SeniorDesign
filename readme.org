@@ -12,7 +12,7 @@ It was a four day short project that I have just worked on during the passed wee
 * Updates
   Since *after this point* (after today, after version *0.2*), it will be a team project, I will always make my updates here in my repository first with updated contents in this README, then I will git update to https://github.com/PaulCode/Tower-iLLuminati team project repository.
 
-** version 0.3 11/14/2014, updates include
+** version 0.3 11/15/2014, updates include
 - fixed the mistake of setting default color to be (211,211,211), but actually should be (239,235,231);
 - modified predefined slot for pushing button down, trial;
 - design plan
