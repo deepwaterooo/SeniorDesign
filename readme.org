@@ -222,3 +222,7 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
   - http://stackoverflow.com/questions/1357960/qt-jpg-image-display
 ** RGB Color
   - http://help.dottoro.com/labpxqqe.php
+** QImageButton
+  - https://github.com/liuyanghejerry/Qt-Plus/blob/master/develop/QImageButton/qimagebutton.h
+  - https://github.com/liuyanghejerry/Qt-Plus/blob/master/develop/QImageButton/qimagebutton.cpp
+

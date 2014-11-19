@@ -80,11 +80,31 @@ don't needs these images any more
     <qresource prefix="/images">
         <file alias="r">r.png</file>
     </qresource>
--->
+
     <qresource prefix="/images">
         <file alias="color">color.jpg</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="down">down2.png</file>
     </qresource>
+-->
+    <qresource prefix="/images">
+        <file alias="undoI">undo.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="redoI">redo.jpg</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="newI">new.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="cutI">cut.jpg</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="beginI">begin.jpg</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="lastI">last.png</file>
+    </qresource>
+
 </RCC>

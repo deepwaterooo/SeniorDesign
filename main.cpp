@@ -6,22 +6,41 @@
 #include <QGraphicsView>
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
-#include <cstring>
+#include <QObject>
+#include <QDebug>
+#include <QWidget>
+#include <QPushButton>
+#include <QMenuBar>
+#include <QLabel>
+#include <QPlainTextEdit>
+#include <QMainWindow>
+#include <QGroupBox>
+#include <QDialogButtonBox>
+#include <QSpinBox>
+#include <QSlider>
+#include <QObject>
+#include <QTimeEdit>
+#include <QtGui/QIcon>
+#include <QTreeView>
+#include <QAction>
+#include <QMenuBar>
+#include <QMessageBox>
+#include <QStatusBar>
+#include <QToolBar>
 #include <iostream>
-#include "myGridLayout.h"
+#include <cstring>
 
-#include "buttons.h"
+#include "mainwindow.h"
+#include "myGridLayout.h"
+#include "colorwheel.h"
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
-    // for buttons for final
-    Buttons button;
-    button.resize(290, 170);
-    button.move(300, 300);  
-    button.setWindowTitle("Tower iLLuminati");
-    button.show();
+    MainWindow window;
+    window.show();
+
     return app.exec();
 }
