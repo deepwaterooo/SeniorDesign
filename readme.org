@@ -18,7 +18,7 @@ It was a four day short project that I have just worked on during the passed wee
 - Self added "*close file*" toolBar option, and just got accepted during today's meeting;
 - Removed .tan file open line menu from main layout;
 - Redesigned First/Play/Pause/Stop/Last commnad line;
-- Up to this point, understood Qt Creator fairly well. May feel boring to update according to our design review, but if necessary, I would still insist to update it accordingly to keep this project in progressing mode, but with lower priority later on.
+- Up to this point, understood Qt Creator fairly well. May feel boring to update according to our design review, but if necessary, I would still insist to update it accordingly to keep this project in progressing mode, but with *LOW PRIORITY* later on.
 - Current GUI Interface looks like followed, but still have work I need to do, like color-wheel, and user defined colors link into predefined color array. 
 [[./pic/2014-11-18_11:12:25.png]] 
 
