@@ -5,12 +5,19 @@
 
 * Statement
   
-It was a four day short project that I have just worked on during the passed weekend. This isn't any project to show off, but rather a review of the project, a review of the process practising and cultivating myself into a professional software engineer. Besides the most fundamental knowledge that we are supposed to learn on campus, students should also focus on the problem-solving skills so that, after graduation eventually we would be capable to learn cutting-edge knowledge, survive and succeed any project or requirements that we don't have any background, even without any instructor or mentor.
+It was a four day short project that I have just worked on during the passed weekend (11/7/2012-11/10/2014). This isn't any project to show off, but rather a review of the project, a review of the process practising and cultivating myself into a professional software engineer. Besides the most fundamental knowledge that we are supposed to learn on campus, students should also focus on the problem-solving skills so that, after graduation eventually we would be capable to learn cutting-edge knowledge, survive and succeed any project or requirements that we don't have any background, even without any instructor or mentor.
   
-  I kept an original version of my *buttons_bk.h*, *buttons_bk.cpp*, and *main_bk.cpp* files for reference as they are the best indication of my problem-solving skills, because I didn't remove any trial that I have tried in order to solve my problems.
+  I kept an original version of my *buttons_bk.h*, *buttons_bk.cpp*, and *main_bk.cpp* files in *./pic/backup_problemSolving/* folder for reference as they are the best indication of my problem-solving skills, because I didn't remove any trial that I have tried in order to get my project done.
 
 * Updates
   Since *after this point* (after today, after version *0.2*), it will be a team project, I will always make my updates here in my repository first with updated contents in this README, then I will git update to https://github.com/PaulCode/Tower-iLLuminati team project repository.
+
+** version 0.5 11/20/2014, *Individual Project*
+- This project for me just turned out to be an individual project, and today I was required to finish my individual design without joining to old team, finish the whole project design and finish an so-far decided to be 15-20 page documentation as well to indicate my design ideas and ability to keep documentations organized (Will I be challenge for writing a 15-20 pages documentation? - Maybe.). 
+- I mean to learn from team project experience (m and p have always been valueable team members before, and the others as well), but since the instructor doesn't allow me to work in the team any more, I could still work hard to make this a personally-spearking good design experience. I would review my pregress with my course instructor after thanks-giving break, and right now, I still intend to implement an outline of my design, so that later on when the department makes decision, this design course could be kept as an option for me for my spring semester. 
+- the *./docs/* folder kept all the documents the team has before *today 11/20/2014 16:43*, will be marked so it will be clear which part won't be my contribution.  
+- My current GUI layout: and my *individual project and design* goes from *this point here today*. 
+[[./pic/2014-11-20_16:25:50.png]]
 
 ** version 0.4 11/18/2014, updates include
 - Removed self-defined buttons.h and buttons.cpp file, used default *mainwindow.h* and *mainwindow.cpp* file instead because MainWindow inherited from QMainWindow satisfies all our requirements, the self-defined buttons inherited from QWidget can NOT satisfy all the requirements, like menubar and central layout;
@@ -30,7 +37,7 @@ It was a four day short project that I have just worked on during the passed wee
 - Team manager offered only one piece of suggestion of IMG_0595.JPG design against my (even p and e's from snapshot day image design) original IMG_0596.JPG design; 
 - Team manager's design was initially rejected by me due to layout intuition and human eye monitor widescreen design concepts; but was also later rejected by both r and m, and r implemented form-based interfaces of both layouts and new proposed design layout was too narrow. Having seen me writing email to manager just as I stated earlier during waiting for pizza time, r applied his power rejected the manager's proposal. And that was mainly r and m's contribution for comparing proposals. 
 - By the end of meeting, manager's new layout design was completely rejected by the team. We agreed on the only existing basic layout. 
-- p just got permanent position late last week from neighboured company, and began fully supporting manager's idea that he doesn't seem to do anything by not offering ideas but accompany manager to get pizza and help maintain a friend environment. But like always, I have full confidence on him. 
+- p just got permanent position late last week (11/13/2014) from neighboured company, and began fully supporting manager's idea that he doesn't seem to do anything by not offering ideas but accompany manager to get pizza and help maintain a friend environment. But like always, I have full confidence on him. 
 
 ** version 0.3 11/15/2014, updates include
 - fixed the mistake of setting default color to be (211,211,211), but actually should be (239,235,231);

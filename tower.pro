@@ -14,12 +14,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     myGridLayout.cpp \
-    verticalbox.cpp \
     colorwheel.cpp \
     mainwindow.cpp
 
 HEADERS  += myGridLayout.h \
-    verticalbox.h \
     floatspinbox.h \
     colorwheel.h \
     mainwindow.h

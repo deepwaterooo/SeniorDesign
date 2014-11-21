@@ -1,0 +1,32 @@
+@startuml
+	hide circle
+
+	class Pixel{
+		+GetColor()
+		+SetColor()
+		-Color
+	}
+	
+	class Color{
+		-red
+		-green
+		-blue
+	}
+	class PixelMap{
+		-Pixel[][]
+		+SetAllColor()
+		+NumberofPixles()
+		-AnimationList
+		+ApplyAnimation()
+	}
+	
+	class Grid{
+	
+	}
+	
+	
+	PixelMap --* Pixel
+	PixelMap --o Color
+	
+	
+@enduml

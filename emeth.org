@@ -4,6 +4,16 @@
 #+latex_class: beamer
 #+options: H:1 num:t toc:nil
 
+* Fairwell
+
+Hello Tower iLLuminati, 
+
+Every party has to come to an end, and here it comes. 
+
+I have been much elder than you, and I have had way more experiences than you in industry, and that may be some reason that towrads my work and priject, sometimes I was way too restricted, though I tried my best to understand that you guys have compilers. 
+
+Since I donesn't fit the team and your culture that well, right now I was aksed to desin the project independent from you guys, and as far as the department is concerned, I am completely ok with it. During this period of time, I am not allowed to talk to our client than expected, I am not allowed to ask more detailed questions with you guys, unless I am going to ask questions when I have difficulties as I am a CS majored students, and I have the right to ask questions towards you guys whoever works in CSAC.
+ 
 * footprint
 
 Hello Emeth, and the related department, 

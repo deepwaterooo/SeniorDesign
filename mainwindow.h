@@ -176,7 +176,6 @@ class MainWindow : public QMainWindow {
         QMenu *select;
         QMenu *view;
         QMenu *help;
-        //QMenu *about;   
         QToolBar *toolBar;
         QAction *newAct;
         QAction *cutAct;
@@ -223,6 +222,7 @@ class MainWindow : public QMainWindow {
         QAction *insertShapes;
         QAction *defPath;
         QAction *colorG;
+
         // for help
         QAction *doc;
         QAction *about;

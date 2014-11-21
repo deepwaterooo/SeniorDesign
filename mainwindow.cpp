@@ -175,7 +175,7 @@ MainWindow::MainWindow(QWidget *parent)
             gridView[1]->addWidget(mBut2[i][j], i, j);
         }
     }
-    printM(QColor::fromRgb(255,215,0));
+    printM(QColor::fromRgb(255,220,0));
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut3[i][j] = new QPushButton();
@@ -183,7 +183,7 @@ MainWindow::MainWindow(QWidget *parent)
             gridView[2]->addWidget(mBut3[i][j], i, j);
         }
     }
-    printR(QColor::fromRgb(143, 188, 143));  
+    printR(QColor::fromRgb(143, 208, 143));  
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut4[i][j] = new QPushButton();
@@ -191,7 +191,7 @@ MainWindow::MainWindow(QWidget *parent)
             gridView[3]->addWidget(mBut4[i][j], i, j);
         }
     }
-    printP(QColor::fromRgb(176, 196, 222));
+    printP(QColor::fromRgb(176, 206, 222));
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut5[i][j] = new QPushButton();
@@ -219,14 +219,15 @@ MainWindow::MainWindow(QWidget *parent)
     void (QSpinBox:: *spinBoxSignal)(int) = &QSpinBox::valueChanged;
     QObject::connect(spinBox, spinBoxSignal, slider, &QSlider::setValue);
     spinBox->setValue(25);
-    scrLeft = new QPushButton(QIcon(":/images/leftI"),tr("ScrollLeft"),this);
-    scrRight = new QPushButton(QIcon(":/images/rightI"),tr("ScrollRight"),this);
-    scrLeft->setFixedSize(90,30);
-    scrRight->setFixedSize(90,30);
-    hbox1->addWidget(scrLeft);
+    
+    //scrLeft = new QPushButton(QIcon(":/images/leftI"),tr("ScrollLeft"));
+    //scrRight = new QPushButton(QIcon(":/images/rightI"),tr("ScrollRight"));
+    //scrLeft->setFixedSize(90,30);
+    //scrRight->setFixedSize(90,30);
+    //hbox1->addWidget(scrLeft);   // I don't like these two bars
     hbox1->addWidget(slider);
     hbox1->addWidget(spinBox);
-    hbox1->addWidget(scrRight);
+    //hbox1->addWidget(scrRight);
     vbox->addStretch(1);
     vbox->addLayout(hbox1);
 
@@ -253,11 +254,11 @@ MainWindow::MainWindow(QWidget *parent)
     pause = new QPushButton(QIcon(":/images/pauseI"), QObject::tr(""));
     stop = new QPushButton(QIcon(":/images/stophsI"), QObject::tr(""));
     QPushButton *last = new QPushButton(QIcon(":/images/lastI"), QObject::tr(""));
-    first->setFixedSize(150,30);
-    play->setFixedSize(150,30);
-    pause->setFixedSize(150,30);
-    stop->setFixedSize(150,30);
-    last->setFixedSize(150,30);
+    first->setFixedSize(120,30);
+    play->setFixedSize(120,30);
+    pause->setFixedSize(120,30);
+    stop->setFixedSize(120,30);
+    last->setFixedSize(120,30);
     hbox2->addWidget(first, 0, Qt::AlignLeft);
     hbox2->addWidget(play, 0, Qt::AlignRight);
     hbox2->addWidget(pause, 0, Qt::AlignRight);
@@ -381,7 +382,7 @@ MainWindow::MainWindow(QWidget *parent)
     QHBoxLayout *hbox8 = new QHBoxLayout();
     for (int i = 0; i < 17; i++) {
         mButton[i] = new QPushButton(this);
-        mButton[i]->setFixedSize(31,31);
+        mButton[i]->setFixedSize(25, 25);  // 31 originally
         hbox8->addWidget(mButton[i]);
     }
 

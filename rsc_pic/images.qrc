@@ -92,7 +92,7 @@ don't needs these images any more
         <file alias="undoI">undo.png</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="redoI">redo.jpg</file>
+        <file alias="redoI">redo.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="newI">new.png</file>

@@ -1,0 +1,31 @@
+﻿
+@startuml img/state_img03.png
+
+Pixel <|-- PixelMap
+
+PixelMap *-- Animation
+
+Shape: 
+
+ColorWheel: QcolorSelector
+
+Tool: 
+
+Pixel : QColor color
+
+PixelMap : NumberOfPixel()
+PixelMap : SetAllColot()
+
+PixelGroup *-- Animation
+Animation : AnimationList()
+Animation : ApplyAnimation()
+Animation : map <Frame_num, PixelGroup> animation
+
+PixelGroup : vector <Qcolor, Qpoint>
+PixelGroup : move (Qpoint)
+PixelGroup: move (int, int)
+
+Frame <|-- Grid 
+
+@enduml
+        

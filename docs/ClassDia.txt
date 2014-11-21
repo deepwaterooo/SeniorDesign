@@ -1,0 +1,65 @@
+﻿
+@startuml img/state_img03.png
+
+class Animation{
+-QMap <int,PixelGroup> animation
++Animation()
++void addFrame(QPoint p, int sourceTimeStamp, int destTimeStamp)
++void addFrame(int x, int y, int sourceTimeStamp, int destTimeStamp)
++void moveFrame(int x, int y, int timeStamp)
++void moveFrame(QPoint p, int timeStamp)
+}
+
+class Grid{
++Grid()
+
+}
+
+class Pixel{
+-QPoint point
+-QColor color
++Pixel()
++Pixel(int x, int y, int r, int g, int b)
++Pixel(QPoint p, QColor c)
++void setPoint(int x, int y)
++void setPoint(QPoint p)
++void setColor(int r, int g, int b)
++void setColor(QColor c)
++void applyVector(QPoint p)
++QPoint getPoint()
++QColor getColor()
++void operator = (const &Pixel other)
+
+}
+
+class PixelGroup{
+-QList <Pixel> group
+-void setGroup(QList <Pixel> g)
++PixelGroup()
++PixelGroup moveNew(QPoint vector)
++PixelGroup moveNew(int x, int y)
++void move(QPoint vector)
++void move(int x, int y)
++int getSize()
++void addPixel(Pixel g)
+
+}
+
+namespace Ui{
+class MainWindow
+}
+
+class MainWindow{
+-void on_actionExit_triggered()
+-Ui::MainWindow* ui 
++Q_OBJECT
++explicit MainWindow(QWidget* parent = 0)
++~MainWindow()
+}
+
+Ui.MainWindow <|-- MainWindow
+PixelGroup o-- Pixel
+Animation o-- PixelGroup
+
+@enduml
+        

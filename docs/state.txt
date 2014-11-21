@@ -1,0 +1,86 @@
+@startuml
+
+[*] --right> StartUp
+
+StartUp: In this state the program loads 
+StartUp: all data relevant to the program. 
+StartUp --right> Idle
+
+Idle: This state is the main
+Idle: trigger state. Here the
+Idle: program waits for input
+Idle --up> Load : Open
+Idle --up> Save : Save
+Idle ----up> AnimateMode : Animate
+Idle ---down> CreateNew : New
+Idle --down> SaveAs : Save As
+Idle ---down> PlayBack : Play
+Idle --down> PreExit : Exit
+
+CreateNew: This state is for
+CreateNew: creating new animations.
+CreateNew: The user can choose default
+CreateNew: settings or set their own.
+CreateNew --> Idle
+
+Load: Prepares the program for
+Load: an existing .tar file
+Load --> LoadFileWindow
+
+LoadFileWindow: Allows the user to choose
+LoadFileWindow: an existing file through
+LoadFileWindow: the file explorer GUI
+LoadFileWindow --> Idle : Open
+LoadFileWindow --> Idle : Cancel
+
+Save: Saves the current file.
+Save: If no file exists then 
+Save: switches to SaveAs state.
+Save --> Idle : Existing .tar
+Save --> SaveAs : No Existing .tar
+
+SaveAs: Prepares the program to
+SaveAs: create new file.
+SaveAs --> SaveFileWindow
+
+SaveFileWindow: Allows the user to choose
+SaveFileWindow: a file name and location
+SaveFileWindow: trough the use of a GUI
+SaveFileWindow --> Idle : Save
+SaveFileWindow --> Idle : Cancel
+SaveFileWindow --> PreExit : Exit Flag
+
+PlayBack: Plays the current animation. 
+PlayBack: Can be stopped or paused with
+PlayBack: current frame saved.
+PlayBack --> Idle : Stop/Pause/Finished
+
+AnimateMode: Allows the user to choose
+AnimateMode: a variety of animation 
+AnimateMode: actions. 
+AnimateMode --> LineAnimater : Line
+AnimateMode --> ShapeAnimater : Shape
+AnimateMode --> PathAnimater : Path
+
+LineAnimater: Allows User to draw lines.
+LineAnimater --> AnimateMode
+
+ShapeAnimater: Allows Users to insert/draw shapes.
+ShapeAnimater --> AnimateMode
+
+PathAnimater: Allows User to create a path
+PathAnimater: for an existing shape to 
+PathAnimater: follow.
+PathAnimater --> AnimateMode
+AnimateMode --> Idle
+
+PreExit: Prompts user if they want
+PreExit: to save their changes.
+PreExit --> Save : Yes
+Save --> PreExit : Exit Flag
+PreExit --> Idle : Cancel
+PreExit --> [*] 
+
+
+
+@enduml
