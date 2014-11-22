@@ -106,5 +106,17 @@ don't needs these images any more
     <qresource prefix="/images">
         <file alias="lastI">last.png</file>
     </qresource>
+    <qresource prefix="/images">
+        <file alias="forwardI">forward.jpg</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="backwardI">backward.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="fastforwardI">fastforward.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="fastbackwardI">fastbackward.jpg</file>
+    </qresource>
 
 </RCC>

@@ -72,7 +72,7 @@ MainWindow::MainWindow(QWidget *parent)
     addAct = new QAction(QIcon(":/images/plusI"), tr("Add..."), this);
     minusAct = new QAction(QIcon(":/images/minusI"), tr("Minus..."), this);
     fileMenu->addAction(openAction);  //open
-    fileMenu->addAction(newAct); //new
+    fileMenu->addAction(newAct);      //new
     fileMenu->addAction(openAction3); //save
     fileMenu->addAction(openAction3as); //save as
     fileMenu->addAction(mexport); //export
@@ -254,15 +254,29 @@ MainWindow::MainWindow(QWidget *parent)
     pause = new QPushButton(QIcon(":/images/pauseI"), QObject::tr(""));
     stop = new QPushButton(QIcon(":/images/stophsI"), QObject::tr(""));
     QPushButton *last = new QPushButton(QIcon(":/images/lastI"), QObject::tr(""));
-    first->setFixedSize(120,30);
-    play->setFixedSize(120,30);
-    pause->setFixedSize(120,30);
-    stop->setFixedSize(120,30);
-    last->setFixedSize(120,30);
+    // add these four for myself
+    QPushButton *forward = new QPushButton(QIcon(":/images/forwardI"), QObject::tr(""));
+    QPushButton *backward = new QPushButton(QIcon(":/images/backwardI"), QObject::tr(""));
+    QPushButton *fastforward = new QPushButton(QIcon(":/images/fastforwardI"), QObject::tr(""));
+    QPushButton *fastbackward = new QPushButton(QIcon(":/images/fastbackwardI"), QObject::tr(""));
+    first->setFixedSize(80,30);
+    play->setFixedSize(80,30);
+    pause->setFixedSize(80,30);
+    stop->setFixedSize(80,30);
+    last->setFixedSize(80,30);
+    forward->setFixedSize(80, 30);
+    backward->setFixedSize(80, 30);
+    fastforward->setFixedSize(80, 30);
+    fastbackward->setFixedSize(80, 30);
+    
     hbox2->addWidget(first, 0, Qt::AlignLeft);
+    hbox2->addWidget(fastbackward, 0, Qt::AlignCenter);
+    hbox2->addWidget(backward, 0, Qt::AlignCenter);
     hbox2->addWidget(play, 0, Qt::AlignRight);
     hbox2->addWidget(pause, 0, Qt::AlignRight);
     hbox2->addWidget(stop, 0, Qt::AlignRight);
+    hbox2->addWidget(forward, 0, Qt::AlignCenter);
+    hbox2->addWidget(fastforward, 0, Qt::AlignCenter);
     hbox2->addWidget(last, 0, Qt::AlignRight);
     vbox->addLayout(hbox2); 
 

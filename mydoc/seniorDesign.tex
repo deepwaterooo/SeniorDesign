@@ -1,0 +1,295 @@
+% Created 2014-11-21 Fri 15:14
+\documentclass[9pt,b5paper]{article}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{xeCJK}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{geometry}
+\geometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{latexsym}
+\usepackage{natbib}
+\usepackage{fancyhdr}
+\usepackage[xetex,colorlinks=true,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
+
+
+\lstset{language=c++,numbers=left,numberstyle=\tiny,basicstyle=\ttfamily\small,tabsize=4,frame=none,escapeinside=``,extendedchars=false,keywordstyle=\color{blue!70},commentstyle=\color{red!55!green!55!blue!55!},rulesepcolor=\color{red!20!green!20!blue!20!}}
+\author{Jenny Huang}
+\date{\today}
+\title{CS480 Tower iLLuminati Design Report}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.3.1 (Org mode 8.2.7c)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{cover sheet}
+\label{sec-1}
+\begin{center}
+\begin{tabular}{ll}
+\hline
+Project Title & Tower iLLuminati\\
+Sponsor & Dr. Robert Rinker\\
+Team name & Heyan Huang\\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Project starting point}
+\label{sec-2}
+Our current software is the v0.3 version writen in C\#. And every "window" change needs a click. And the v0.2 was black and white, and since UI CS Curriculum is C++ based, we want to try our best to make a most basic software so that later on every ACM member with interest would be able to add any components that they are interested in and so that there won't be programming language barrier for them. 
+
+It's a old project that repeats each year maybe just for us students to get practised. Our current version of project was pretty much a fully functioning one, and it was writen by one ACM student who graduated already, and it was writen in C\# with his own interest.
+
+\includegraphics[width=.9\linewidth]{../pic/oldVersion.png}
+
+\section{Current version shortcomings}
+\label{sec-3}
+\begin{itemize}
+\item The current software play the .tan light file type separately from the .wav audio file, which is not convenient;
+\item Rewrite in C++
+\item Make light shows "easier"
+\begin{itemize}
+\item Less clicks
+\item Automated movement
+\item Pre-generated shapes
+\item Pre-generated animations-
+\item Import from other files
+\end{itemize}
+\end{itemize}
+
+\section{Design main layout}
+\label{sec-4}
+\begin{itemize}
+\item GUI design
+\item Design documents
+\item Main division of work
+\item Classes and Prototypes
+\end{itemize}
+
+\section{Design}
+\label{sec-5}
+\begin{itemize}
+\item Prototypes and Classes
+\begin{itemize}
+\item More to be Added
+\end{itemize}
+\item Coding
+\begin{itemize}
+\item Based on Design
+\item Testing
+\end{itemize}
+\end{itemize}
+
+\section{Menu Design Specification}
+\label{sec-6}
+\subsection{File menu}
+\label{sec-6-1}
+\subsubsection{Open project}
+\label{sec-6-1-1}
+\subsubsection{New - project}
+\label{sec-6-1-2}
+\subsubsection{Save - project}
+\label{sec-6-1-3}
+\subsubsection{Save as - project}
+\label{sec-6-1-4}
+\subsubsection{Export take project information and extrapolate to .tan (light show file type)}
+\label{sec-6-1-5}
+\subsubsection{Close - project}
+\label{sec-6-1-6}
+\subsubsection{Exit - animator}
+\label{sec-6-1-7}
+
+\subsection{Edit menu}
+\label{sec-6-2}
+\subsubsection{Copy copy a pixelgroup or frame}
+\label{sec-6-2-1}
+Ctrl + c
+\subsubsection{Cut - cut a pixelgroup or frame}
+\label{sec-6-2-2}
+Ctrl + x
+\subsubsection{Paste map a pixelgroup to grid or frame to frame sequence}
+\label{sec-6-2-3}
+Crtl + v
+\subsubsection{Insert}
+\label{sec-6-2-4}
+After
+Before
+\subsubsection{Clear -  current frame}
+\label{sec-6-2-5}
+\subsubsection{Delete removes current frame or pixel group}
+\label{sec-6-2-6}
+\subsubsection{Undo ctrl + z}
+\label{sec-6-2-7}
+\subsubsection{Redo ctrl + y}
+\label{sec-6-2-8}
+
+\subsection{Play menu}
+\label{sec-6-3}
+\subsubsection{play from start}
+\label{sec-6-3-1}
+\subsubsection{play from current}
+\label{sec-6-3-2}
+\subsubsection{Pause}
+\label{sec-6-3-3}
+\subsubsection{StopM}
+\label{sec-6-3-4}
+\subsubsection{move forward}
+\label{sec-6-3-5}
+Default to 1 frame
+Can select a specific time segment
+\subsubsection{Move back}
+\label{sec-6-3-6}
+Default to 1 frame
+Can select a specific time segment
+\subsection{Select menu}
+\label{sec-6-4}
+\subsubsection{Select row space + click}
+\label{sec-6-4-1}
+\subsubsection{Select column  - shift + space + click}
+\label{sec-6-4-2}
+\subsubsection{Invert selection ctrl + i}
+\label{sec-6-4-3}
+\subsubsection{Select all crtl + a ???????????????????????????????????????????//////}
+\label{sec-6-4-4}
+\subsubsection{Deselect  - crtl + d}
+\label{sec-6-4-5}
+\subsubsection{Selection items that are represented in menu}
+\label{sec-6-4-6}
+\begin{enumerate}
+\item Shift + click
+\label{sec-6-4-6-1}
+
+Selects between two pixels or frames
+\item Crtl + click
+\label{sec-6-4-6-2}
+
+Selects or deselects multiple individual pixels or frames
+\end{enumerate}
+
+\subsection{Animation tool menu}
+\label{sec-6-5}
+\subsubsection{insert shape pull out menu with shapes}
+\label{sec-6-5-1}
+\subsubsection{define path* assigns a pixelgroup an animation path}
+\label{sec-6-5-2}
+\subsubsection{color gradient* user can choose to a fade a color from one point on the grid to the next}
+\label{sec-6-5-3}
+
+\subsection{Help menu}
+\label{sec-6-6}
+\subsubsection{help tools}
+\label{sec-6-6-1}
+
+\section{GUI Layout}
+\label{sec-7}
+\subsection{Main GUI Windows}
+\label{sec-7-1}
+
+\includegraphics[width=.9\linewidth]{../pic/2014-11-20_16:25:50.png}
+
+\subsection{Pop-up Windows}
+\label{sec-7-2}
+
+\includegraphics[width=.9\linewidth]{../pic/popup.png}
+
+\section{Major area of project research and results}
+\label{sec-8}
+\subsection{Literature/Catalog Review}
+\label{sec-8-1}
+\subsection{Prototyping}
+\label{sec-8-2}
+\subsection{Modeling and/or Experimentation}
+\label{sec-8-3}
+\subsection{Visualization (sketches, drawings, diagrams)}
+\label{sec-8-4}
+
+\section{Final product architecture}
+\label{sec-9}
+\section{components of my design will work}
+\label{sec-10}
+\section{unreolved issues and plan for attacking these}
+\label{sec-11}
+
+\section{Updates}
+\label{sec-12}
+Since \textbf{after this point} (after today, after version \textbf{0.2}), it will be a team project, I will always make my updates here in my repository first with updated contents in this README, then I will git update to \url{https://github.com/PaulCode/Tower-iLLuminati} team project repository.
+
+\subsection{version 0.5 11/20/2014, \textbf{Individual Project}}
+\label{sec-12-1}
+\begin{itemize}
+\item This project for me just turned out to be an individual project, and today I was required to finish my individual design without joining to old team, finish the whole project design and finish an so-far decided to be 15-20 page documentation as well to indicate my design ideas and ability to keep documentations organized (Will I be challenge for writing a 15-20 pages documentation? - Maybe.).
+\item I mean to learn from team project experience (m and p have always been valueable team members before, and the others as well), but since the instructor doesn't allow me to work in the team any more, I could still work hard to make this a personally-spearking good design experience. I would review my pregress with my course instructor after thanks-giving break, and right now, I still intend to implement an outline of my design, so that later on when the department makes decision, this design course could be kept as an option for me for my spring semester.
+\item the \textbf{./docs/} folder kept all the documents the team has before \textbf{today 11/20/2014 16:43}, will be marked so it will be clear which part won't be my contribution.
+\item My current GUI layout: and my \textbf{individual project and design} goes from \textbf{this point here today}.
+\end{itemize}
+\includegraphics[width=.9\linewidth]{./pic/2014-11-20_16:25:50.png}
+
+\subsection{version 0.4 11/18/2014, updates include}
+\label{sec-12-2}
+\begin{itemize}
+\item Removed self-defined buttons.h and buttons.cpp file, used default \textbf{mainwindow.h} and \textbf{mainwindow.cpp} file instead because MainWindow inherited from QMainWindow satisfies all our requirements, the self-defined buttons inherited from QWidget can NOT satisfy all the requirements, like menubar and central layout;
+\item Added menus according to our design on just passed Saturday;
+\item Self added "\textbf{close file}" toolBar option, and just got accepted during today's meeting;
+\item Removed .tan file open line menu from main layout;
+\item Redesigned First/Play/Pause/Stop/Last commnad line;
+\item Up to this point, understood Qt Creator fairly well. May feel boring to update according to our design review, but if necessary, I would still insist to update it accordingly to keep this project in progressing mode, but with \textbf{LOW PRIORITY} later on.
+\item Current GUI Interface looks like followed, but still have work I need to do, like color-wheel, and user defined colors link into predefined color array.
+\end{itemize}
+\includegraphics[width=.9\linewidth]{./pic/2014-11-18_11:12:25.png} 
+
+\subsubsection{Team Meeting Review on 11/16/2014 11:00-4:00 pm}
+\label{sec-12-2-1}
+\begin{itemize}
+\item A team member lead the meeting, and on that day we mainly reviewed menu bar, all pictures are named in ./pic/IMG$_{\text{059}}$?.JPG style; Those pictures are team Contributions, \textbf{not only} mine; The \textbf{coding implementations} are all \textbf{mine} though.
+\item The idears are mainly M, me and r's contributions for menubar and for main design; My contributions were mainly more common sense ones, like color gradient (which was still original came from Dr. client), and cut, copy, paste, first frame, last frame command buttons etc, while m was the leading force for design, and r for confirmation.
+\item Team manager helped record review contents for this meeting;
+\item Team manager blamed me for having misunderstood her that nobody asked me to implement a GUI instead of designing a GUI. This saying was immediately criticised by another team member out of fairness that if it was not her, the team manager, we should have designed and reviewed all our designs three or four weeks ago. I can't hold my anger neither said back to her that it was all her -- the team manager's fault, and I will prove and make it clear that it was all her fault, not mine.
+\item Team manager offered only one piece of suggestion of IMG$_{\text{0595}}$.JPG design against my (even p and e's from snapshot day image design) original IMG$_{\text{0596}}$.JPG design;
+\item Team manager's design was initially rejected by me due to layout intuition and human eye monitor widescreen design concepts; but was also later rejected by both r and m, and r implemented form-based interfaces of both layouts and new proposed design layout was too narrow. Having seen me writing email to manager just as I stated earlier during waiting for pizza time, r applied his power rejected the manager's proposal. And that was mainly r and m's contribution for comparing proposals.
+\item By the end of meeting, manager's new layout design was completely rejected by the team. We agreed on the only existing basic layout.
+\item p just got permanent position late last week (11/13/2014) from neighboured company, and began fully supporting manager's idea that he doesn't seem to do anything by not offering ideas but accompany manager to get pizza and help maintain a friend environment. But like always, I have full confidence on him.
+\end{itemize}
+
+\subsection{version 0.3 11/15/2014, updates include}
+\label{sec-12-3}
+\begin{itemize}
+\item fixed the mistake of setting default color to be (211,211,211), but actually should be (239,235,231);
+\item modified predefined slot for pushing button down, trial;
+\item my refactor and design plan
+\end{itemize}
+
+\subsection{version 0.2 11/13/2014, updates include}
+\label{sec-12-4}
+\begin{itemize}
+\item \textbf{clean code} - removed all unnecessary conments, methods and variables;
+\item "\textbf{pre}" button stores the latest used color, and it's clickable;
+\item "\textbf{cur}" button stores the latest previewed color, and it's clickable;
+\item Red Green Blue spinBoxes are able to show the corresponding QColor r g b values;
+\item Modified setColor 5 functions to use setStyleSheet(\ldots{}) method to set colors (instead of previous QPalette setColor(\ldots{}) and setAutoFillBackground(true) method.); Solved Windows not showing color problem; (details: I have tried the setStyleSheet(\ldots{}) method for my 17 predefined colors, but when I needed to get the color, I failed my basic test with the mistake used string instead of \textbf{QString}, so later on need to pay more attention to details.)
+\end{itemize}
+
+\section{Future Work}
+\label{sec-13}
+\begin{itemize}
+\item Implement functionality to GUI
+\item Implement multiple pixel movement
+\item Figure out modifications to .tan file layout
+\item Next Semester
+\begin{itemize}
+\item Implement more advanced animations/movements
+\item Add more GUI features
+\end{itemize}
+\end{itemize}
+% Emacs 24.3.1 (Org mode 8.2.7c)
+\end{document}

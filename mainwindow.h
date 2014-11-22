@@ -16,7 +16,7 @@
 class MainWindow : public QMainWindow {
     Q_OBJECT
     QWidget *centralWidget;
-    QHBoxLayout *hbox;
+    //QHBoxLayout *hbox;   // hbox9
  public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
