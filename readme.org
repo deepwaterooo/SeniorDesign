@@ -12,6 +12,8 @@ It was a four day short project that I have just worked on during the passed wee
 * Updates
   Since *after this point* (after today, after version *0.2*), it will be a team project, I will always make my updates here in my repository first with updated contents in this README, then I will git update to https://github.com/PaulCode/Tower-iLLuminati team project repository.
 
+  Since version *0.5*, it is an individual project, will *ONLY* update here since *11/20/2014*.
+
 ** *Global Agreement - Graduate*: 11/21/2014
 - Reach *Global Agreement* with the department (my major advisor told me the good news) that I could *graduate* in summer 2015, with registering 1 credit part-time for coming spring semester;
 - There is *NO ANY* Ph.d on me, and my advisor clearly stated that nobody here in the department would want to block me here on campus forever.
