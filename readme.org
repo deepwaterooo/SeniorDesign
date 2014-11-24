@@ -12,6 +12,11 @@ It was a four day short project that I have just worked on during the passed wee
 * Updates
   Since *after this point* (after today, after version *0.2*), it will be a team project, I will always make my updates here in my repository first with updated contents in this README, then I will git update to https://github.com/PaulCode/Tower-iLLuminati team project repository.
 
+** version 0.6 11/21/2014, *Global Agreement - Graduate*, updates include
+- Worked a little bit on the docs that I am required to do;
+- worked a little bit on the popup window when click/conduce "play";
+- Redesing the play command line buttons according to my taste;
+
 [[./pic/2014-11-21_17:20:11_GlobalAgreementGraduate.png]]
 
 ** version 0.5 11/20/2014, *Individual Project*
