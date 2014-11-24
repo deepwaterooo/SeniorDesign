@@ -31,7 +31,6 @@
 #include <cstring>
 
 #include "mainwindow.h"
-#include "myGridLayout.h"
 #include "colorwheel.h"
 
 using namespace std;

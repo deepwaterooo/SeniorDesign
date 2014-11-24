@@ -303,7 +303,7 @@ MainWindow::MainWindow(QWidget *parent)
     }
     dir[1][1]->setFlat(true);
     for (int i = 0; i < 3; ++i)
-        dir[3][i]->setFixedSize(40, 56);
+        dir[3][i]->setFixedSize(40, 50);
     
     // inserted verticalbox part
     QVBoxLayout *vbox2 = new QVBoxLayout();
@@ -358,14 +358,14 @@ MainWindow::MainWindow(QWidget *parent)
     vboxRgb->addLayout(hbox5);
     
     // inserted verticalbox3 part for color preview
-    QVBoxLayout *vbox3 = new QVBoxLayout(this);
+    QVBoxLayout *vbox3 = new QVBoxLayout();
     vbox3->setAlignment(Qt::AlignHCenter);
     QLabel *prelabel = new QLabel(tr("Color"));
     QLabel *curlabel = new QLabel(tr("Preview"));
     pre = new QPushButton();
     cur = new QPushButton();
-    pre->setFixedSize(80,60);
-    cur->setFixedSize(80,60);
+    pre->setFixedSize(80,50);
+    cur->setFixedSize(80,50);
     vbox3->setAlignment(pre, Qt::AlignCenter);
     vbox3->setAlignment(cur, Qt::AlignCenter);
     vbox3->addWidget(pre);
@@ -828,7 +828,3 @@ void MainWindow::open() {
 
 MainWindow::~MainWindow() {
 }
-/*
-void MainWindow::open() {
-    QMessageBox::information(this, tr("Information"), tr("Open"));
-    }*/

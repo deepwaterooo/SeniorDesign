@@ -13,17 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-    myGridLayout.cpp \
     colorwheel.cpp \
     mainwindow.cpp
 
-HEADERS  += myGridLayout.h \
-    floatspinbox.h \
+HEADERS  += floatspinbox.h \
     colorwheel.h \
     mainwindow.h
 
-FORMS    += mainwindow.ui
-
-RESOURCES += \
-    res.qrc \
-    rsc_pic/images.qrc
+RESOURCES += rsc_pic/images.qrc

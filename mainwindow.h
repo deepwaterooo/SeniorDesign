@@ -10,7 +10,6 @@
 #include <QPlainTextEdit>
 #include <QSpinBox>
 
-#include "myGridLayout.h"
 #include "colorwheel.h"
 
 class MainWindow : public QMainWindow {
@@ -150,7 +149,6 @@ class MainWindow : public QMainWindow {
         QPushButton *clear;
         QPushButton *mButton[17];  // for predifined colors
         QPushButton* mButt[12][6];
-        myGridLayout* mGrid;
         QGridLayout* gridView[5];
         QPushButton* mBut1[10][4];
         QPushButton* mBut2[10][4];
