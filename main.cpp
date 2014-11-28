@@ -30,7 +30,8 @@
 #include <iostream>
 #include <cstring>
 
-#include "mainwindow.h"
+//#include "mainwindow.h"
+#include "popwindow.h"
 #include "colorwheel.h"
 
 using namespace std;
@@ -40,6 +41,10 @@ int main(int argc, char *argv[]) {
 
     MainWindow window;
     window.show();
+    /*
+      PopWindow window0;
+    window0.show();
+    */
 
     return app.exec();
 }

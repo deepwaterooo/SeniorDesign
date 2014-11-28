@@ -9,62 +9,6 @@ It was a four day short project that I have just worked on during the passed wee
   
   I kept an original version of my *buttons_bk.h*, *buttons_bk.cpp*, and *main_bk.cpp* files in *./pic/backup_problemSolving/* folder for reference as they are the best indication of my problem-solving skills, because I didn't remove any trial that I have tried in order to get my project done.
 
-* Updates
-  Since *after this point* (after today, after version *0.2*), it will be a team project, I will always make my updates here in my repository first with updated contents in this README, then I will git update to https://github.com/PaulCode/Tower-iLLuminati team project repository.
-
-  Since version *0.5*, it is an individual project, will *ONLY* update here since *11/20/2014*.
-
-** *Global Agreement - Graduate*: 11/21/2014
-- Reach *Global Agreement* with the department (my major advisor told me the good news) that I could *graduate* in summer 2015, with registering 1 credit part-time for coming spring semester;
-- There is *NO ANY* Ph.d on me, and my advisor clearly stated that nobody here in the department would want to block me here on campus forever.
-- Use picture ./pic/2014-11-21_17:20:11_GlobalAgreementGraduate.png to set a mark here;
-
-** version 0.6 11/21/2014, *Global Agreement - Graduate*, updates include
-- Worked a little bit on the docs that I am required to do;
-- worked a little bit on the popup window when click/conduce "play";
-- Redesing the play command line buttons according to my taste;
-
-[[./pic/2014-11-21_17:20:11_GlobalAgreementGraduate.png]]
-
-** version 0.5 11/20/2014, *Individual Project*
-- This project for me just turned out to be an individual project, and today I was required to finish my individual design without joining to old team, finish the whole project design and finish an so-far decided to be 15-20 page documentation as well to indicate my design ideas and ability to keep documentations organized (Will I be challenge for writing a 15-20 pages documentation? - Maybe.). 
-- I mean to learn from team project experience (m and p have always been valueable team members before, and the others as well), but since the instructor doesn't allow me to work in the team any more, I could still work hard to make this a personally-spearking good design experience. I would review my pregress with my course instructor after thanks-giving break, and right now, I still intend to implement an outline of my design, so that later on when the department makes decision, this design course could be kept as an option for me for my spring semester. 
-- the *./docs/* folder kept all the documents the team has before *today 11/20/2014 16:43*, will be marked so it will be clear which part won't be my contribution.  
-- My current GUI layout: and my *individual project and design* goes from *this point here today*. 
-[[./pic/2014-11-20_16:25:50.png]]
-
-** version 0.4 11/18/2014, updates include
-- Removed self-defined buttons.h and buttons.cpp file, used default *mainwindow.h* and *mainwindow.cpp* file instead because MainWindow inherited from QMainWindow satisfies all our requirements, the self-defined buttons inherited from QWidget can NOT satisfy all the requirements, like menubar and central layout;
-- Added menus according to our design on just passed Saturday;
-- Self added "*close file*" toolBar option, and just got accepted during today's meeting;
-- Removed .tan file open line menu from main layout;
-- Redesigned First/Play/Pause/Stop/Last commnad line;
-- Up to this point, understood Qt Creator fairly well. May feel boring to update according to our design review, but if necessary, I would still insist to update it accordingly to keep this project in progressing mode, but with *LOW PRIORITY* later on.
-- Current GUI Interface looks like followed, but still have work I need to do, like color-wheel, and user defined colors link into predefined color array. 
-[[./pic/2014-11-18_11:12:25.png]] 
-
-*** Team Meeting Review on 11/16/2014 11:00-4:00 pm
-- A team member lead the meeting, and on that day we mainly reviewed menu bar, all pictures are named in ./pic/IMG_059?.JPG style; Those pictures are team Contributions, *not only* mine; The *coding implementations* are all *mine* though. 
-- The idears are mainly M, me and r's contributions for menubar and for main design; My contributions were mainly more common sense ones, like color gradient (which was still original came from Dr. client), and cut, copy, paste, first frame, last frame command buttons etc, while m was the leading force for design, and r for confirmation. 
-- Team manager helped record review contents for this meeting;
-- Team manager blamed me for having misunderstood her that nobody asked me to implement a GUI instead of designing a GUI. This saying was immediately criticised by another team member out of fairness that if it was not her, the team manager, we should have designed and reviewed all our designs three or four weeks ago. I can't hold my anger neither said back to her that it was all her -- the team manager's fault, and I will prove and make it clear that it was all her fault, not mine. 
-- Team manager offered only one piece of suggestion of IMG_0595.JPG design against my (even p and e's from snapshot day image design) original IMG_0596.JPG design; 
-- Team manager's design was initially rejected by me due to layout intuition and human eye monitor widescreen design concepts; but was also later rejected by both r and m, and r implemented form-based interfaces of both layouts and new proposed design layout was too narrow. Having seen me writing email to manager just as I stated earlier during waiting for pizza time, r applied his power rejected the manager's proposal. And that was mainly r and m's contribution for comparing proposals. 
-- By the end of meeting, manager's new layout design was completely rejected by the team. We agreed on the only existing basic layout. 
-- p just got permanent position late last week (11/13/2014) from neighboured company, and began fully supporting manager's idea that he doesn't seem to do anything by not offering ideas but accompany manager to get pizza and help maintain a friend environment. But like always, I have full confidence on him. 
-
-** version 0.3 11/15/2014, updates include
-- fixed the mistake of setting default color to be (211,211,211), but actually should be (239,235,231);
-- modified predefined slot for pushing button down, trial;
-- my refactor and design plan
-
-** version 0.2 11/13/2014, updates include
-- *clean code* - removed all unnecessary conments, methods and variables;
-- "*pre*" button stores the latest used color, and it's clickable;
-- "*cur*" button stores the latest previewed color, and it's clickable;
-- Red Green Blue spinBoxes are able to show the corresponding QColor r g b values;
-- Modified setColor 5 functions to use setStyleSheet(...) method to set colors (instead of previous QPalette setColor(...) and setAutoFillBackground(true) method.); Solved Windows not showing color problem; (details: I have tried the setStyleSheet(...) method for my 17 predefined colors, but when I needed to get the color, I failed my basic test with the mistake used string instead of *QString*, so later on need to pay more attention to details.)
-
 * Course Introduction
 ** Reason for choosing this Course
    This fall semester I didn't have many course to choose at all. The all choices for me possible includes: 
@@ -244,26 +188,100 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
 - "Clear" & 8 directions are easy to implement and will be done by end of this semester;
 - Yet I will take my time to finish all the color/time/direction related button slot functions by the end of this semester;
 
+* Updates
+  Since *after this point* (after today, after version *0.2*), it will be a team project, I will always make my updates here in my repository first with updated contents in this README, then I will git update to https://github.com/PaulCode/Tower-iLLuminati team project repository.
+
+  Since version *0.5*, it is an individual project, will *ONLY* update here since *11/20/2014*.
+
+** version 0.2 11/13/2014, updates include
+- *clean code* - removed all unnecessary conments, methods and variables;
+- "*pre*" button stores the latest used color, and it's clickable;
+- "*cur*" button stores the latest previewed color, and it's clickable;
+- Red Green Blue spinBoxes are able to show the corresponding QColor r g b values;
+- Modified setColor 5 functions to use setStyleSheet(...) method to set colors (instead of previous QPalette setColor(...) and setAutoFillBackground(true) method.); Solved Windows not showing color problem; (details: I have tried the setStyleSheet(...) method for my 17 predefined colors, but when I needed to get the color, I failed my basic test with the mistake used string instead of *QString*, so later on need to pay more attention to details.)
+
+** version 0.3 11/15/2014, updates include
+- fixed the mistake of setting default color to be (211,211,211), but actually should be (239,235,231);
+- modified predefined slot for pushing button down, trial;
+- my refactor and design plan
+
+** Review Team Meeting on 11/16/2014 11:00-4:00 pm
+- A team member lead the meeting, and on that day we mainly reviewed menu bar, all pictures are named in ./pic/IMG_059?.JPG style; Those pictures are team Contributions, *not only* mine; The *coding implementations* are all *mine* though. 
+- The idears are mainly M, me and r's contributions for menubar and for main design; My contributions were mainly more common sense ones, like color gradient (which was still original came from Dr. client), and cut, copy, paste, first frame, last frame command buttons etc, while m was the leading force for design, and r for confirmation. 
+- Team manager helped record review contents for this meeting;
+- Team manager blamed me for having misunderstood her that nobody asked me to implement a GUI instead of designing a GUI. This saying was immediately criticised by another team member out of fairness that if it was not her, the team manager, we should have designed and reviewed all our designs three or four weeks ago. I can't hold my anger neither said back to her that it was all her -- the team manager's fault, and I will prove and make it clear that it was all her fault, not mine. 
+- Team manager offered only one piece of suggestion of IMG_0595.JPG design against my (even p and e's from snapshot day image design) original IMG_0596.JPG design; 
+- Team manager's design was initially rejected by me due to layout intuition and human eye monitor widescreen design concepts; but was also later rejected by both r and m, and r implemented form-based interfaces of both layouts and new proposed design layout was too narrow. Having seen me writing email to manager just as I stated earlier during waiting for pizza time, r applied his power rejected the manager's proposal. And that was mainly r and m's contribution for comparing proposals. 
+- By the end of meeting, manager's new layout design was completely rejected by the team. We agreed on the only existing basic layout. 
+- p just got permanent position late last week (11/13/2014) from neighboured company, and began fully supporting manager's idea that he doesn't seem to do anything by not offering ideas but accompany manager to get pizza and help maintain a friend environment. But like always, I have full confidence on him. 
+
+** version 0.4 11/18/2014, updates include
+- Removed self-defined buttons.h and buttons.cpp file, used default *mainwindow.h* and *mainwindow.cpp* file instead because MainWindow inherited from QMainWindow satisfies all our requirements, the self-defined buttons inherited from QWidget can NOT satisfy all the requirements, like menubar and central layout;
+- Added menus according to our design on just passed Saturday;
+- Self added "*close file*" toolBar option, and just got accepted during today's meeting;
+- Removed .tan file open line menu from main layout;
+- Redesigned First/Play/Pause/Stop/Last commnad line;
+- Up to this point, understood Qt Creator fairly well. May feel boring to update according to our design review, but if necessary, I would still insist to update it accordingly to keep this project in progressing mode, but with *LOW PRIORITY* later on.
+- Current GUI Interface looks like followed, but still have work I need to do, like color-wheel, and user defined colors link into predefined color array. 
+[[./pic/2014-11-18_11:12:25.png]] 
+
+** version 0.5 11/20/2014, *Individual Project*
+- This project for me just turned out to be an individual project, and today I was required to finish my individual design without joining to old team, finish the whole project design and finish an so-far decided to be 15-20 page documentation as well to indicate my design ideas and ability to keep documentations organized (Will I be challenge for writing a 15-20 pages documentation? - Maybe.). 
+- I mean to learn from team project experience (m and p have always been valueable team members before, and the others as well), but since the instructor doesn't allow me to work in the team any more, I could still work hard to make this a personally-spearking good design experience. I would review my pregress with my course instructor after thanks-giving break, and right now, I still intend to implement an outline of my design, so that later on when the department makes decision, this design course could be kept as an option for me for my spring semester. 
+- the *./docs/* folder kept all the documents the team has before *today 11/20/2014 16:43*, will be marked so it will be clear which part won't be my contribution.  
+- My current GUI layout: and my *individual project and design* goes from *this point here today*. 
+[[./pic/2014-11-20_16:25:50.png]]
+
+** version 0.6 11/21/2014, *Global Agreement - Graduate*, updates include
+- Worked a little bit on the docs that I am required to do;
+- worked a little bit on the popup window when click/conduce "play";
+- Redesing the play command line buttons according to my taste;
+
+  [[./pic/2014-11-21_17:20:11_GlobalAgreementGraduate.png]]
+
+** *Global Agreement - Graduate*: 11/21/2014
+- Reach *Global Agreement* with the department (my major advisor told me the good news) that I could *graduate* in summer 2015, with registering 1 credit part-time for coming spring semester;
+- There is *NO ANY* Ph.d on me, and my advisor clearly stated that nobody here in the department would want to block me here on campus forever.
+- Use picture ./pic/2014-11-21_17:20:11_GlobalAgreementGraduate.png to set a mark here;
+
+** version 0.7 11/27/2014, updates include
+- Highlight valid frame & current viewing frame bolder to be *Red* color;
+- Finished a simple *Animation Popup* window design and implementation as layout below. This popup window should be linked with "*play*" button when it gets clicked. Popup window is designed as to the client's requirement that he doesn't want to get disrupted by the other neighboured frames in main window. So the popup window frame is not highlighted to be RED any more. I could also remove the frame border if the client want that layout.
+
+  [[./pic/Screenshot_from_2014-11-27_23:34:06.png]]
+- Redesing & Implemented left handside working space QGridLayout to be 20*12 row*col, instead of old one 12*6 row*col;
+- Redesing & Implemented bottom right predefined colors to be user custom colors with 34*2 options interactively changable/redefinable by user;
+- Redesign & Implemented right bottom working area so it has a better layout;
+- Redesign & Implemented QGridLayout setSpacing() values so that the working space grids and preview layouts mimic that actual tower window size;
+- Current main window layout looks at listed below:
+
+  [[./pic/Screenshot_from_2014-11-27_22:42:34.png]]
+
 * Reference
-** Basic layouts
+- Basic layouts
   - http://qt-project.org/doc/qt-4.8/layouts-basiclayouts.html- 
-** layout example
+- layout example
   - http://zetcode.com/gui/qt4/layoutmanagement/
-** my_grid_layout
+- my_grid_layout
   - http://stackoverflow.com/questions/9660080/how-does-one-fill-a-qgridlayout-from-top-left-to-right
   - http://stackoverflow.com/questions/8685005/qt-making-a-splitter-horizontal-and-vertical-at-same-time 
-** Layout management: find file, directories and subdirectories
+- Layout management: find file, directories and subdirectories
   - http://www.informit.com/articles/article.aspx?p=1405543
-** subclass for buttons
+- subclass for buttons
   - http://qt-articles.blogspot.com/2010/06/how-to-customize-button-in-qt.html
   - http://stackoverflow.com/questions/3137805/how-to-set-image-on-qpushbutton
-** float spin box
+- float spin box
   - http://www.qtforum.org/article/12505/qspinbox-with-float-values.html?s=b97a1086f89c740edca22c410bdfec398bb41f5d
-** QGraphicsView
+- QGraphicsView
   - http://stackoverflow.com/questions/1357960/qt-jpg-image-display
-** RGB Color
+- RGB Color
   - http://help.dottoro.com/labpxqqe.php
-** QImageButton
+- QImageButton
   - https://github.com/liuyanghejerry/Qt-Plus/blob/master/develop/QImageButton/qimagebutton.h
   - https://github.com/liuyanghejerry/Qt-Plus/blob/master/develop/QImageButton/qimagebutton.cpp
-
+- Signal Slot
+  - http://blog.csdn.net/m6830098/article/details/13058459
+  - http://www.ibm.com/developerworks/cn/linux/guitoolkit/qt/signal-slot/
+  - http://blog.csdn.net/qter_wd007/article/details/5598264
+- Signal Slot with threads
+  - http://www.360doc.com/content/12/1226/12/9200790_256340719.shtml 

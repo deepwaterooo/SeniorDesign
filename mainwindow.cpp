@@ -158,44 +158,44 @@ MainWindow::MainWindow(QWidget *parent)
     QHBoxLayout *hbox10 = new QHBoxLayout();
     for (int i = 0; i < 5; ++i) {        
         gridView[i] = new QGridLayout();
-        gridView[i]->setSpacing(3);
+        gridView[i]->setSpacing(11);
     }
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut1[i][j] = new QPushButton();
-            mBut1[i][j]->setFixedSize(20, 20);
+            mBut1[i][j]->setFixedSize(18, 18);
             gridView[0]->addWidget(mBut1[i][j], i, j);
         }
     }
-    printH(QColor::fromRgb(135,206,250));
+    printH(QColor::fromRgb(135,226,250));
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut2[i][j] = new QPushButton();
-            mBut2[i][j]->setFixedSize(20, 20);
+            mBut2[i][j]->setFixedSize(18, 18);
             gridView[1]->addWidget(mBut2[i][j], i, j);
         }
     }
-    printM(QColor::fromRgb(255,220,0));
+    printM(QColor::fromRgb(255,222,0));
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut3[i][j] = new QPushButton();
-            mBut3[i][j]->setFixedSize(20, 20);
+            mBut3[i][j]->setFixedSize(18, 18);
             gridView[2]->addWidget(mBut3[i][j], i, j);
         }
     }
-    printR(QColor::fromRgb(143, 208, 143));  
+    printR(QColor::fromRgb(143, 228, 143));  
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut4[i][j] = new QPushButton();
-            mBut4[i][j]->setFixedSize(20, 20);
+            mBut4[i][j]->setFixedSize(18, 18);
             gridView[3]->addWidget(mBut4[i][j], i, j);
         }
     }
-    printP(QColor::fromRgb(176, 206, 222));
+    printP(QColor::fromRgb(176, 226, 222));
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut5[i][j] = new QPushButton();
-            mBut5[i][j]->setFixedSize(20, 20);
+            mBut5[i][j]->setFixedSize(18, 18);
             gridView[4]->addWidget(mBut5[i][j], i, j);
         }
     }
@@ -259,15 +259,15 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton *backward = new QPushButton(QIcon(":/images/backwardI"), QObject::tr(""));
     QPushButton *fastforward = new QPushButton(QIcon(":/images/fastforwardI"), QObject::tr(""));
     QPushButton *fastbackward = new QPushButton(QIcon(":/images/fastbackwardI"), QObject::tr(""));
-    first->setFixedSize(80,30);
-    play->setFixedSize(80,30);
-    pause->setFixedSize(80,30);
-    stop->setFixedSize(80,30);
-    last->setFixedSize(80,30);
-    forward->setFixedSize(80, 30);
-    backward->setFixedSize(80, 30);
-    fastforward->setFixedSize(80, 30);
-    fastbackward->setFixedSize(80, 30);
+    first->setFixedSize(80,40);
+    play->setFixedSize(80,40);
+    pause->setFixedSize(80,40);
+    stop->setFixedSize(80,40);
+    last->setFixedSize(80,40);
+    forward->setFixedSize(80, 40);
+    backward->setFixedSize(80, 40);
+    fastforward->setFixedSize(80, 40);
+    fastbackward->setFixedSize(80, 40);
     
     hbox2->addWidget(first, 0, Qt::AlignLeft);
     hbox2->addWidget(fastbackward, 0, Qt::AlignCenter);
@@ -282,7 +282,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // for 8 direction square
     QGridLayout* direction = new QGridLayout();
-    direction->setSpacing(5);
+    direction->setSpacing(10);
     dir[0][0] = new QPushButton(QIcon(":/images/upleftI"), tr(""), this);
     dir[0][1] = new QPushButton(QIcon(":/images/upI"), tr(""), this);
     dir[0][2] = new QPushButton(QIcon(":/images/uprightI"), tr(""), this);
@@ -297,13 +297,15 @@ MainWindow::MainWindow(QWidget *parent)
     dir[3][2] = new QPushButton();
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 3; ++j ) {
-            dir[i][j]->setFixedSize(40,40);
+            dir[i][j]->setFixedSize(50, 50);
             direction->addWidget(dir[i][j], i, j);
         }
     }
     dir[1][1]->setFlat(true);
-    for (int i = 0; i < 3; ++i)
-        dir[3][i]->setFixedSize(40, 50);
+    for (int i = 0; i < 3; ++i) {            
+        dir[3][i]->setFixedSize(50, 70);  // 50, 80
+        //dir[3][i]->setFlat(true);
+    }
     
     // inserted verticalbox part
     QVBoxLayout *vbox2 = new QVBoxLayout();
@@ -312,7 +314,7 @@ MainWindow::MainWindow(QWidget *parent)
     QHBoxLayout *hbox3 = new QHBoxLayout();
     QHBoxLayout *hbox4 = new QHBoxLayout();
     QHBoxLayout *hbox5 = new QHBoxLayout();
-    vbox->setSpacing(1);
+    vbox->setSpacing(10);
 
     // two time boxes
     QLabel *atimel = new QLabel;
@@ -321,37 +323,42 @@ MainWindow::MainWindow(QWidget *parent)
     QLabel *btimel = new QLabel;
     QTimeEdit *btimeEdit = new QTimeEdit(QTime::currentTime());
     btimeEdit->setTimeRange(QTime(0, 0, 0, 0), QTime(23, 59, 0, 0));
-    atimel->setText(tr("  Frame Start Time"));
-    btimel->setText(tr("Increment Amount"));
+    atimel->setText(tr("Frame Start Time: "));
+    btimel->setText(tr("Increment Amount: "));
     hbox->addWidget(atimeEdit);
     hbox->addWidget(atimel);
     hbox7->addWidget(btimeEdit);
     hbox7->addWidget(btimel);
     
     // integer spinbox
-    QLabel *alabel = new QLabel(tr("Red"));
+    QLabel *alabel = new QLabel(tr("Red:  "));
     rspinBox = new QSpinBox;
     rspinBox->setRange(0, 255);
     rspinBox->setSingleStep(1);
     rspinBox->setValue(255);
-    QLabel *blabel = new QLabel(tr("Green"));
+    QLabel *blabel = new QLabel(tr("Green:"));
     gspinBox = new QSpinBox;
     gspinBox->setRange(0, 255);
     gspinBox->setSingleStep(1);
     gspinBox->setValue(255);
-    QLabel *clabel = new QLabel(tr("Blue"));
+    QLabel *clabel = new QLabel(tr("Blue: "));
     bspinBox = new QSpinBox;
     bspinBox->setRange(0, 255);
     bspinBox->setSingleStep(1);
     bspinBox->setValue(255);
-    hbox3->addWidget(rspinBox);
     hbox3->addWidget(alabel);
-    hbox4->addWidget(gspinBox);
+    hbox3->addWidget(rspinBox);
     hbox4->addWidget(blabel);
-    hbox5->addWidget(bspinBox);
+    hbox4->addWidget(gspinBox);
     hbox5->addWidget(clabel);
-    vbox2->addLayout(hbox);
-    vbox2->addLayout(hbox7);
+    hbox5->addWidget(bspinBox);
+    //vbox2->addLayout(hbox);
+    //vbox2->addLayout(hbox7);
+    vbox2->addWidget(atimel);
+    vbox2->addWidget(atimeEdit);
+    vbox2->addWidget(btimel);
+    vbox2->addWidget(btimeEdit);
+    
     QVBoxLayout* vboxRgb = new QVBoxLayout();  // for R G B
     vboxRgb->addLayout(hbox3);
     vboxRgb->addLayout(hbox4);
@@ -360,24 +367,26 @@ MainWindow::MainWindow(QWidget *parent)
     // inserted verticalbox3 part for color preview
     QVBoxLayout *vbox3 = new QVBoxLayout();
     vbox3->setAlignment(Qt::AlignHCenter);
-    QLabel *prelabel = new QLabel(tr("Color"));
-    QLabel *curlabel = new QLabel(tr("Preview"));
+    QLabel *prelabel = new QLabel(tr("Previous Color: "));
+    QLabel *curlabel = new QLabel(tr("New Color Preview:"));
     pre = new QPushButton();
     cur = new QPushButton();
-    pre->setFixedSize(80,50);
-    cur->setFixedSize(80,50);
+    pre->setFixedSize(90,60);
+    cur->setFixedSize(90,60);
     vbox3->setAlignment(pre, Qt::AlignCenter);
     vbox3->setAlignment(cur, Qt::AlignCenter);
+    vbox3->addWidget(prelabel);
     vbox3->addWidget(pre);
+    vbox3->addWidget(curlabel);
     vbox3->addWidget(cur);
     connect(pre, SIGNAL(released()), this, SLOT(preBtnClicked()));
     connect(cur, SIGNAL(released()), this, SLOT(curBtnClicked()));
-    QHBoxLayout* hboxRgb = new QHBoxLayout();
-    hboxRgb->addLayout(vboxRgb);
-    hboxRgb->addLayout(vbox3);
+    //QHBoxLayout* hboxRgb = new QHBoxLayout();
+    //hboxRgb->addLayout(vboxRgb);
+    //hboxRgb->addLayout(vbox3);
     QHBoxLayout *hbox11 = new QHBoxLayout();
     ColorWheel* color = new ColorWheel();  
-    vbox2->addLayout(hboxRgb); // R G B preview hbox
+    //vbox2->addLayout(hboxRgb); // R G B preview hbox
 
     // added a line in between the two part
     QFrame *line2 = new QFrame(this);    // <<< this does the trick
@@ -385,70 +394,101 @@ MainWindow::MainWindow(QWidget *parent)
     line2->setMidLineWidth(2);
     line2->setFrameShape(QFrame::VLine);
     line2->setFrameShadow(QFrame::Raised);
+    QFrame *line3 = new QFrame(this);    // <<< this does the trick
+    line3->setLineWidth(3);
+    line3->setMidLineWidth(2);
+    line3->setFrameShape(QFrame::VLine);
+    line3->setFrameShadow(QFrame::Raised);
+    QFrame *line4 = new QFrame(this);    // <<< this does the trick
+    line4->setLineWidth(3);
+    line4->setMidLineWidth(2);
+    line4->setFrameShape(QFrame::VLine);
+    line4->setFrameShadow(QFrame::Raised);
+    QFrame *line5 = new QFrame(this);    // <<< this does the trick
+    line5->setLineWidth(3);
+    line5->setMidLineWidth(2);
+    line5->setFrameShape(QFrame::VLine);
+    line5->setFrameShadow(QFrame::Raised);
     hbox11->addLayout(direction, Qt::AlignLeft);
     hbox11->addWidget(line2);
-    hbox11->addLayout(vbox2, Qt::AlignCenter);
-    hbox11->addWidget(color, Qt::AlignRight);
-    vbox->addLayout(hbox11);
+    //hbox11->addLayout(vbox2, Qt::AlignCenter);
+    hbox11->addLayout(vbox2);
+    hbox11->addWidget(line3);
+    hbox11->addLayout(vboxRgb);
+    hbox11->addWidget(line4);
+    hbox11->addLayout(vbox3);
+    hbox11->addWidget(line5);
+    hbox11->setSpacing(15);
+    
+    QVBoxLayout *vcolor = new QVBoxLayout();
+    QLabel *mytmp = new QLabel;
+    QLabel *mytmp2 = new QLabel;
+    vcolor->addWidget(mytmp, Qt::AlignRight);
+    vcolor->addWidget(color, Qt::AlignRight);
+    vcolor->addWidget(mytmp2, Qt::AlignRight);
+    hbox11->addLayout(vcolor);
+    vbox->addLayout(hbox11, Qt::AlignRight);
 
     
     // for predefined color button background colors
-    QHBoxLayout *hbox8 = new QHBoxLayout();
-    for (int i = 0; i < 17; i++) {
-        mButton[i] = new QPushButton(this);
-        mButton[i]->setFixedSize(25, 25);  // 31 originally
-        hbox8->addWidget(mButton[i]);
+    gridPreColor = new QGridLayout();
+    gridPreColor->setSpacing(2);
+    for(int j = 0; j < 2; j++) {        
+        for (int i = 0; i < 34; i++) {
+            mButton[j][i] = new QPushButton(this);
+            mButton[j][i]->setFixedSize(22, 22);  // 31 originally
+            gridPreColor->addWidget(mButton[j][i], j, i);
+        }
     }
-
+    vbox->addLayout(gridPreColor);
+ 
     QString temp = "QPushButton{color:red;background-color:rgb(";
     QString temp2 = QString::number(0);
     temp = temp + temp2 + "," + temp2 + "," + temp2 + ")}";
-    //std::cout << temp.toStdString() <<  std::endl;
-
-    mButton[0]->setStyleSheet(temp);
-    mButton[1]->setStyleSheet("QPushButton{color:red;background-color:rgb(255,255,255)}");
-    mButton[2]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,255,255)}");
-    mButton[3]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,139,139)}");
-    mButton[4]->setStyleSheet("QPushButton{color:red;background-color:rgb(255,0,0)}");
-    mButton[5]->setStyleSheet("QPushButton{color:red;background-color:rgb(139,0,0)}");
-    mButton[6]->setStyleSheet("QPushButton{color:red;background-color:rgb(255,0,255)}");
-    mButton[7]->setStyleSheet("QPushButton{color:red;background-color:rgb(139,0,139)}");
-    mButton[8]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,128,0)}");
-    mButton[9]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,100,0)}");
-    mButton[10]->setStyleSheet("QPushButton{color:red;background-color:rgb(255,255,0)}");
-    mButton[11]->setStyleSheet("QPushButton{color:red;background-color:rgb(233,150,122)}"); // darkyello, darkSalmon
-    mButton[12]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,0,255)}");
-    mButton[13]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,0,139)}");
-    mButton[14]->setStyleSheet("QPushButton{color:red;background-color:rgb(128,128,128)}");
-    mButton[15]->setStyleSheet("QPushButton{color:red;background-color:rgb(169,169,169)}");
-    mButton[16]->setStyleSheet("QPushButton{color:red;background-color:rgb(211,211,211)}");
-    connect(mButton[0], SIGNAL(released()), this, SLOT(preColorClicked0()));
-    connect(mButton[1], SIGNAL(released()), this, SLOT(preColorClicked1()));
-    connect(mButton[2], SIGNAL(released()), this, SLOT(preColorClicked2()));
-    connect(mButton[3], SIGNAL(released()), this, SLOT(preColorClicked3()));
-    connect(mButton[4], SIGNAL(released()), this, SLOT(preColorClicked4()));
-    connect(mButton[5], SIGNAL(released()), this, SLOT(preColorClicked5()));
-    connect(mButton[6], SIGNAL(released()), this, SLOT(preColorClicked6()));
-    connect(mButton[7], SIGNAL(released()), this, SLOT(preColorClicked7()));
-    connect(mButton[8], SIGNAL(released()), this, SLOT(preColorClicked8()));
-    connect(mButton[9], SIGNAL(released()), this, SLOT(preColorClicked9()));
-    connect(mButton[10], SIGNAL(released()), this, SLOT(preColorClicked10()));
-    connect(mButton[11], SIGNAL(released()), this, SLOT(preColorClicked11()));
-    connect(mButton[12], SIGNAL(released()), this, SLOT(preColorClicked12()));
-    connect(mButton[13], SIGNAL(released()), this, SLOT(preColorClicked13()));
-    connect(mButton[14], SIGNAL(released()), this, SLOT(preColorClicked14()));
-    connect(mButton[15], SIGNAL(released()), this, SLOT(preColorClicked15()));
-    connect(mButton[16], SIGNAL(released()), this, SLOT(preColorClicked16()));
-    vbox->addLayout(hbox8);
+    mButton[0][0]->setStyleSheet(temp);
+    mButton[0][1]->setStyleSheet("QPushButton{color:red;background-color:rgb(255,255,255)}");
+    mButton[0][2]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,255,255)}");
+    mButton[0][3]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,139,139)}");
+    mButton[0][4]->setStyleSheet("QPushButton{color:red;background-color:rgb(255,0,0)}");
+    mButton[0][5]->setStyleSheet("QPushButton{color:red;background-color:rgb(139,0,0)}");
+    mButton[0][6]->setStyleSheet("QPushButton{color:red;background-color:rgb(255,0,255)}");
+    mButton[0][7]->setStyleSheet("QPushButton{color:red;background-color:rgb(139,0,139)}");
+    mButton[0][8]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,128,0)}");
+    mButton[0][9]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,100,0)}");
+    mButton[0][10]->setStyleSheet("QPushButton{color:red;background-color:rgb(255,255,0)}");
+    mButton[0][11]->setStyleSheet("QPushButton{color:red;background-color:rgb(233,150,122)}"); // darkyello, darkSalmon
+    mButton[0][12]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,0,255)}");
+    mButton[0][13]->setStyleSheet("QPushButton{color:red;background-color:rgb(0,0,139)}");
+    mButton[0][14]->setStyleSheet("QPushButton{color:red;background-color:rgb(128,128,128)}");
+    mButton[0][15]->setStyleSheet("QPushButton{color:red;background-color:rgb(169,169,169)}");
+    mButton[0][16]->setStyleSheet("QPushButton{color:red;background-color:rgb(211,211,211)}");
+    connect(mButton[0][0], SIGNAL(released()), this, SLOT(preColorClicked0()));
+    connect(mButton[0][1], SIGNAL(released()), this, SLOT(preColorClicked1()));
+    connect(mButton[0][2], SIGNAL(released()), this, SLOT(preColorClicked2()));
+    connect(mButton[0][3], SIGNAL(released()), this, SLOT(preColorClicked3()));
+    connect(mButton[0][4], SIGNAL(released()), this, SLOT(preColorClicked4()));
+    connect(mButton[0][5], SIGNAL(released()), this, SLOT(preColorClicked5()));
+    connect(mButton[0][6], SIGNAL(released()), this, SLOT(preColorClicked6()));
+    connect(mButton[0][7], SIGNAL(released()), this, SLOT(preColorClicked7()));
+    connect(mButton[0][8], SIGNAL(released()), this, SLOT(preColorClicked8()));
+    connect(mButton[0][9], SIGNAL(released()), this, SLOT(preColorClicked9()));
+    connect(mButton[0][10], SIGNAL(released()), this, SLOT(preColorClicked10()));
+    connect(mButton[0][11], SIGNAL(released()), this, SLOT(preColorClicked11()));
+    connect(mButton[0][12], SIGNAL(released()), this, SLOT(preColorClicked12()));
+    connect(mButton[0][13], SIGNAL(released()), this, SLOT(preColorClicked13()));
+    connect(mButton[0][14], SIGNAL(released()), this, SLOT(preColorClicked14()));
+    connect(mButton[0][15], SIGNAL(released()), this, SLOT(preColorClicked15()));
+    connect(mButton[0][16], SIGNAL(released()), this, SLOT(preColorClicked16()));
+    //vbox->addLayout(hbox8);
 
 
     // left hand side grid section
     QGridLayout* grid = new QGridLayout();
-    grid->setSpacing(5);
-    for (int i = 0; i < 12; ++i ) {
-        for (int j = 0; j < 6; ++j ) {
+    grid->setSpacing(13);
+    for (int i = 0; i < 20; ++i ) {
+        for (int j = 0; j < 12; ++j ) {
             mButt[i][j] = new QPushButton();
-            mButt[i][j]->setFixedSize(30, 30);
+            mButt[i][j]->setFixedSize(22, 22);
             grid->addWidget(mButt[i][j], i, j);
         }
     }
@@ -534,6 +574,7 @@ MainWindow::MainWindow(QWidget *parent)
         line[i]->setMidLineWidth(3);
         line[i]->setFrameShadow(QFrame::Raised);
         line[i]->setFrameShape(QFrame::VLine);
+        line[i]->setPalette(QPalette(QColor(255, 0, 0)));  // give it a color to stand out
     }
     for (int i = 20; i < 28; ++i) {        
         line[i] = new QFrame(); 
@@ -543,16 +584,18 @@ MainWindow::MainWindow(QWidget *parent)
         line[i]->setFrameShape(QFrame::HLine);
     }
     for (int i = 0; i < 10; ++i) {        
-        grid->addWidget(line[i], 1+i, 1, Qt::AlignLeft);
+        grid->addWidget(line[i], 5+i, 4, Qt::AlignLeft);
     }
     for (int i = 0; i < 10; ++i) {        
-        grid->addWidget(line[i+10], 1+i, 4, Qt::AlignRight);
+        grid->addWidget(line[i+10], 5+i, 7, Qt::AlignRight);
     }
     for (int i = 20; i < 24; ++i) {        
-        grid->addWidget(line[i], 1, i-19, Qt::AlignTop);
+        line[i]->setPalette(QPalette(QColor(255, 0, 0)));  // give it a color to stand out
+        grid->addWidget(line[i], 5, i-16, Qt::AlignTop);
     }
     for (int i = 24; i < 28; ++i) {        
-        grid->addWidget(line[i], 10, i-23, Qt::AlignBottom);
+        line[i]->setPalette(QPalette(QColor(255, 0, 0)));  // give it a color to stand out
+        grid->addWidget(line[i], 14, i-20, Qt::AlignBottom);
     }
     
     // added a line in between left and right side
@@ -590,7 +633,7 @@ void MainWindow::setColor(QPushButton* ptrBtn[][4], int i, int j, QColor color) 
     ptrBtn[i][j]->setStyleSheet(temp); 
 }
 
-void MainWindow::setColor(QPushButton* ptrBtn[][6], int i, int j, QColor color) {
+void MainWindow::setColor(QPushButton* ptrBtn[][12], int i, int j, QColor color) {
     int r,g,b;
     color.getRgb(&r, &g, &b);
     QString temp = "QPushButton{color:red;background-color:rgb(";
@@ -601,7 +644,7 @@ void MainWindow::setColor(QPushButton* ptrBtn[][6], int i, int j, QColor color) 
     ptrBtn[i][j]->setStyleSheet(temp); 
 }
 
-void MainWindow::setColor(QPushButton* ptrBtn[][6], int i, int j) {
+void MainWindow::setColor(QPushButton* ptrBtn[][12], int i, int j) {
     int r,g,b;
     newColor.getRgb(&r, &g, &b);
     QString temp = "QPushButton{color:red;background-color:rgb(";
@@ -638,7 +681,7 @@ void MainWindow::setColor(QPushButton* ptrBtn) {
 
 QColor MainWindow::getPreColor(int idx) {
     QColor color;
-    color = mButton[idx]->palette().color(QPalette::Button);
+    color = mButton[0][idx]->palette().color(QPalette::Button);
     return color;
 }
 // overloaded for "pre" button slot function
@@ -669,6 +712,7 @@ void MainWindow::addFrame(QGridLayout* grid) {
         line[i]->setMidLineWidth(2);
         line[i]->setFrameShadow(QFrame::Raised);
         line[i]->setFrameShape(QFrame::VLine);
+        line[i]->setPalette(QPalette(QColor(255, 0, 0)));  // give it a color to stand out
     }
     for (int i = 20; i < 28; ++i) {        
         line[i] = new QFrame(); 
@@ -684,9 +728,11 @@ void MainWindow::addFrame(QGridLayout* grid) {
         grid->addWidget(line[i+10], i, 3, Qt::AlignRight);
     }
     for (int i = 20; i < 24; ++i) {        
+        line[i]->setPalette(QPalette(QColor(255, 0, 0)));  // give it a color to stand out
         grid->addWidget(line[i], 0, i-20, Qt::AlignTop);
     }
     for (int i = 24; i < 28; ++i) {        
+        line[i]->setPalette(QPalette(QColor(255, 0, 0)));  // give it a color to stand out
         grid->addWidget(line[i], 9, i-24, Qt::AlignBottom);
     }
 }

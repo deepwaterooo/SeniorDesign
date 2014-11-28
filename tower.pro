@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     colorwheel.cpp \
-    mainwindow.cpp
+#    mainwindow.cpp \
+    popwindow.cpp
 
 HEADERS  += floatspinbox.h \
     colorwheel.h \
-    mainwindow.h
+#    mainwindow.h \
+    popwindow.h
 
 RESOURCES += rsc_pic/images.qrc

@@ -22,8 +22,8 @@ class MainWindow : public QMainWindow {
     void add_widget( QWidget* p_widget );
     void preColorClicked(int);
     void setColor(QPushButton* [][4], int i, int j, QColor);
-    void setColor(QPushButton* [][6], int i, int j, QColor);
-    void setColor(QPushButton* [][6], int i, int j);
+    void setColor(QPushButton* [][12], int i, int j, QColor);
+    void setColor(QPushButton* [][12], int i, int j);
     void setColor(QPushButton*);
     void setColorToDefault(QPushButton*);
     QColor getPreColor(int idx);        // get color from predefined array
@@ -46,12 +46,12 @@ class MainWindow : public QMainWindow {
         void curBtnClicked(){newColor = getPreCurColor(cur);setColor(cur);setSpinBoxValue();}
         
         // for 17 predefined color slots
-        void preColorClicked0() {newColor = getPreColor(0);setColor(cur);setSpinBoxValue();mButton[0]->setCheckable(true);mButton[0]->setAutoExclusive(false);}
-        void preColorClicked1() {newColor = getPreColor(1);setColor(cur);setSpinBoxValue();mButton[1]->setCheckable(true);mButton[1]->setAutoExclusive(false);}
-        void preColorClicked2() {newColor = getPreColor(2);setColor(cur);setSpinBoxValue();mButton[2]->setCheckable(true);mButton[2]->setAutoExclusive(false);}
-        void preColorClicked3() {newColor = getPreColor(3);setColor(cur);setSpinBoxValue();mButton[3]->setCheckable(true);mButton[3]->setAutoExclusive(false);}
-        void preColorClicked4() {newColor = getPreColor(4);setColor(cur);setSpinBoxValue();mButton[4]->setCheckable(true);mButton[3]->setAutoExclusive(false);}
-        void preColorClicked5() {newColor = getPreColor(5);setColor(cur);setSpinBoxValue();mButton[5]->setCheckable(true);mButton[3]->setAutoExclusive(false);}
+        void preColorClicked0() {newColor = getPreColor(0);setColor(cur);setSpinBoxValue();mButton[0][0]->setCheckable(true);mButton[0][0]->setAutoExclusive(false);}
+        void preColorClicked1() {newColor = getPreColor(1);setColor(cur);setSpinBoxValue();mButton[0][1]->setCheckable(true);mButton[0][1]->setAutoExclusive(false);}
+        void preColorClicked2() {newColor = getPreColor(2);setColor(cur);setSpinBoxValue();mButton[0][2]->setCheckable(true);mButton[0][2]->setAutoExclusive(false);}
+        void preColorClicked3() {newColor = getPreColor(3);setColor(cur);setSpinBoxValue();mButton[0][3]->setCheckable(true);mButton[0][3]->setAutoExclusive(false);}
+        void preColorClicked4() {newColor = getPreColor(4);setColor(cur);setSpinBoxValue();mButton[0][4]->setCheckable(true);mButton[0][4]->setAutoExclusive(false);}
+        void preColorClicked5() {newColor = getPreColor(5);setColor(cur);setSpinBoxValue();mButton[0][5]->setCheckable(true);mButton[0][5]->setAutoExclusive(false);}
         void preColorClicked6() {newColor = getPreColor(6);setColor(cur);setSpinBoxValue();}
         void preColorClicked7() {newColor = getPreColor(7);setColor(cur);setSpinBoxValue();}
         void preColorClicked8() {newColor = getPreColor(8);setColor(cur);setSpinBoxValue();}
@@ -147,8 +147,10 @@ class MainWindow : public QMainWindow {
         QPushButton *minus;
         QPushButton *duplicate;
         QPushButton *clear;
-        QPushButton *mButton[17];  // for predifined colors
-        QPushButton* mButt[12][6];
+        QPushButton *mButton[2][34];  // for predifined colors
+        QGridLayout* gridPreColor;
+        
+        QPushButton* mButt[20][12];
         QGridLayout* gridView[5];
         QPushButton* mBut1[10][4];
         QPushButton* mBut2[10][4];
