@@ -1,3 +1,6 @@
+#ifndef MYDOUBLESPINBOX_H
+#define MYDOUBLESPINBOX_H
+
 #include <QObject>
 #include <QDoubleSpinBox>
 
@@ -11,3 +14,5 @@ class MyDoubleSpinBox: public QDoubleSpinBox  {
     virtual QString textFromValue ( double value ) const;
     ~MyDoubleSpinBox() {}
 };
+
+#endif

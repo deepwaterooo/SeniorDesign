@@ -275,14 +275,24 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
 - Redesing & Implemented right bottom working area so it includes the *priority options* layout on the right which sets priorities when different patterns merge;
 - Highlight *Red:* *Green:* *Blue:* texts to be the specific color as well so that it's a more obvious indication layout;
 - Design & Implemented *Frame Start time:* QDoubleSpinBox to show 8-digit hh:mm:ss timer counter; Design & Implemented *Increment Amout:* QDoubleSpinBox to show 9-digit mm:ss.001sec timer counter as well, by inherit QDoubleSpinBox to override a member function; I have tried and finished an python example layout stored in *./pic/backup_problemSolving/* folder, *QxDoubleSpinBox.py* and *Window.py* refered to a website listed below, can be refered as problem-solving indication. *Note:* Signals and Slots are working fine here, but minor issues with seconds showing and milloseconds showing for frame and Increment respectively; having not got any suggestive idears yet, but will look into it later on;
-- worked on the documents a little bit;
+- Added .wav audio file parser into GUI for timestamps; Suggestive layout comes out to been listed below, which has a timestamp double spinbox to show the detailed time and parsed wave drawing picture: 
+
+  [[./pic/Screenshot_from_2014-12-05_07:48:18.png]]
+- My design for user predified colors, Qt Quick dynamic JS creation or regular QPushButton one as I am doing now? Maybe I should implement the project piece by piece, from easy to difficult updated implementation;
+- Same happens to .wav file parser and graphics generatation. It's an interesting project with many potentials. I will come back to work on this one later when I solved my *priorities*, like my first priority will be to find a job which *sponsors H1B working Visa* for me before *4/1/2015*. 
+- worked on the documents a little bit; From very beginning I never liked to write the document, but still even after I have put hard work on it, I still needs to finish the software design document according to requirement even individually. 
 - will add *Increment Amout* to *menu* option as well tomorrow;
 **** Signals & Slots (Qt Essential)
 - Linked *ColorWheel* signal with MainWindow slot function to get full color-picker function from this color-wheel, *done* with *color-wheel* functions, but the implementation ideas for color-wheel should be learned and grasped and adapted to be my own ideas for future implementations;
+- for Qt Signals and Slots, so far I got three ideas how to implement the connection between signals and slots;
+  - Inheritance to rewrite signals and redefine slots;
+  - Use eventFilter to find signal sender(), and conduct the connection by scanning the widgets;
+  - Most basic method that I implemented already, by connecting one by one, and repeat;
+    The very first method I tried a little bit, but failed to get my pushbutton painted. But I can spend some time to debug this one, and I could also try the second method as well. There must be some way to facillate the linking process.
 **** Qt: Code Less; Create More; Deploy Anywhere.
      current snampshot:
 
-[[./pic/Screenshot_from_2014-12-04_18:22:35.png]]
+  [[./pic/Screenshot_from_2014-12-04_18:22:35.png]]
 * Reference
 - Basic layouts
   - http://qt-project.org/doc/qt-4.8/layouts-basiclayouts.html- 
@@ -312,6 +322,18 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
 - Signal Slot
   - http://blog.csdn.net/m6830098/article/details/13058459
   - http://www.ibm.com/developerworks/cn/linux/guitoolkit/qt/signal-slot/
+  - http://blog.csdn.net/qter_wd007/article/details/5598264
+  - http://doc.qt.digia.com/4.6/signalsandslots.html
+  - override slot http://www.cnblogs.com/rickyk/p/3792149.html
+  - Inheritance: http://xhrwang.me/2014/07/13/qt-signals-and-slots.html
+  - http://wenku.baidu.com/view/f802b33ea32d7375a417802e
+  - http://blog.sina.com.cn/s/blog_63913ba6010133r9.html
+  - http://www.codeproject.com/Articles/21909/Introduction-to-dynamic-two-dimensional-arrays-in
+  - http://www.tutorialspoint.com/cplusplus/cpp_overloading.htm
+  - http://www.tutorialspoint.com/cplusplus/subscripting_operator_overloading.htm
+  - http://www.qtcentre.org/threads/1345-Multiple-Inheritance-amp-Qt
+- Overload functions casts
+  - http://qt-project.org/forums/viewthread/23846
 - Signal Slot with threads
   - http://www.360doc.com/content/12/1226/12/9200790_256340719.shtml 
 - QLabel text color set
@@ -332,7 +354,19 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
   - http://blog.csdn.net/foruok/article/details/32730911
 - Qt style sheet 
   - http://www.cnblogs.com/csuftzzk/p/qss_lineedit_completer.html
+- private classes and D-pointers
+  - http://zchydem.enume.net/2010/01/19/qt-howto-private-classes-and-d-pointers/
+- the event system
+  - http://qt-project.org/doc/qt-5/eventsandfilters.html
 - Menu separator
   - http://qt-project.org/doc/qt-4.8/mainwindows-menus.html
 - Menu submenu
   - http://stackoverflow.com/questions/13799033/how-to-add-submenu-in-qt
+- EventFilter
+  - http://blog.csdn.net/zhoxier/article/details/7655775
+- EventHandler
+  - http://www.360doc.com/content/12/0809/15/1291795_229229792.shtml
+- c++ overload operator
+  - http://en.cppreference.com/w/cpp/language/operators
+- Shapes
+  - http://qt-project.org/doc/qt-4.8/graphicsview-diagramscene.html

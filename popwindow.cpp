@@ -39,7 +39,17 @@
 #include <QPlainTextEdit>
 #include <QSpinBox>
 
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QPixmap>
+#include <QGraphicsPixmapItem>
+
 #include "popwindow.h"
+
+void PopWindow::leftGridClicked(int &x, int &y, QColor color) {
+    QColor fcolor = QColor::fromRgb(255,255,255);
+    //mGrid->getClicked(x, y, fcolor);  // for changing back to QGridLayout and compile only
+}
 
 PopWindow::PopWindow(QWidget *parent)
     : QMainWindow(parent) {
@@ -49,7 +59,42 @@ PopWindow::PopWindow(QWidget *parent)
     this->setCentralWidget(centralWidget);
     QVBoxLayout *vbox = new QVBoxLayout();   // for overall vertical boxa
 
+    view = new QGraphicsView(this);
+    scene = new QGraphicsScene();
+    view->setGeometry(QRect(50, 50, 800, 200));
+    //QGraphicsScene scene;
+    QImage image(":/images/waveI");
+    pix = QPixmap::fromImage(image);
+    //QGraphicsPixmapItem item(QPixmap(":/images/waveI"));
+    view->setScene(scene);
+    scene->addPixmap(pix);
+    //scene->addItem(&item);
+    //view->scale(1, -1);
+    //view->show();
+    vbox->addWidget(view);
     
+    /*
+    // for .wav graphics
+    QGraphicsScene scene;
+    QGraphicsView view(&scene);
+    QGraphicsView view2(&scene);
+    QGraphicsPixmapItem item(QPixmap(":/images/waveI"));
+    //QGraphicsPixmapItem item2(QPixmap(":/images/h"));
+    scene.addItem(&item);
+    //scene.addItem(&item2);
+    view.show();
+    vbox->addWidget(&view);
+
+    
+      mGrid = new MyGridLayout();
+      mGrid->setContentsMargins (0, 0, 0, 0);
+      mGrid->setSizeConstraint (QLayout::SetFixedSize);
+      //mGrid->setSpacing(13);
+      // this connection does not work yet
+      //connect(mGrid, SIGNAL(released(int&, int&, QColor)), this, SLOT(leftGridClicked(int&, int&, QColor)));
+      printH(QColor::fromRgb(135,206,250));
+    */
+
     // for mGrid Animation
     mGrid = new QGridLayout();
     mGrid->setContentsMargins (0, 0, 0, 0);
@@ -63,8 +108,8 @@ PopWindow::PopWindow(QWidget *parent)
         }
     }
     printH(QColor::fromRgb(135,206,250));
-    addFrame(mGrid);  // cold remove this one
-
+    //addFrame(mGrid);  // cold remove this one
+    
     //vbox->addLayout(mGrid);
     // to pack grid in the middle
     QHBoxLayout *hbox = new QHBoxLayout();
@@ -155,29 +200,29 @@ void PopWindow::setColor(QPushButton* ptrBtn[][4], int i, int j, QColor color) {
     ptrBtn[i][j]->setStyleSheet(temp); 
 }
 /*
-void PopWindow::setColor(QPushButton* ptrBtn[][6], int i, int j, QColor color) {
-    int r,g,b;
-    color.getRgb(&r, &g, &b);
-    QString temp = "QPushButton{color:red;background-color:rgb(";
-    QString tempr = QString::number(r);
-    QString tempg = QString::number(g);
-    QString tempb = QString::number(b);
-    temp = temp + tempr + "," + tempg + "," + tempb + ")}";
-    ptrBtn[i][j]->setStyleSheet(temp); 
-}
+  void PopWindow::setColor(QPushButton* ptrBtn[][6], int i, int j, QColor color) {
+  int r,g,b;
+  color.getRgb(&r, &g, &b);
+  QString temp = "QPushButton{color:red;background-color:rgb(";
+  QString tempr = QString::number(r);
+  QString tempg = QString::number(g);
+  QString tempb = QString::number(b);
+  temp = temp + tempr + "," + tempg + "," + tempb + ")}";
+  ptrBtn[i][j]->setStyleSheet(temp); 
+  }
 
-void PopWindow::setColor(QPushButton* ptrBtn[][6], int i, int j) {
-    int r,g,b;
-    newColor.getRgb(&r, &g, &b);
-    QString temp = "QPushButton{color:red;background-color:rgb(";
-    QString tempr = QString::number(r);
-    QString tempg = QString::number(g);
-    QString tempb = QString::number(b);
-    temp = temp + tempr + "," + tempg + "," + tempb + ")}";
-    ptrBtn[i][j]->setStyleSheet(temp); 
-    // set newColor to be curColor
-    curColor = newColor;
-}
+  void PopWindow::setColor(QPushButton* ptrBtn[][6], int i, int j) {
+  int r,g,b;
+  newColor.getRgb(&r, &g, &b);
+  QString temp = "QPushButton{color:red;background-color:rgb(";
+  QString tempr = QString::number(r);
+  QString tempg = QString::number(g);
+  QString tempb = QString::number(b);
+  temp = temp + tempr + "," + tempg + "," + tempb + ")}";
+  ptrBtn[i][j]->setStyleSheet(temp); 
+  // set newColor to be curColor
+  curColor = newColor;
+  }
 */
 void PopWindow::setColorToDefault(QPushButton* ptrBtn) { // 239,235,231
     QString temp = "QPushButton{color:red;background-color:rgb(";
@@ -201,22 +246,22 @@ void PopWindow::setColor(QPushButton* ptrBtn) {
     curColor = newColor;
 }
 /*
-QColor PopWindow::getPreColor(int idx) {
-    QColor color;
-    color = mButton[idx]->palette().color(QPalette::Button);
-    return color;
-    }  
-// overloaded for "pre" button slot function
-QColor PopWindow::getPreCurColor(QPushButton* tmp) { 
-    QColor color;
-    color = tmp->palette().color(QPalette::Button);
-    return color;
-}
+  QColor PopWindow::getPreColor(int idx) {
+  QColor color;
+  color = mButton[idx]->palette().color(QPalette::Button);
+  return color;
+  }  
+  // overloaded for "pre" button slot function
+  QColor PopWindow::getPreCurColor(QPushButton* tmp) { 
+  QColor color;
+  color = tmp->palette().color(QPalette::Button);
+  return color;
+  }
 
-void PopWindow::preColorClicked(int idx) {
-    newColor = getPreColor(idx);        
-    setColor(cur);
-}
+  void PopWindow::preColorClicked(int idx) {
+  newColor = getPreColor(idx);        
+  setColor(cur);
+  }
 */
 void PopWindow::setSpinBoxValue() {
     int r,g,b;

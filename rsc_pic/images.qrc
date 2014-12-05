@@ -121,5 +121,8 @@ don't needs these images any more
     <qresource prefix="/images">
         <file alias="fastbackwardI">fast_backward.png</file>
     </qresource>
+    <qresource prefix="/images">
+        <file alias="waveI">wave2.jpg</file>
+    </qresource>
 
 </RCC>

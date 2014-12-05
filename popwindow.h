@@ -9,6 +9,12 @@
 #include <QWidget>
 #include <QPlainTextEdit>
 #include <QSpinBox>
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QPixmap>
+
+#include "myGridLayout.h"
+//#include "loc.h"
 
 class PopWindow : public QMainWindow {
     Q_OBJECT
@@ -17,6 +23,7 @@ class PopWindow : public QMainWindow {
  public:
     explicit PopWindow(QWidget *parent = 0);
     ~PopWindow();
+
     void add_widget( QWidget* p_widget );
     void preColorClicked(int);
     void setColor(QPushButton* [][4], int i, int j, QColor);
@@ -33,6 +40,7 @@ class PopWindow : public QMainWindow {
     void printR(QColor color);
 
     public slots:
+        void leftGridClicked(int &x, int &y, QColor);
         void tbrowBtnClicked(); // for .tan file "Browse" button
  private:
         QPushButton *save;
@@ -46,6 +54,7 @@ class PopWindow : public QMainWindow {
         QGridLayout* gridPreColor;
         
         QPushButton* mButt[10][4];
+        //MyGridLayout* mGrid;
         QGridLayout* mGrid;
         QString filename;
         QPushButton* scrLeft;
@@ -58,6 +67,8 @@ class PopWindow : public QMainWindow {
         QSpinBox *bspinBox;
         QColor newColor;
         QColor curColor;
-
+        QGraphicsScene* scene;
+        QGraphicsView* view;
+        QPixmap pix;
 };
 #endif

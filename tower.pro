@@ -13,16 +13,20 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-    colorwheel.cpp \
-    mainwindow.cpp \
+    colorwheel.cpp \  
     popwindow.cpp \
-    myDoubleSpinBox.cpp
+    myDoubleSpinBox.cpp \
+    myPushButton.cpp \
+    myGridLayout.cpp \
+    mainwindow.cpp
 
 HEADERS  += floatspinbox.h \
     colorwheel.h \
-    mainwindow.h \
     popwindow.h \
-    myDoubleSpinBox.h
+    myDoubleSpinBox.h \
+    myPushButton.h \
+    myGridLayout.h \
+    mainwindow.h
 
 RESOURCES += rsc_pic/images.qrc
 

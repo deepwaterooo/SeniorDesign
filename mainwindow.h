@@ -10,13 +10,18 @@
 #include <QPlainTextEdit>
 #include <QSpinBox>
 #include <QDoubleSpinBox>
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QPixmap>
 
+//#include "Q8DigitSpinBox.h"
 #include "myDoubleSpinBox.h"
 #include "colorwheel.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
     QWidget *centralWidget;
+    //QHBoxLayout *hbox;   // hbox9
  public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
@@ -40,6 +45,10 @@ class MainWindow : public QMainWindow {
     void printR(QColor color);
 
  private:
+    QGraphicsScene* scene;
+    QGraphicsView* gview;
+    QPixmap pix;
+
     QPushButton *mButton[2][34];  // for predifined colors
     QGridLayout* gridPreColor;
     QPushButton* mButt[20][12];

@@ -1,4 +1,4 @@
-% Created 2014-12-04 Thu 18:37
+% Created 2014-12-05 Fri 08:08
 \documentclass[9pt,b5paper]{article}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -379,13 +379,25 @@ will try to update 12/05/2014 as one version tomorrow
 \item Redesing \& Implemented right bottom working area so it includes the \textbf{priority options} layout on the right which sets priorities when different patterns merge;
 \item Highlight \textbf{Red:} \textbf{Green:} \textbf{Blue:} texts to be the specific color as well so that it's a more obvious indication layout;
 \item Design \& Implemented \textbf{Frame Start time:} QDoubleSpinBox to show 8-digit hh:mm:ss timer counter; Design \& Implemented \textbf{Increment Amout:} QDoubleSpinBox to show 9-digit mm:ss.001sec timer counter as well, by inherit QDoubleSpinBox to override a member function; I have tried and finished an python example layout stored in \textbf{./pic/backup$_{\text{problemSolving}}$/} folder, \textbf{QxDoubleSpinBox.py} and \textbf{Window.py} refered to a website listed below, can be refered as problem-solving indication. \textbf{Note:} Signals and Slots are working fine here, but minor issues with seconds showing and milloseconds showing for frame and Increment respectively; having not got any suggestive idears yet, but will look into it later on;
-\item worked on the documents a little bit;
+\item Added .wav audio file parser into GUI for timestamps; Suggestive layout comes out to been listed below, which has a timestamp double spinbox to show the detailed time and parsed wave drawing picture: 
+
+\includegraphics[width=.9\linewidth]{./pic/Screenshot_from_2014-12-05_07:48:18.png}
+\item My design for user predified colors, Qt Quick dynamic JS creation or regular QPushButton one as I am doing now? Maybe I should implement the project piece by piece, from easy to difficult updated implementation;
+\item Same happens to .wav file parser and graphics generatation. It's an interesting project with many potentials. I will come back to work on this one later when I solved my \textbf{priorities}, like my first priority will be to find a job which \textbf{sponsors H1B working Visa} for me before \textbf{4/1/2015}.
+\item worked on the documents a little bit; From very beginning I never liked to write the document, but still even after I have put hard work on it, I still needs to finish the software design document according to requirement even individually.
 \item will add \textbf{Increment Amout} to \textbf{menu} option as well tomorrow;
 \end{itemize}
 \item Signals \& Slots (Qt Essential)
 \label{sec-13-9-2-2}
 \begin{itemize}
 \item Linked \textbf{ColorWheel} signal with MainWindow slot function to get full color-picker function from this color-wheel, \textbf{done} with \textbf{color-wheel} functions, but the implementation ideas for color-wheel should be learned and grasped and adapted to be my own ideas for future implementations;
+\item for Qt Signals and Slots, so far I got three ideas how to implement the connection between signals and slots;
+\begin{itemize}
+\item Inheritance to rewrite signals and redefine slots;
+\item Use eventFilter to find signal sender(), and conduct the connection by scanning the widgets;
+\item Most basic method that I implemented already, by connecting one by one, and repeat;
+The very first method I tried a little bit, but failed to get my pushbutton painted. But I can spend some time to debug this one, and I could also try the second method as well. There must be some way to facillate the linking process.
+\end{itemize}
 \end{itemize}
 \item Qt: Code Less; Create More; Deploy Anywhere.
 \label{sec-13-9-2-3}
@@ -445,6 +457,20 @@ current snampshot:
 \begin{itemize}
 \item \url{http://blog.csdn.net/m6830098/article/details/13058459}
 \item \url{http://www.ibm.com/developerworks/cn/linux/guitoolkit/qt/signal-slot/}
+\item \url{http://blog.csdn.net/qter_wd007/article/details/5598264}
+\item \url{http://doc.qt.digia.com/4.6/signalsandslots.html}
+\item override slot \url{http://www.cnblogs.com/rickyk/p/3792149.html}
+\item Inheritance: \url{http://xhrwang.me/2014/07/13/qt-signals-and-slots.html}
+\item \url{http://wenku.baidu.com/view/f802b33ea32d7375a417802e}
+\item \url{http://blog.sina.com.cn/s/blog_63913ba6010133r9.html}
+\item \url{http://www.codeproject.com/Articles/21909/Introduction-to-dynamic-two-dimensional-arrays-in}
+\item \url{http://www.tutorialspoint.com/cplusplus/cpp_overloading.htm}
+\item \url{http://www.tutorialspoint.com/cplusplus/subscripting_operator_overloading.htm}
+\item \url{http://www.qtcentre.org/threads/1345-Multiple-Inheritance-amp-Qt}
+\end{itemize}
+\item Overload functions casts
+\begin{itemize}
+\item \url{http://qt-project.org/forums/viewthread/23846}
 \end{itemize}
 \item Signal Slot with threads
 \begin{itemize}
@@ -484,6 +510,14 @@ current snampshot:
 \begin{itemize}
 \item \url{http://www.cnblogs.com/csuftzzk/p/qss_lineedit_completer.html}
 \end{itemize}
+\item private classes and D-pointers
+\begin{itemize}
+\item \url{http://zchydem.enume.net/2010/01/19/qt-howto-private-classes-and-d-pointers/}
+\end{itemize}
+\item the event system
+\begin{itemize}
+\item \url{http://qt-project.org/doc/qt-5/eventsandfilters.html}
+\end{itemize}
 \item Menu separator
 \begin{itemize}
 \item \url{http://qt-project.org/doc/qt-4.8/mainwindows-menus.html}
@@ -491,6 +525,22 @@ current snampshot:
 \item Menu submenu
 \begin{itemize}
 \item \url{http://stackoverflow.com/questions/13799033/how-to-add-submenu-in-qt}
+\end{itemize}
+\item EventFilter
+\begin{itemize}
+\item \url{http://blog.csdn.net/zhoxier/article/details/7655775}
+\end{itemize}
+\item EventHandler
+\begin{itemize}
+\item \url{http://www.360doc.com/content/12/0809/15/1291795_229229792.shtml}
+\end{itemize}
+\item c++ overload operator
+\begin{itemize}
+\item \url{http://en.cppreference.com/w/cpp/language/operators}
+\end{itemize}
+\item Shapes
+\begin{itemize}
+\item \url{http://qt-project.org/doc/qt-4.8/graphicsview-diagramscene.html}
 \end{itemize}
 \end{itemize}
 % Emacs 24.3.1 (Org mode 8.2.7c)

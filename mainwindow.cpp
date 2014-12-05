@@ -39,6 +39,9 @@
 #include <QSpinBox>
 #include <QScrollArea>
 #include <string>
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QPixmap>
 
 #include "mainwindow.h"
 
@@ -167,16 +170,46 @@ MainWindow::MainWindow(QWidget *parent)
     QHBoxLayout *hbox9 = new QHBoxLayout(this);
     QVBoxLayout *vbox = new QVBoxLayout(this);
 
+
+    // for graphicsscene
+    gview = new QGraphicsView();
+    scene = new QGraphicsScene();
+    gview->setGeometry(QRect(50, 50, 800, 200));
+    QImage image(":/images/waveI");
+    pix = QPixmap::fromImage(image);
+    gview->setScene(scene);
+    scene->addPixmap(pix);
+    vbox->addWidget(gview);
+
+    QHBoxLayout *hbox02 = new QHBoxLayout(this);
+    //MyDoubleSpinBox *b02 = new MyDoubleSpinBox;
+    QSpinBox *b02 = new QSpinBox(this);
+    b02->setRange(0.000, 13);
+    b02->setSingleStep(2);
+    b02->setValue(5);   
+    QSlider *slider02 = new QSlider(Qt::Horizontal, this);
+    //spinBox->setRange(0, 25);
+    slider02->setRange(0, 5.25);
+    QObject::connect(slider02, &QSlider::valueChanged, b02, &QSpinBox::setValue);
+    void (QSpinBox:: *spinBoxSignal)(int) = &QSpinBox::valueChanged;
+    QObject::connect(b02, spinBoxSignal, slider02, &QSlider::setValue);
+    b02->setValue(25);
+    hbox02->addWidget(slider02);
+    hbox02->addWidget(b02);
+    vbox->addStretch(1);
+    vbox->addLayout(hbox02);
+
+    
     // hbox10 for 5 images
     QHBoxLayout *hbox10 = new QHBoxLayout(this);
     for (int i = 0; i < 5; ++i) {        
         gridView[i] = new QGridLayout(this);
-        gridView[i]->setSpacing(11);
+        gridView[i]->setSpacing(10);
     }
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut1[i][j] = new QPushButton(this);
-            mBut1[i][j]->setFixedSize(18, 18);
+            mBut1[i][j]->setFixedSize(13, 17);
             gridView[0]->addWidget(mBut1[i][j], i, j);
         }
     }
@@ -184,7 +217,7 @@ MainWindow::MainWindow(QWidget *parent)
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut2[i][j] = new QPushButton(this);
-            mBut2[i][j]->setFixedSize(18, 18);
+            mBut2[i][j]->setFixedSize(13, 17);
             gridView[1]->addWidget(mBut2[i][j], i, j);
         }
     }
@@ -192,7 +225,7 @@ MainWindow::MainWindow(QWidget *parent)
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut3[i][j] = new QPushButton(this);
-            mBut3[i][j]->setFixedSize(18, 18);
+            mBut3[i][j]->setFixedSize(13, 17);
             gridView[2]->addWidget(mBut3[i][j], i, j);
         }
     }
@@ -200,7 +233,7 @@ MainWindow::MainWindow(QWidget *parent)
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut4[i][j] = new QPushButton(this);
-            mBut4[i][j]->setFixedSize(18, 18);
+            mBut4[i][j]->setFixedSize(13, 17);
             gridView[3]->addWidget(mBut4[i][j], i, j);
         }
     }
@@ -208,7 +241,7 @@ MainWindow::MainWindow(QWidget *parent)
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j< 4; j++) {
             mBut5[i][j] = new QPushButton(this);
-            mBut5[i][j]->setFixedSize(18, 18);
+            mBut5[i][j]->setFixedSize(13, 17);
             gridView[4]->addWidget(mBut5[i][j], i, j);
         }
     }
@@ -219,7 +252,7 @@ MainWindow::MainWindow(QWidget *parent)
     hbox10->addLayout(gridView[3]);  // P
     hbox10->addLayout(gridView[2]);  // R
     hbox10->addLayout(gridView[4]);
-    vbox->addLayout(hbox10);
+    //vbox->addLayout(hbox10);
 
     
     // for buttons
@@ -229,14 +262,14 @@ MainWindow::MainWindow(QWidget *parent)
     spinBox->setRange(0, 200);
     slider->setRange(0, 200);
     QObject::connect(slider, &QSlider::valueChanged, spinBox, &QSpinBox::setValue);
-    void (QSpinBox:: *spinBoxSignal)(int) = &QSpinBox::valueChanged;
+    //void (QSpinBox:: *spinBoxSignal)(int) = &QSpinBox::valueChanged;
     QObject::connect(spinBox, spinBoxSignal, slider, &QSlider::setValue);
     spinBox->setValue(25);
     
     hbox1->addWidget(slider);
     hbox1->addWidget(spinBox);
     vbox->addStretch(1);
-    vbox->addLayout(hbox1);
+    //vbox->addLayout(hbox1);                     // move to the end
 
     /* 
     //don't need this one for now
@@ -267,15 +300,15 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton *backward = new QPushButton(QIcon(":/images/backwardI"), QObject::tr(""), this);
     QPushButton *fastforward = new QPushButton(QIcon(":/images/fastforwardI"), QObject::tr(""), this);
     QPushButton *fastbackward = new QPushButton(QIcon(":/images/fastbackwardI"), QObject::tr(""), this);
-    first->setFixedSize(80,40);
-    play->setFixedSize(80,40);
-    pause->setFixedSize(80,40);
-    stop->setFixedSize(80,40);
-    last->setFixedSize(80,40);
-    forward->setFixedSize(80, 40);
-    backward->setFixedSize(80, 40);
-    fastforward->setFixedSize(80, 40);
-    fastbackward->setFixedSize(80, 40);
+    first->setFixedSize(80,30);
+    play->setFixedSize(80,30);
+    pause->setFixedSize(80,30);
+    stop->setFixedSize(80,30);
+    last->setFixedSize(80,30);
+    forward->setFixedSize(80, 30);
+    backward->setFixedSize(80, 30);
+    fastforward->setFixedSize(80, 30);
+    fastbackward->setFixedSize(80, 30);
     
     hbox2->addWidget(first, 0, Qt::AlignLeft);
     hbox2->addWidget(fastbackward, 0, Qt::AlignCenter);
@@ -286,7 +319,7 @@ MainWindow::MainWindow(QWidget *parent)
     hbox2->addWidget(forward, 0, Qt::AlignCenter);
     hbox2->addWidget(fastforward, 0, Qt::AlignCenter);
     hbox2->addWidget(last, 0, Qt::AlignRight);
-    vbox->addLayout(hbox2); 
+            //vbox->addLayout(hbox2); 
 
     // for 8 direction square
     QGridLayout* direction = new QGridLayout(this);
@@ -320,7 +353,7 @@ MainWindow::MainWindow(QWidget *parent)
     QHBoxLayout *hbox3 = new QHBoxLayout(this);
     QHBoxLayout *hbox4 = new QHBoxLayout(this);
     QHBoxLayout *hbox5 = new QHBoxLayout(this);
-    vbox->setSpacing(10);
+    vbox->setSpacing(5);
 
     // two time boxes
     QLabel *atimel = new QLabel;
@@ -510,7 +543,10 @@ MainWindow::MainWindow(QWidget *parent)
         }
     }
     vbox->addLayout(gridPreColor);
- 
+    vbox->addLayout(hbox10);
+            vbox->addLayout(hbox1);
+            vbox->addLayout(hbox2);
+            
     QString temp = "QPushButton{color:red;background-color:rgb(";
     QString temp2 = QString::number(0);
     temp = temp + temp2 + "," + temp2 + "," + temp2 + ")}";
@@ -557,7 +593,7 @@ MainWindow::MainWindow(QWidget *parent)
     for (int i = 0; i < 20; ++i ) {
         for (int j = 0; j < 12; ++j ) {
             mButt[i][j] = new QPushButton(this);
-            mButt[i][j]->setFixedSize(22, 22);
+            mButt[i][j]->setFixedSize(23, 28);
             grid->addWidget(mButt[i][j], i, j);
         }
     }
