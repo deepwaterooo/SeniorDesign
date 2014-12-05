@@ -71,7 +71,7 @@ It's a old project that repeats each year maybe just for us students to get prac
 - One team member finished a wikipage;
 - One team member gave a most basic C# code of base version software during one team member with Professor, and gave the presentation for design review;
 - The team has one effective team meeting for menu bar design on Nov 16th;
-- I was asked to type the team contract, and was the team member tried to design and implement a most basic clickable GUI as the project implementation starting point;
+- I was asked to type the team contract, and was the team member to design and implement a basic clickable GUI as the project implementation starting point;
 - I am right now asked to write the Design Report proposal individually for this course;
 
 * Concepts Considered - 3 pages
@@ -103,12 +103,14 @@ It's a old project that repeats each year maybe just for us students to get prac
 - Scientific naming conventions;
 - Concepts comparson among team members;
 ** Include morphological charts, decision matrices
-** GUI Layout Selection
+- GUI Layout Selection
    We have been proposed two GUI designs, snapshotted when we discussed about them, which are listed as followed. 
    #+caption: team manager proposed new design 
    [[../pic/Screenshot_from_2014-12-02_22:43:29_one.png]]
    #+caption: Original traditional design
    [[../pic/Screenshot_from_2014-12-02_23:04:43_me.png]]
+- My design for user predified colors, Qt Quick dynamic JS creation or regular QPushButton one as I am doing now? Maybe I should implement the project piece by piece, from easy to difficult updated implementation;
+- Same happens to .wav file parser and graphics generatation. It's an interesting project with many potentials. I will come back to work on this one later when I solved my priorities. 
    
 * System Architecture - 2 pages
 ** Architecture Design
