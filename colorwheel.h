@@ -7,17 +7,15 @@ class ColorWheel : public QWidget {
     Q_OBJECT
  public:
     explicit ColorWheel(QWidget *parent = 0);
-
+    
     virtual QSize sizeHint () const;
     virtual QSize minimumSizeHint () const;
     QColor color();
-    
  signals:
     void colorChange(const QColor &color);
-    
+
     public slots:
         void setColor(const QColor &color);
-
  protected:
         void mousePressEvent(QMouseEvent *event);
         void mouseMoveEvent(QMouseEvent *event);
@@ -29,21 +27,23 @@ class ColorWheel : public QWidget {
         QImage wheelImage;
         QImage squareImage;
         QPixmap wheel;
-        bool mouseDown;
         QPoint lastPos;
-        int margin;
-        int wheelWidth;
         QRegion wheelRegion;
         QRegion squareRegion;
         QColor current;
+        int margin;
+        int wheelWidth;
+        bool mouseDown;
         bool inWheel;
         bool inSquare;
+
         QColor posColor(const QPoint &point);
         void drawWheelImage(const QSize &newSize);
         void drawIndicator(const int &hue);
         void drawPicker(const QColor &color);
         void drawSquareImage(const int &hue);
         void composeWheel();
+
         private slots:
             void hueChanged(const int &hue);
             void svChanged(const QColor &newcolor);

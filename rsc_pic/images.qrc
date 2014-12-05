@@ -3,7 +3,7 @@
         <file alias="doc-open">open.png</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="doc-close">document-close.png</file>
+        <file alias="doc-close">close.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="searchI">search.png</file>
@@ -63,6 +63,9 @@
     <qresource prefix="/images">
         <file alias="saveI">save.png</file>
     </qresource>
+    <qresource prefix="/images">
+        <file alias="saveasI">saveas.png</file>
+    </qresource>
 <!--
 don't needs these images any more
     <qresource prefix="/images">
@@ -95,10 +98,10 @@ don't needs these images any more
         <file alias="redoI">redo.png</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="newI">new.png</file>
+        <file alias="newI">newfile.png</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="cutI">cut.jpg</file>
+        <file alias="cutI">cut.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="beginI">begin.jpg</file>
@@ -107,16 +110,16 @@ don't needs these images any more
         <file alias="lastI">last.png</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="forwardI">forward.jpg</file>
+        <file alias="forwardI">forward.png</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="backwardI">backward.png</file>
+        <file alias="backwardI">backward.jpg</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="fastforwardI">fastforward.png</file>
+        <file alias="fastforwardI">fast_forward.png</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="fastbackwardI">fastbackward.jpg</file>
+        <file alias="fastbackwardI">fast_backward.png</file>
     </qresource>
 
 </RCC>

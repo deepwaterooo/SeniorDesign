@@ -9,13 +9,14 @@
 #include <QWidget>
 #include <QPlainTextEdit>
 #include <QSpinBox>
+#include <QDoubleSpinBox>
 
+#include "myDoubleSpinBox.h"
 #include "colorwheel.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
     QWidget *centralWidget;
-    //QHBoxLayout *hbox;   // hbox9
  public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
@@ -38,12 +39,39 @@ class MainWindow : public QMainWindow {
     void printP(QColor color);
     void printR(QColor color);
 
+ private:
+    QPushButton *mButton[2][34];  // for predifined colors
+    QGridLayout* gridPreColor;
+    QPushButton* mButt[20][12];
+    QGridLayout* gridView[5];
+    QPushButton* mBut1[10][4];
+    QPushButton* mBut2[10][4];
+    QPushButton* mBut3[10][4];
+    QPushButton* mBut4[10][4];
+    QPushButton* mBut5[10][4];
+    QPushButton* dir[4][3];
+    QString filename;
+    QPushButton *pre; // store the last color used
+    QPushButton *cur; // for preview current color
+    QPlainTextEdit *tedit;
+    MyDoubleSpinBox *atimeEdit;
+    QSpinBox *rspinBox;
+    QSpinBox *gspinBox;
+    QSpinBox *bspinBox;
+    QColor newColor;
+    QColor curColor;
     public slots:
         void tbrowBtnClicked(); // for .tan file "Browse" button
 
         // for "pre" "cur" button to get latest color used
         void preBtnClicked(){newColor = getPreCurColor(pre);setColor(cur);setSpinBoxValue();}
         void curBtnClicked(){newColor = getPreCurColor(cur);setColor(cur);setSpinBoxValue();}
+        // for colorwheel clicked
+        void colorwheelClicked(QColor color) {        
+            newColor = color;
+            setColor(cur);
+            setSpinBoxValue();
+        }
         
         // for 17 predefined color slots
         void preColorClicked0() {newColor = getPreColor(0);setColor(cur);setSpinBoxValue();mButton[0][0]->setCheckable(true);mButton[0][0]->setAutoExclusive(false);}
@@ -137,95 +165,6 @@ class MainWindow : public QMainWindow {
         void gridLayoutClicked113();
         void gridLayoutClicked114();
         void gridLayoutClicked115();
-
- private:
-        QPushButton *save;
-        QPushButton *play;
-        QPushButton *stop;
-        QPushButton *pause;
-        QPushButton *plus;
-        QPushButton *minus;
-        QPushButton *duplicate;
-        QPushButton *clear;
-        QPushButton *mButton[2][34];  // for predifined colors
-        QGridLayout* gridPreColor;
-        
-        QPushButton* mButt[20][12];
-        QGridLayout* gridView[5];
-        QPushButton* mBut1[10][4];
-        QPushButton* mBut2[10][4];
-        QPushButton* mBut3[10][4];
-        QPushButton* mBut4[10][4];
-        QPushButton* mBut5[10][4];
-        QPushButton* dir[4][3];
-        QString filename;
-        QPushButton* scrLeft;
-        QPushButton* scrRight;
-        QPlainTextEdit *tedit;
-        QPushButton *pre; // store the last color used
-        QPushButton *cur; // for preview current color
-        QSpinBox *rspinBox;
-        QSpinBox *gspinBox;
-        QSpinBox *bspinBox;
-        QColor newColor;
-        QColor curColor;
-
-        QMenu *fileMenu;
-        QMenu *edit;
-        QMenu *mplay;
-        QMenu *select;
-        QMenu *view;
-        QMenu *help;
-        QToolBar *toolBar;
-        QAction *newAct;
-        QAction *cutAct;
-        QAction *openAction;
-        QAction *exitAction;
-        QAction *openAction2;
-        QAction *openAction3;
-        QAction *openAction3as;
-        QAction *openAction4;
-        QAction *openAction5;
-        QAction *mexport;
-        QAction *mexit;
-        QAction *undoAct;
-        QAction *redoAct;
-        QAction *addAct;
-        QAction *minusAct;
-
-        // for Edit
-        QAction *copy;
-        QAction *cut;
-        QAction *paste;
-        QAction *minsert;
-        QAction *insertBef;
-        QAction *insertAft;
-        QAction *mdelete;
-        QAction *mclear;
-
-        // for play
-        QAction *playBef;
-        QAction *playCur;
-        QAction *mpause;
-        QAction *mstop;
-        QAction *moveForw;
-        QAction *moveBacw;
-
-        // for Selection
-        QAction *selRow;
-        QAction *selCol;
-        QAction *selAll;
-        QAction *invertSel;
-        QAction *deselect;
-
-        // for Animation tools
-        QAction *insertShapes;
-        QAction *defPath;
-        QAction *colorG;
-
-        // for help
-        QAction *doc;
-        QAction *about;
 };
     
 #endif

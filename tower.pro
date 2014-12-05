@@ -14,12 +14,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     colorwheel.cpp \
-#    mainwindow.cpp \
-    popwindow.cpp
+    mainwindow.cpp \
+    popwindow.cpp \
+    myDoubleSpinBox.cpp
 
 HEADERS  += floatspinbox.h \
     colorwheel.h \
-#    mainwindow.h \
-    popwindow.h
+    mainwindow.h \
+    popwindow.h \
+    myDoubleSpinBox.h
 
 RESOURCES += rsc_pic/images.qrc
+
+QMAKE_CXXFLAGS += -std=c++0x
