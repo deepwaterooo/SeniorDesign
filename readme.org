@@ -281,6 +281,7 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
 - My design for user predified colors, Qt Quick dynamic JS creation or regular QPushButton one as I am doing now? Maybe I should implement the project piece by piece, from easy to difficult updated implementation;
 - Same happens to .wav file parser and graphics generatation. It's an interesting project with many potentials. I will come back to work on this one later when I solved my *priorities*, like my first priority will be to find a job which *sponsors H1B working Visa* for me before *4/1/2015*. 
 - worked on the documents a little bit, the file can be view from *./mydocs/seniorDesign.org* file; From very beginning I never liked to write the document, but still even after I have put hard work on it, I still needs to finish the software design document according to requirement even individually. 
+- Snapshot #2 will be from 8:30-10:20, but the final document report is not required for today.
 - will add *Increment Amout* to *menu* option as well tomorrow;
 **** Signals & Slots (Qt Essential)
 - Linked *ColorWheel* signal with MainWindow slot function to get full color-picker function from this color-wheel, *done* with *color-wheel* functions, but the implementation ideas for color-wheel should be learned and grasped and adapted to be my own ideas for future implementations;
