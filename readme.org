@@ -294,6 +294,7 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
      current snampshot:
 
   [[./pic/Screenshot_from_2014-12-04_18:22:35.png]]
+** docs
 * Reference
 - Basic layouts
   - http://qt-project.org/doc/qt-4.8/layouts-basiclayouts.html- 

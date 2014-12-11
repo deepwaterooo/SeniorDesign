@@ -1,0 +1,465 @@
+% Created 2014-12-10 Wed 15:15
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{xeCJK}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{geometry}
+%\geometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{latexsym}
+\usepackage{natbib}
+\usepackage{fancyhdr}
+\usepackage[xetex,colorlinks=true,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
+
+
+\lstset{language=c++,numbers=left,numberstyle=\tiny,basicstyle=\ttfamily\small,tabsize=4,frame=none,escapeinside=``,extendedchars=false,keywordstyle=\color{blue!70},commentstyle=\color{red!55!green!55!blue!55!},rulesepcolor=\color{red!20!green!20!blue!20!}}
+\author{Jenny Huang}
+\date{\today}
+\title{CS480 Tower iLLuminati Design Report}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.3.1 (Org mode 8.2.7c)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Project Background}
+\label{sec-1}
+\begin{itemize}
+\item Motivation for the work: Our client Dr. Rinker is very environment-friendly on campus, and he leads the ACM team for the department, and he enjoys offering music-related fun activities for the campus like tower light show for homecoming events. For tower light show, the current tower animator C\#-programming based software plays the .tan light file type separately from the .wav audio file, which is not convenient for him and his ACM parties to use.
+\item Identify the need: Since University of Idaho Computer Science department is mainly C++-based programming, and the c\# language does produce language barrier for a certain amount of ACM users, and the software is quite some distance from being user-friendly and functional complete, there exist the need for potential re-factor, reimplementation, or update on this software.
+\item Describe the expected benefits: Reimplement and update the software in c++ language will promote ACM user attendance on product software updates and also, we, as the senior design team would be able to get good practise and benefit a long way from various aspects like programming technical practice, software engineering, project design and handling, as well as problem-solving skills. 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../pic/oldVersion.png}
+\caption{Base software Interface}
+\end{figure}
+\end{itemize}
+
+\newpage
+
+\section{Problem Definition}
+\label{sec-2}
+\subsection{Goals}
+\label{sec-2-1}
+This design document describes the design of the software for tower light animation synchronized with audio music for the University of Idaho, Senior Design course. It is intended for the development team. 
+\subsection{Scope}
+\label{sec-2-2}
+This application must satisfy the requirements as defined by the customer, Dr. Rinker. 
+\begin{itemize}
+\item Must link the light animator .tan file with corresponding audio file
+\item Must redesign and reimplement the software in C++ and Qt Creator library for Graphical User Interface
+\item Must be a non-trivial tower light animator software
+\item Should make the software user-friendly and easy to use
+\begin{itemize}
+\item When design each frame, the user promote less clicks for picking color for each grid;
+\item Should have commands for automated movements
+\item Should design pre-generated shapes and patterns
+\item Could have pre-generated animations
+\item The software could import from source files satisfies the specified requirements
+\item Since audio file will be provided already, the software promotes user-friendly feature, the design should include a parser to parse audio file for tower light frame intervals.
+\item The software should be real-time, which de-promotes slow response, and promote well-design for source program execution efficiency.
+\end{itemize}
+\end{itemize}
+\subsection{Deliverables}
+\label{sec-2-3}
+\begin{itemize}
+\item Software which is well-designed and fully satisfies the client's requirements, and the application should also be user-friendly and executes smooth and efficiently.
+\item A Software Requirement Specification document and a user-manual which is easy to read and understand, as well as fully functional to explain all the necessary manipulations.
+\end{itemize}
+\subsection{Constraints}
+\label{sec-2-4}
+As a senior team, we design well-design and implementation for the software, but there are critical issues that we need take into consideration for, for example, 80\% of the team-mates are currently in the university famous <Compiler Design> class, and they can barely spend many time on this project for the fall semester. As a result, when we design the project, we keep the client's requirements in mind, and try to design the software so that the software meets the minimum requirement to be a software while satisfying the clearly-specified scope, while at the same time that the software is very expendable to promote more features, efficiency and user-experience. 
+\subsection{Reference Material}
+\label{sec-2-5}
+\begin{itemize}
+\item Qt Project Documentation: \url{https://qt-project.org/doc/}
+\end{itemize}
+
+\section{Project Plan}
+\label{sec-3}
+\subsection{Tasks and schedule}
+\label{sec-3-1}
+\begin{itemize}
+\item Develop, review, and finish the design by the end of the first semester;
+\item Finish the design documents so that after the Christmas break, we will still be able to pick up and start from where we left off from the fall semester;
+\end{itemize}
+\subsection{Team responsibilities}
+\label{sec-3-2}
+\begin{itemize}
+\item One team member created a image GUI design for our Snapshot \#1, which is included in Figure 2;
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../pic/GUI.png}
+\caption{imaged-based GUI for Snapshot \#1}
+\end{figure}
+\item One team member created a state diagram, and configured Qt Creator environment for the team;
+\item One team member finished a wiki-page;
+\item One team member gave a most basic C\# code of base version software during one team member with Professor, and gave the presentation for design review;
+\item The team has one effective team meeting for menu bar design on Nov 16th;
+\item I was asked to type the team contract, and was the team member to design and implement a basic click-able GUI as the project implementation starting point;
+\item I am right now asked to write the Design Report proposal individually for this course;
+\end{itemize}
+
+\section{Concepts Considered}
+\label{sec-4}
+\subsection{Original ideas and those derived from other sources}
+\label{sec-4-1}
+\begin{itemize}
+\item Original ideas were mainly derived from our current base version of C\#-programming based software;
+\item Implementation language C++ was selected because our university is applied the C++-based data structure and programming teaching style; And Qt Creator was selected and required by course instructor Professor Bolden;
+\end{itemize}
+
+\newpage
+\begin{table}[htb]
+\caption{System Functions conpressed into Menubar}
+\centering
+\begin{tabular}{llllll}
+\hline
+File & Edit & Play & Select & Mtool & Help\\
+\hline
+Open & Copy (C-c) & play from start & Row (SPC-mse) & Insert Shapes & Documentation\\
+New & Cut (C-x) & play from current & Col (Sft-SPC-mse) & Define Pattern* & About\\
+Save & Paste (C-v) & Pause & All (C-a) & Color Gradient* & \\
+Save as & Insert After/Before & Stop & Invert Slt  (C-i) &  & \\
+Export & Clear & Move Forward & Slt Shift-C &  & \\
+Close & Delete & Move Backward & Slt C-mouse &  & \\
+Exit & Undo (C-z) &  &  &  & \\
+ & Redo (C-y) &  &  &  & \\
+\hline
+\end{tabular}
+\end{table}
+\subsection{Quantitative Data or Measurements}
+\label{sec-4-2}
+\begin{itemize}
+\item According to requirement that the software needs to be user-friendly, and must conduct less clicks when picking color and design color frames;
+\item According to requirement that the software needs to be smart, so that it can NOT be slow for source program execution.
+\item References: Literature/Catalogue Review
+\end{itemize}
+
+\section{Concept Selection}
+\label{sec-5}
+\subsection{Design Choices}
+\label{sec-5-1}
+We have mainly three major concept selections for this project design, and they are GUI main window layout design, pre-defined color design, and a potential wave parser insertion into the design and GUI. 
+\begin{itemize}
+\item GUI Layout Selection
+We have been proposed two GUI designs, snapshot when we discussed about them, which are listed as followed. 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../pic/Screenshot_from_2014-12-02_22:43:29_one.png}
+\caption{team manager proposed new design}
+\end{figure}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../pic/Screenshot_from_2014-12-02_23:04:43_me.png}
+\caption{Original traditional design}
+\end{figure}
+\item My design for user pre-defined colors, Qt Quick dynamic JS creation or regular QPushButton one as I am doing now? Maybe I should implement the project piece by piece, from easy to difficult updated implementation;
+\item In my currently partially implemented GUI, I don't have the .wav source file involved except for playing manipulations on this type of file, for example, play, pause and stop. But we could include the .wav type file parser engine and perform graphics generation. This project is an interesting project with lots of potentials. I will come back to work on this one later when I solved my priorities.
+\end{itemize}
+\subsection{Concept Selection Criteria}
+\label{sec-5-2}
+The criteria that we applied for the selection of concepts include: 
+\begin{itemize}
+\item Scientific naming conventions;
+\item Concepts comparison among team members; Take the very first GUI main window design as the example, after we having implemented a form-based main window layout (included in Figure 3 \& Figure 4), we discussed among team members, for the user-friendly software design requirement, we came to agreement that we should pick the traditional wide-screen one. And similarly came to other selection results.
+\end{itemize}
+
+\section{System Architecture}
+\label{sec-6}
+\subsection{Architecture Design}
+\label{sec-6-1}
+The architectural design was developed by following the software requirements according to Software Requirement Specification (SRS). Here, the Tower Light Animator will be described in terms of basic modules which will give the reader a first understanding of the functionalities of the software. 
+\newline
+\newline
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../pic/highlevelmodel.jpg}
+\caption{System Architecture High Level Model}
+\end{figure}
+The Tower Light Animator can be described in five different modules, as drawing listed in Figure 5 - System Architecture High Level Model: 
+\begin{itemize}
+\item GUI: It is in charge of giving access to our clients and any software user to interact with the program;
+\item Software Manager: This module is the management center of the several modules. It decides which other module is necessary to call to get source feed or to execute commands. Also, it is in charged of controlling the software module-to-module control flow, supervising the commands rules and handling excepts and errors as well.
+\item Event Manager: This module is responsible for handling mouse click events and keyboard events. It is responsible for receiving and handling these two device events signals, sorting, filtering, identifying the source signals, and links, triggers the corresponding response to command center;
+\item File Manager: It is always responsible for writing the software generated product contents into output specific types of files. And it is also responsible for importing and parsing the source input file and stores the source information into efficiency-concentrated data structures, and parse data into visible graphics as well if necessary. This is the valued I added to the project, and will be fully conducted when the project is on track and in good shape.
+\item Command Center: This module is the center for specifying and defining the majority kinds of GUI-related activity body, like what should the software do if the use clicks a specific button with a mouse click on the left, the corresponding response the software would conduct will be defined in one command or more. And this is the center for all these commands.
+\end{itemize}
+\subsection{Decomposition Description}
+\label{sec-6-2}
+In this section, each module inside the Tower Light Animator application described previously is broken into smaller specific tasks which will allow the reader to identify what is the expected behaviour of each module. The detailed contents are also drawing shown in Figure 6: System Architecture Block Diagram of the animator.
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../pic/block.jpg}
+\caption{System Architecture Block Diagram for Tower Light Animator}
+\end{figure}
+\begin{itemize}
+\item GUI
+\begin{itemize}
+\item User interaction: this component is in charge of capturing the decisions made by the our clients and software user (buttons, sliders, etc.).
+\item Software Feedback: this component shows all the alerts and current status of the in-progress tower light frame-making that are sent by the Software Manager module in order to inform the clients what is happening at every moment of the progress.
+\item Entity Representation: this component contains the rest of the graphic elements that are part of the Tower Light Animator and the user can apply of (i.e. color sources, including predefined colors, picking from color wheel etc.).
+\item It is in charge of giving access to our clients and any software user to interact with the program; The GUI is a "MUST" for the software.
+\end{itemize}
+\item Software Manager
+\begin{itemize}
+\item Control Flow: it controls the status of the software (i.e. player turn and time taken by the computer players)
+\item This module is the management center of the several modules. It decides which other module is necessary to call to get source feed or to execute commands. Also, it is in charged of controlling the software module-to-module control flow, supervising the commands rules and handling excepts and errors as well.
+\item This module functions and promotes software efficiency.
+\end{itemize}
+\item Event Manager
+\begin{itemize}
+\item This module is responsible for handling mouse click events and keyboard events. It is responsible for receiving and handling these two device events signals, sorting, filtering, identifying the source signals, and links, triggers the corresponding response to command center;
+\item This module functions for reacting to user-input events and promotes user-friendly features.
+\end{itemize}
+\item Files Manager
+\begin{itemize}
+\item It is always responsible for writing the software generated product contents into output specific types of files. And it is also responsible for importing and parsing the source input file and stores the source information into efficiency-concentrated data structures, and parse data into visible graphics as well if necessary. This is the valued I added to the project, and will be fully conducted when the project is on track and in good shape.
+\item The module is a "MUST" for user-software interaction production -- write into file, and also promotes user-friendly and software-smart features.
+\end{itemize}
+\item Command Center
+\begin{itemize}
+\item This module is the center for specifying and defining the majority kinds of GUI-related activity body, like what should the software do if the use clicks a specific button with a mouse click on the left, the corresponding response the software would conduct will be defined in one command or more. And this is the center for all these commands.
+\item This module is the most basic execution element, and software can not function without this module.
+\end{itemize}
+\end{itemize}
+
+\section{Data Design}
+\label{sec-7}
+\subsection{Data Description}
+\label{sec-7-1}
+The system architecture is implemented by using C++ and Qt Creator library specific classes. Accordingly, the system entities are stored, processed and organized in these classes via different data structures, including 2D array of QWidget pointers, array list, containers and maps. 
+\subsection{Data Dictionary}
+\label{sec-7-2}
+\begin{center}
+\begin{tabular}{lll}
+\hline
+Component & SubComponent & Classes/Interfaces\\
+\hline
+GUI & User Interaction & Gid\\
+GUI & User Interaction & AGrid\\
+GUI & User Interaction & GridList\\
+\hline
+GUI & Software Feedback & Animation, QList\\
+\hline
+GUI & Entity Representation & Loc\\
+GUI & Entity Representation & MyPushButton\\
+GUI & Entity Representation & MyGridLayout\\
+GUI & Entity Representation & MyDoubleSpinBox\\
+\hline
+Event Handler & Filter Handler & KeyEvent\\
+Event Handler & Filter Handler & KeySequence\\
+Event Handler & Filter Handler & MouseEvent\\
+\hline
+File Manager & Read/Write & QFile, QFileDevice\\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Component Design}
+\label{sec-8}
+\subsection{GUI}
+\label{sec-8-1}
+\begin{itemize}
+\item User interaction
+\item QMenu, QAction
+\item QHBoxLayout, QVBoxLayout, QGridLayout
+\item QPushButton, MyPushButton
+\item QSpinBox, MyDoubleSpinBox
+\item QSlider
+\item QLabel
+\item ColorWheel
+\item Qt Quick for JS dynamic user-custom colors
+\end{itemize}
+\subsection{Software Manager}
+\label{sec-8-2}
+\begin{itemize}
+\item QThread
+\item QRunnable
+\item QtConcurrent
+\item QTimerEvent
+\item QChildEvent
+\end{itemize}
+\subsection{Event Manager}
+\label{sec-8-3}
+\begin{itemize}
+\item Q$_{\text{OBJECT}}$ Signals \& Slots
+\item EventHandler
+\item EventFilter
+\item QKeyEvent
+\item QKeySequence
+\item QMouseEvent
+\item QWidget::paintEvent
+\end{itemize}
+\subsection{Files Manager}
+\label{sec-8-4}
+\begin{itemize}
+\item QFile
+\item QTempraryFile
+\item QFileDevice
+\item QBuffer
+\item QProcess
+\end{itemize}
+\subsection{Command Center}
+\label{sec-8-5}
+\begin{itemize}
+\item This module contains mainly functions.
+\end{itemize}
+
+\section{Human Interface Design}
+\label{sec-9}
+\begin{itemize}
+\item Main Window
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../pic/Screenshot_from_2014-12-02_19:22:35.png}
+\caption{Main Windows}
+\end{figure}
+\item Pop-up Window
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../pic/Screenshot_from_2014-11-27_23:34:06.png}
+\caption{Pop-up Windows}
+\end{figure}
+\item Partially Implemented detailed Class Diagram
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../pic/guiClass.jpg}
+\caption{partially implemented detailed class diagram}
+\end{figure}
+\end{itemize}
+
+\section{Future Work}
+\label{sec-10}
+\subsection{Necessary Work}
+\label{sec-10-1}
+\begin{itemize}
+\item Implement functionality to GUI
+\item Implement multiple pixel movement
+\item Figure out modifications to .tan file layout
+\item Next Semester
+\begin{itemize}
+\item Implement more advanced animations/movements
+\item Add more GUI features
+\end{itemize}
+\end{itemize}
+\subsection{Features that didn't find their way into the current design}
+\label{sec-10-2}
+\begin{itemize}
+\item Threads implementation
+\item Software IO manager and manipulations
+\item Audio file parse to generate consistence for timestamps incremental amount, a basic intuitive layout is listed as below presented in Figure 6, which has a timestamps double spin-box to show the detailed time and parsed wave drawing picture: 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../pic/Screenshot_from_2014-12-05_07:48:18.png}
+\caption{GUI with audio file parsed for timestamps}
+\end{figure}
+\end{itemize}
+\subsection{Estimate size and duration of the required effort}
+\label{sec-10-3}
+\begin{itemize}
+\item This is a interesting project, and for the practise propose, it is better designed and implemented within a team environment, and in that case, it will be fast, because there are more contributors to the project on ideas of design and implementation.
+\item for Qt Signals and Slots
+So far I got three ideas how to implement the connection between signals and slots;
+\item Inheritance to rewrite signals and redefine slots;
+\item Use event-filter to find signal sender(), and conduct the connection by scanning the widgets;
+\item Most basic method that I implemented already, by connecting one by one, and repeat;
+\end{itemize}
+The very first method I tried a little bit, but failed to get my push-button painted. But I can spend some time to debug this one, and I could also try the second method as well. There must be some way to facilitate the linking process.
+\newpage
+\section{Appendices}
+\label{sec-11}
+The supporting documents to long or detailed for main body includes the following several sections. 
+\subsection{Calculations \& drawings}
+\label{sec-11-1}
+\subsection{Large tables \& figures}
+\label{sec-11-2}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../docs/Class_img03.png}
+\caption{System Architecture Class Diagram}
+\end{figure}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{../docs/state.png}
+\caption{Software State Diagram}
+\end{figure}
+\begin{table}[htb]
+\caption{Commands and Fast keys}
+\centering
+\begin{tabular}{lll}
+\hline
+MainMenu & Commands & Fast Keyset\\
+\hline
+File & File & C-f\\
+ & New & \\
+ & Open & C-o\\
+ & Save & \\
+ & Save as & \\
+ & Export & \\
+ & Close & \\
+ & Exit & \\
+Edit & Edit & C-e\\
+ & Cut & C-x\\
+ & Copy & C-c\\
+ & Paste & C-v\\
+ & Insert After/Before & \\
+ & Delete & \\
+ & Clear Frame & \\
+ & Undo & C-z\\
+ & Redo & C-y\\
+Play & Play & C-p\\
+ & From Beginning & C-b\\
+ & From Current & C-n (now)\\
+ & Pause & \\
+ & Stop & \\
+ & Move Forward & \\
+ & Move Backward & \\
+ & Preview Mode & C-r (review)\\
+Select & Select & C-s\\
+ & Row & SPC-mse\\
+ & Col & Sft-SPC-mse\\
+ & All & C-a\\
+ & Invert & C-i\\
+ & Deselect & C-d\\
+Mtool & Mtool & C-m (movie)\\
+ & Insert Shapes & \\
+ & Define Pattern* & \\
+ & Color Gradient* & \\
+Help & Help & C-h\\
+ & Documentation & \\
+ & About & \\
+\hline
+\end{tabular}
+\end{table}
+
+Visualization (sketches, drawings, diagrams)
+\begin{itemize}
+\item Classes and Prototypes
+Modeling and/or Experimentation
+\end{itemize}
+\subsection{Vendor data sheets}
+\label{sec-11-3}
+\subsection{Source Codes}
+\label{sec-11-4}
+\begin{itemize}
+\item Coding
+\begin{itemize}
+\item Based on Design
+\item Testing
+\end{itemize}
+\end{itemize}
+% Emacs 24.3.1 (Org mode 8.2.7c)
+\end{document}
