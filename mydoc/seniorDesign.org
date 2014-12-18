@@ -6,9 +6,9 @@
 #+latex: \newpage
 
 * Project Background
-- Motivation for the work: Our client Dr. Rinker is very environment-friendly on campus, and he leads the ACM team for the department, and he enjoys offering music-related fun activities for the campus like tower light show for homecoming events. For tower light show, the current tower animator C\#-programming based software plays the .tan light file type separately from the .wav audio file, which is not convenient for him and his ACM parties to use.
+- Motivation for the work: Our client Dr. Rinker is very musical fan and popular star on campus, and he leads the ACM team for the department, and he enjoys offering music-related fun activities for the campus like tower light show for homecoming events. For tower light show, the current tower animator C\#-programming based software plays the .tan light file type separately from the .wav audio file, which is not convenient for him and his ACM parties to use.
 - Identify the need: Since University of Idaho Computer Science department is mainly C++-based programming, and the c\# language does produce language barrier for a certain amount of ACM users, and the software is quite some distance from being user-friendly and functional complete, there exist the need for potential re-factor, reimplementation, or update on this software.
-- Describe the expected benefits: Reimplement and update the software in c++ language will promote ACM user attendance on product software updates and also, we, as the senior design team would be able to get good practise and benefit a long way from various aspects like programming technical practice, software engineering, project design and handling, as well as problem-solving skills. 
+- Describe the expected benefits: Reimplement and update the software in C++ language will promote ACM user attendance on product software updates and also, we, as the senior design team would be able to get good practise and benefit a long way from various aspects like programming technical practice, software engineering, project design and handling, as well as problem-solving skills. 
   #+caption: Base software Interface
   [[../pic/oldVersion.png]]
   
@@ -34,29 +34,29 @@
 - Software which is well-designed and fully satisfies the client's requirements, and the application should also be user-friendly and executes smooth and efficiently.
 - A Software Requirement Specification document and a user-manual which is easy to read and understand, as well as fully functional to explain all the necessary manipulations.
 ** Constraints
-As a senior team, we design well-design and implementation for the software, but there are critical issues that we need take into consideration for, for example, 80\% of the team-mates are currently in the university famous <Compiler Design> class, and they can barely spend many time on this project for the fall semester. As a result, when we design the project, we keep the client's requirements in mind, and try to design the software so that the software meets the minimum requirement to be a software while satisfying the clearly-specified scope, while at the same time that the software is very expendable to promote more features, efficiency and user-experience. 
+As a senior team, we design well-design and implementation for the software, but there are critical issues that we need take into consideration for, for example, 80\% of the team-mates are currently in the most famous and difficult course with extra overloads, and they can barely spend many time on this project for the fall semester. As a result, when we design the project, we keep the client's requirements in mind, and try to design the software so that the software meets the minimum requirement to be a software while satisfying the clearly-specified scope, while at the same time that the software is very expendable to promote more features, efficiency and user-experience. 
 ** Reference Material
 - Qt Project Documentation: https://qt-project.org/doc/
 
 * Project Plan
 ** Tasks and schedule
-- Develop, review, and finish the design by the end of the first semester;
-- Finish the design documents so that after the Christmas break, we will still be able to pick up and start from where we left off from the fall semester;
+- Develop, review, and finish the design by the end of the first semester
+- Finish the design documents so that after the Christmas break, we will still be able to pick up and start from where we left off from the fall semester
 ** Team responsibilities
-- One team member created a image GUI design for our Snapshot #1, which is included in Figure 2;
+- One team member created a image GUI design for our Snapshot #1, which is included in Figure 2
   #+caption: imaged-based GUI for Snapshot #1
   [[../pic/GUI.png]]   
-- One team member created a state diagram, and configured Qt Creator environment for the team;
-- One team member finished a wiki-page;
-- One team member gave a most basic C\# code of base version software during one team member with Professor, and gave the presentation for design review;
-- The team has one effective team meeting for menu bar design on Nov 16th;
-- I was asked to type the team contract, and was the team member to design and implement a basic click-able GUI as the project implementation starting point;
-- I am right now asked to write the Design Report proposal individually for this course;
+- One team member created a state diagram, and configured Qt Creator environment for the team
+- One team member finished a wiki-page
+- One team member gave a most basic C\# code of base version software during one team member with Professor, and gave the presentation for design review
+- The team has one effective team meeting for menu bar design on Nov 16th
+- I was asked to type the team contract, and was the team member to design and implement a basic click-able GUI as the project implementation starting point
+- I am right now asked to write the Design Report proposal individually for this course
 
 * Concepts Considered
 ** Original ideas and those derived from other sources
-- Original ideas were mainly derived from our current base version of C\#-programming based software;
-- Implementation language C++ was selected because our university is applied the C++-based data structure and programming teaching style; And Qt Creator was selected and required by course instructor Professor Bolden;
+- Original ideas were mainly derived from our current base version of C\#-programming based software.
+- Implementation language C++ was selected because our university is applied the C++-based data structure and programming teaching style; And Qt Creator was selected and required by course instructor Professor Bolden.
 
 #+latex: \newpage
   #+caption: System Functions conpressed into Menubar
@@ -80,14 +80,13 @@ As a senior team, we design well-design and implementation for the software, but
 * Concept Selection
 ** Design Choices
    We have mainly three major concept selections for this project design, and they are GUI main window layout design, pre-defined color design, and a potential wave parser insertion into the design and GUI. 
-- GUI Layout Selection
-   We have been proposed two GUI designs, snapshot when we discussed about them, which are listed as followed. 
-   #+caption: team manager proposed new design 
+- GUI Layout Selection: We have been proposed two GUI designs, snapshot when we discussed about them, which are listed as followed. 
+   #+caption: Team manager proposed new design 
    [[../pic/Screenshot_from_2014-12-02_22:43:29_one.png]]
    #+caption: Original traditional design
    [[../pic/Screenshot_from_2014-12-02_23:04:43_me.png]]
-- My design for user pre-defined colors, Qt Quick dynamic JS creation or regular QPushButton one as I am doing now? Maybe I should implement the project piece by piece, from easy to difficult updated implementation;
-- In my currently partially implemented GUI, I don't have the .wav source file involved except for playing manipulations on this type of file, for example, play, pause and stop. But we could include the .wav type file parser engine and perform graphics generation. This project is an interesting project with lots of potentials. I will come back to work on this one later when I solved my priorities.
+- My design for user pre-defined colors, Qt Quick dynamic JS creation or regular QPushButton one as I am doing now? Maybe I should implement the project piece by piece, from easy to difficult updated implementation
+- In my currently partially implemented GUI, I don't have the .wav source file involved except for playing manipulations on this type of file, for example, play, pause and stop. But we could include the .wav type file parser engine and perform graphics generation. This project is an interesting project with lots of potentials. I will come back to work on this one later when I solved my priorities
 ** Concept Selection Criteria 
    The criteria that we applied for the selection of concepts include: 
 - Scientific naming conventions;
@@ -99,35 +98,38 @@ As a senior team, we design well-design and implementation for the software, but
    #+latex: \newline
    #+latex: \newline
    #+caption: System Architecture High Level Model
-   [[../pic/highlevelmodel.jpg]]
+   [[../pic/highlevelmodel-o.jpg]]
    The Tower Light Animator can be described in five different modules, as drawing listed in Figure 5 - System Architecture High Level Model: 
 - GUI: It is in charge of giving access to our clients and any software user to interact with the program;
-- Software Manager: This module is the management center of the several modules. It decides which other module is necessary to call to get source feed or to execute commands. Also, it is in charged of controlling the software module-to-module control flow, supervising the commands rules and handling excepts and errors as well.
-- Event Manager: This module is responsible for handling mouse click events and keyboard events. It is responsible for receiving and handling these two device events signals, sorting, filtering, identifying the source signals, and links, triggers the corresponding response to command center;
-- File Manager: It is always responsible for writing the software generated product contents into output specific types of files. And it is also responsible for importing and parsing the source input file and stores the source information into efficiency-concentrated data structures, and parse data into visible graphics as well if necessary. This is the valued I added to the project, and will be fully conducted when the project is on track and in good shape.
-- Command Center: This module is the center for specifying and defining the majority kinds of GUI-related activity body, like what should the software do if the use clicks a specific button with a mouse click on the left, the corresponding response the software would conduct will be defined in one command or more. And this is the center for all these commands.
+- Software Manager: This module is the management center of the several modules. It controls the status of software together with several other minor functionalities
+- Event Manager: This module is responsible for handling mouse click events and keyboard events.
+- File Manager: It is responsible for writing the software generated product contents into output specific types of files, together with some potential functionalities
+- Command Center: This module is the center for specifying and defining the majority kinds of GUI-related activity body.
 ** Decomposition Description
    In this section, each module inside the Tower Light Animator application described previously is broken into smaller specific tasks which will allow the reader to identify what is the expected behaviour of each module. The detailed contents are also drawing shown in Figure 6: System Architecture Block Diagram of the animator.
    #+caption: System Architecture Block Diagram for Tower Light Animator
-   [[../pic/block.jpg]]
+   [[../pic/highlevelmodel.jpg]]
 - GUI
   - User interaction: this component is in charge of capturing the decisions made by the our clients and software user (buttons, sliders, etc.).
   - Software Feedback: this component shows all the alerts and current status of the in-progress tower light frame-making that are sent by the Software Manager module in order to inform the clients what is happening at every moment of the progress.
   - Entity Representation: this component contains the rest of the graphic elements that are part of the Tower Light Animator and the user can apply of (i.e. color sources, including predefined colors, picking from color wheel etc.).
   - It is in charge of giving access to our clients and any software user to interact with the program; The GUI is a "MUST" for the software.
 - Software Manager
-  - Control Flow: it controls the status of the software (i.e. player turn and time taken by the computer players)
+  - Control Flow: it controls the status of the software (i.e, player turn and time taken by the computer players)
   - This module is the management center of the several modules. It decides which other module is necessary to call to get source feed or to execute commands. Also, it is in charged of controlling the software module-to-module control flow, supervising the commands rules and handling excepts and errors as well.
   - This module functions and promotes software efficiency.
 - Event Manager
-  - This module is responsible for handling mouse click events and keyboard events. It is responsible for receiving and handling these two device events signals, sorting, filtering, identifying the source signals, and links, triggers the corresponding response to command center;
+  - This module is responsible for handling mouse click events and keyboard events. 
+  - It is responsible for receiving and handling these two device events signals, sorting, filtering, identifying the source signals, and links, triggers the corresponding response to command center;
   - This module functions for reacting to user-input events and promotes user-friendly features.
 - Files Manager
-  - It is always responsible for writing the software generated product contents into output specific types of files. And it is also responsible for importing and parsing the source input file and stores the source information into efficiency-concentrated data structures, and parse data into visible graphics as well if necessary. This is the valued I added to the project, and will be fully conducted when the project is on track and in good shape.
-  - The module is a "MUST" for user-software interaction production -- write into file, and also promotes user-friendly and software-smart features.
+  - It is responsible for writing the software generated product contents into output specific types of files. 
+  - And it is also responsible for importing and parsing the source input file and stores the source information into efficiency-concentrated data structures, and parse data into visible graphics as well if necessary. 
+  - This is the valued I added to the project, and will be fully conducted when the project is on track and in good shape.
+  - The module is a "MUST"-accomplish feature for user-software interaction production -- write into file, and also promotes user-friendly and software-smart features.
 - Command Center
   - This module is the center for specifying and defining the majority kinds of GUI-related activity body, like what should the software do if the use clicks a specific button with a mouse click on the left, the corresponding response the software would conduct will be defined in one command or more. And this is the center for all these commands.
-  - This module is the most basic execution element, and software can not function without this module.
+  - This module is the most basic execution element, and software cannot function without this module.
 
 * Data Design
 ** Data Description
@@ -172,7 +174,7 @@ As a senior team, we design well-design and implementation for the software, but
 - QTimerEvent
 - QChildEvent
 ** Event Manager
-- Q_OBJECT Signals & Slots
+- Q\textunderscore OBJECT Signals & Slots
 - EventHandler
 - EventFilter
 - QKeyEvent
@@ -196,7 +198,7 @@ As a senior team, we design well-design and implementation for the software, but
   #+caption: Pop-up Windows
   [[../pic/Screenshot_from_2014-11-27_23:34:06.png]]
 - Partially Implemented detailed Class Diagram
-  #+caption: partially implemented detailed class diagram
+  #+caption: Partially implemented detailed class diagram
   [[../pic/guiClass.jpg]]
   
 * Future Work
@@ -207,19 +209,19 @@ As a senior team, we design well-design and implementation for the software, but
 - Next Semester
   - Implement more advanced animations/movements
   - Add more GUI features
-** Features that didn't find their way into the current design
+** Features not in current design
 - Threads implementation
 - Software IO manager and manipulations
 - Audio file parse to generate consistence for timestamps incremental amount, a basic intuitive layout is listed as below presented in Figure 6, which has a timestamps double spin-box to show the detailed time and parsed wave drawing picture: 
   #+CAPTION: GUI with audio file parsed for timestamps
   [[../pic/Screenshot_from_2014-12-05_07:48:18.png]]
-** Estimate size and duration of the required effort
-- This is a interesting project, and for the practise propose, it is better designed and implemented within a team environment, and in that case, it will be fast, because there are more contributors to the project on ideas of design and implementation.
+** Estimated size and duration of future work
+- This is a interesting project, and for the practise propose, it is better designed and implemented within a team environment, and in that case, it will be fast, because there are more contributors to the project on ideas of design and implementation
 - for Qt Signals and Slots
-  So far I got three ideas how to implement the connection between signals and slots;
-- Inheritance to rewrite signals and redefine slots;
-- Use event-filter to find signal sender(), and conduct the connection by scanning the widgets;
-- Most basic method that I implemented already, by connecting one by one, and repeat;
+  So far I got three ideas how to implement the connection between signals and slots
+- Inheritance to rewrite signals and redefine slots
+- Use event-filter to find signal sender(), and conduct the connection by scanning the widgets
+- Most basic method that I implemented already, by connecting one by one, and repeat
 The very first method I tried a little bit, but failed to get my push-button painted. But I can spend some time to debug this one, and I could also try the second method as well. There must be some way to facilitate the linking process.
 #+latex: \newpage
 * Appendices
@@ -230,7 +232,7 @@ The very first method I tried a little bit, but failed to get my push-button pai
    [[../docs/Class_img03.png]]
    #+caption: Software State Diagram
    [[../docs/state.png]]
-   #+caption: Commands and Fast keys
+   #+caption: Commands and Quick keys
 |----------+---------------------+--------------|
 | MainMenu | Commands            | Fast Keyset  |
 |----------+---------------------+--------------|

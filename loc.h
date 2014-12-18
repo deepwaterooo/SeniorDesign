@@ -8,8 +8,8 @@ class Loc {
     void setY(Loc src){ y = src.y; }
     int getX(Loc src){ return src.x; }
     int getY(Loc src){ return src.y; }
-    int getmX(){ return x; }
-    int getmY(){ return y; }
+    int getX(){ return x; }
+    int getY(){ return y; }
  private:
     int x;
     int y;

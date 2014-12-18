@@ -124,9 +124,9 @@ MainWindow::MainWindow(QWidget *parent)
     moveForw->addAction(tr("30 Sec"));
     moveForw->addAction(tr("45 Sec"));
     /*  // don't think I need the images here
-    QAction *fone = moveForw->addAction(QIcon(":/images/forwardI"), tr("15 Sec"));
-    QAction *ftwo = moveForw->addAction(QIcon(":/images/fastforwardI"), tr("30 Sec"));
-    QAction *fthree = moveForw->addAction(QIcon(":/images/fastforwardI"), tr("45 Sec"));
+        QAction *fone = moveForw->addAction(QIcon(":/images/forwardI"), tr("15 Sec"));
+        QAction *ftwo = moveForw->addAction(QIcon(":/images/fastforwardI"), tr("30 Sec"));
+        QAction *fthree = moveForw->addAction(QIcon(":/images/fastforwardI"), tr("45 Sec"));
     */
     QMenu *moveBacw = mplay->addMenu(QIcon(":/images/backwardI"), tr("Move &Backward"));
     moveBacw->addAction(tr("15 Sec"));
@@ -319,7 +319,7 @@ MainWindow::MainWindow(QWidget *parent)
     hbox2->addWidget(forward, 0, Qt::AlignCenter);
     hbox2->addWidget(fastforward, 0, Qt::AlignCenter);
     hbox2->addWidget(last, 0, Qt::AlignRight);
-            //vbox->addLayout(hbox2); 
+    //vbox->addLayout(hbox2); 
 
     // for 8 direction square
     QGridLayout* direction = new QGridLayout(this);
@@ -364,12 +364,12 @@ MainWindow::MainWindow(QWidget *parent)
     //atimeEdit->setValue(5.25);
     atimeEdit->setValue(5.338);
     /*    
-    atimeEdit = new Q8DigitSpinBox;
-    //atimeEdit->setValue(328.0);
-    QDoubleSpinBox *btimeEdit = new QDoubleSpinBox();
-    btimeEdit->setRange(0.000, 60.000);
-    btimeEdit->setSingleStep(0.001);
-    btimeEdit->setValue(13.320);   // partially working now
+          atimeEdit = new Q8DigitSpinBox;
+          //atimeEdit->setValue(328.0);
+          QDoubleSpinBox *btimeEdit = new QDoubleSpinBox();
+          btimeEdit->setRange(0.000, 60.000);
+          btimeEdit->setSingleStep(0.001);
+          btimeEdit->setValue(13.320);   // partially working now
     */  
     MyDoubleSpinBox *btimeEdit = new MyDoubleSpinBox;
     btimeEdit->setRange(0.000, 60.000);
@@ -412,10 +412,10 @@ MainWindow::MainWindow(QWidget *parent)
     vbox2->addLayout(hbox);
     vbox2->addLayout(hbox7);
     /*
-    vbox2->addWidget(atimel);
-    vbox2->addWidget(atimeEdit);
-    vbox2->addWidget(btimel);
-    vbox2->addWidget(btimeEdit);
+      vbox2->addWidget(atimel);
+      vbox2->addWidget(atimeEdit);
+      vbox2->addWidget(btimel);
+      vbox2->addWidget(btimeEdit);
     */
     QVBoxLayout* vboxRgb = new QVBoxLayout();  // for R G B
     vboxRgb->addLayout(hbox3);
@@ -491,45 +491,45 @@ MainWindow::MainWindow(QWidget *parent)
 
     // grid with scroll bar command button layout
     QScrollArea * scrollArea = new QScrollArea(this);
-     QWidget *contentsWidget = new QWidget(scrollArea);
-     //QGridLayout *grid0 = new QGridLayout(contentsWidget);
-     QVBoxLayout *grid0 = new QVBoxLayout();
-     grid0->setSpacing(1);
-     scrollArea->setWidgetResizable(true);
-     scrollArea->setWidget(contentsWidget);
-     contentsWidget->setLayout(grid0);
-     //contentsWidget->setMinimumSize(scrollArea->width(), scrollArea->height());
-     //grid0->setHorizontalSpacing(0);
-     //grid0->setVerticalSpacing(0);
-     QPushButton *brow[12];
-     brow[0] = new QPushButton(tr(" &Color Gradient"));
-     brow[1] = new QPushButton(tr(" &Star"));
-     brow[2] = new QPushButton(tr(" &Heart"));
-     brow[3] = new QPushButton(tr(" &Sine Wave"));
-     brow[4] = new QPushButton(tr(" &Triangle"));
-     brow[5] = new QPushButton(tr(" &Rectangle"));
-     brow[6] = new QPushButton(tr(" &Polygen Five"));
-     brow[7] = new QPushButton(tr(" &H print H"));
-     brow[8] = new QPushButton(tr(" &B print B"));
-     brow[9] = new QPushButton(tr(" &P print P"));
-     brow[10] = new QPushButton(tr(" &R print R"));
-     brow[11] = new QPushButton(tr(" &E print E"));
-     //                                                  "border:5px;\n"
-     for (int i = 0; i < 12; ++i) {
-         brow[i]->setFixedSize(150, 30);
-         brow[i]->setStyleSheet(QString::fromUtf8("font-weight:300;\n"
-                                                  "color:black;\n"
-                                                  "text-align:left;"));
-         grid0->addWidget(brow[i], Qt::AlignLeft);
-         //grid0->addWidget(brow[i], i, 0, Qt::AlignLeft);
-     }
+    QWidget *contentsWidget = new QWidget(scrollArea);
+    //QGridLayout *grid0 = new QGridLayout(contentsWidget);
+    QVBoxLayout *grid0 = new QVBoxLayout();
+    grid0->setSpacing(1);
+    scrollArea->setWidgetResizable(true);
+    scrollArea->setWidget(contentsWidget);
+    contentsWidget->setLayout(grid0);
+    //contentsWidget->setMinimumSize(scrollArea->width(), scrollArea->height());
+    //grid0->setHorizontalSpacing(0);
+    //grid0->setVerticalSpacing(0);
+    QPushButton *brow[12];
+    brow[0] = new QPushButton(tr(" &Color Gradient"));
+    brow[1] = new QPushButton(tr(" &Star"));
+    brow[2] = new QPushButton(tr(" &Heart"));
+    brow[3] = new QPushButton(tr(" &Sine Wave"));
+    brow[4] = new QPushButton(tr(" &Triangle"));
+    brow[5] = new QPushButton(tr(" &Rectangle"));
+    brow[6] = new QPushButton(tr(" &Polygen Five"));
+    brow[7] = new QPushButton(tr(" &H print H"));
+    brow[8] = new QPushButton(tr(" &B print B"));
+    brow[9] = new QPushButton(tr(" &P print P"));
+    brow[10] = new QPushButton(tr(" &R print R"));
+    brow[11] = new QPushButton(tr(" &E print E"));
+    //                                                  "border:5px;\n"
+    for (int i = 0; i < 12; ++i) {
+        brow[i]->setFixedSize(150, 30);
+        brow[i]->setStyleSheet(QString::fromUtf8("font-weight:300;\n"
+                                                 "color:black;\n"
+                                                 "text-align:left;"));
+        grid0->addWidget(brow[i], Qt::AlignLeft);
+        //grid0->addWidget(brow[i], i, 0, Qt::AlignLeft);
+    }
 
-     // hbox11 added to vbox overall layout
-     hbox11->addLayout(vcolor, Qt::AlignLeft);
-     hbox11->addWidget(line4);
-     hbox11->addWidget(scrollArea, Qt::AlignLeft);
-     //vbox->addLayout(hbox11);
-     vbox->addLayout(hbox11, Qt::AlignRight);
+    // hbox11 added to vbox overall layout
+    hbox11->addLayout(vcolor, Qt::AlignLeft);
+    hbox11->addWidget(line4);
+    hbox11->addWidget(scrollArea, Qt::AlignLeft);
+    //vbox->addLayout(hbox11);
+    vbox->addLayout(hbox11, Qt::AlignRight);
 
     
     // for predefined color button background colors
@@ -544,8 +544,8 @@ MainWindow::MainWindow(QWidget *parent)
     }
     vbox->addLayout(gridPreColor);
     vbox->addLayout(hbox10);
-            vbox->addLayout(hbox1);
-            vbox->addLayout(hbox2);
+    vbox->addLayout(hbox1);
+    vbox->addLayout(hbox2);
             
     QString temp = "QPushButton{color:red;background-color:rgb(";
     QString temp2 = QString::number(0);
@@ -669,6 +669,176 @@ MainWindow::MainWindow(QWidget *parent)
     connect(mButt[11][3], SIGNAL(released()), this, SLOT(gridLayoutClicked113()));   
     connect(mButt[11][4], SIGNAL(released()), this, SLOT(gridLayoutClicked114()));   
     connect(mButt[11][5], SIGNAL(released()), this, SLOT(gridLayoutClicked115()));   
+
+    connect(mButt[0][6], SIGNAL(released()), this, SLOT(gridLayoutClicked06()));
+    connect(mButt[0][7], SIGNAL(released()), this, SLOT(gridLayoutClicked07()));
+    connect(mButt[0][8], SIGNAL(released()), this, SLOT(gridLayoutClicked08()));
+    connect(mButt[0][9], SIGNAL(released()), this, SLOT(gridLayoutClicked09()));
+    connect(mButt[0][10], SIGNAL(released()), this, SLOT(gridLayoutClicked010()));
+    connect(mButt[0][11], SIGNAL(released()), this, SLOT(gridLayoutClicked011()));
+    connect(mButt[1][6], SIGNAL(released()), this, SLOT(gridLayoutClicked16()));
+    connect(mButt[1][7], SIGNAL(released()), this, SLOT(gridLayoutClicked17()));
+    connect(mButt[1][8], SIGNAL(released()), this, SLOT(gridLayoutClicked18()));
+    connect(mButt[1][9], SIGNAL(released()), this, SLOT(gridLayoutClicked19()));
+    connect(mButt[1][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1m10()));
+    connect(mButt[1][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1m11()));
+    connect(mButt[2][6], SIGNAL(released()), this, SLOT(gridLayoutClicked26()));
+    connect(mButt[2][7], SIGNAL(released()), this, SLOT(gridLayoutClicked27()));
+    connect(mButt[2][8], SIGNAL(released()), this, SLOT(gridLayoutClicked28()));
+    connect(mButt[2][9], SIGNAL(released()), this, SLOT(gridLayoutClicked29()));
+    connect(mButt[2][10], SIGNAL(released()), this, SLOT(gridLayoutClicked210()));
+    connect(mButt[2][11], SIGNAL(released()), this, SLOT(gridLayoutClicked211()));
+    connect(mButt[3][6], SIGNAL(released()), this, SLOT(gridLayoutClicked36()));
+    connect(mButt[3][7], SIGNAL(released()), this, SLOT(gridLayoutClicked37()));
+    connect(mButt[3][8], SIGNAL(released()), this, SLOT(gridLayoutClicked38()));
+    connect(mButt[3][9], SIGNAL(released()), this, SLOT(gridLayoutClicked39()));
+    connect(mButt[3][10], SIGNAL(released()), this, SLOT(gridLayoutClicked310()));
+    connect(mButt[3][11], SIGNAL(released()), this, SLOT(gridLayoutClicked311()));
+    connect(mButt[4][6], SIGNAL(released()), this, SLOT(gridLayoutClicked46()));
+    connect(mButt[4][7], SIGNAL(released()), this, SLOT(gridLayoutClicked47()));
+    connect(mButt[4][8], SIGNAL(released()), this, SLOT(gridLayoutClicked48()));
+    connect(mButt[4][9], SIGNAL(released()), this, SLOT(gridLayoutClicked49()));
+    connect(mButt[4][10], SIGNAL(released()), this, SLOT(gridLayoutClicked410()));
+    connect(mButt[4][11], SIGNAL(released()), this, SLOT(gridLayoutClicked411()));
+    connect(mButt[5][6], SIGNAL(released()), this, SLOT(gridLayoutClicked56()));
+    connect(mButt[5][7], SIGNAL(released()), this, SLOT(gridLayoutClicked57()));
+    connect(mButt[5][8], SIGNAL(released()), this, SLOT(gridLayoutClicked58()));
+    connect(mButt[5][9], SIGNAL(released()), this, SLOT(gridLayoutClicked59()));
+    connect(mButt[5][10], SIGNAL(released()), this, SLOT(gridLayoutClicked510()));
+    connect(mButt[5][11], SIGNAL(released()), this, SLOT(gridLayoutClicked511()));
+    connect(mButt[6][6], SIGNAL(released()), this, SLOT(gridLayoutClicked66()));
+    connect(mButt[6][7], SIGNAL(released()), this, SLOT(gridLayoutClicked67()));
+    connect(mButt[6][8], SIGNAL(released()), this, SLOT(gridLayoutClicked68()));
+    connect(mButt[6][9], SIGNAL(released()), this, SLOT(gridLayoutClicked69()));
+    connect(mButt[6][10], SIGNAL(released()), this, SLOT(gridLayoutClicked610()));
+    connect(mButt[6][11], SIGNAL(released()), this, SLOT(gridLayoutClicked611()));
+    connect(mButt[7][6], SIGNAL(released()), this, SLOT(gridLayoutClicked76()));
+    connect(mButt[7][7], SIGNAL(released()), this, SLOT(gridLayoutClicked77()));
+    connect(mButt[7][8], SIGNAL(released()), this, SLOT(gridLayoutClicked78()));
+    connect(mButt[7][9], SIGNAL(released()), this, SLOT(gridLayoutClicked79()));
+    connect(mButt[7][10], SIGNAL(released()), this, SLOT(gridLayoutClicked710()));
+    connect(mButt[7][11], SIGNAL(released()), this, SLOT(gridLayoutClicked711()));
+    connect(mButt[8][6], SIGNAL(released()), this, SLOT(gridLayoutClicked86()));
+    connect(mButt[8][7], SIGNAL(released()), this, SLOT(gridLayoutClicked87()));
+    connect(mButt[8][8], SIGNAL(released()), this, SLOT(gridLayoutClicked88()));
+    connect(mButt[8][9], SIGNAL(released()), this, SLOT(gridLayoutClicked89()));
+    connect(mButt[8][10], SIGNAL(released()), this, SLOT(gridLayoutClicked810()));
+    connect(mButt[8][11], SIGNAL(released()), this, SLOT(gridLayoutClicked811()));
+    connect(mButt[9][6], SIGNAL(released()), this, SLOT(gridLayoutClicked96()));
+    connect(mButt[9][7], SIGNAL(released()), this, SLOT(gridLayoutClicked97()));
+    connect(mButt[9][8], SIGNAL(released()), this, SLOT(gridLayoutClicked98()));
+    connect(mButt[9][9], SIGNAL(released()), this, SLOT(gridLayoutClicked99()));
+    connect(mButt[9][10], SIGNAL(released()), this, SLOT(gridLayoutClicked910()));
+    connect(mButt[9][11], SIGNAL(released()), this, SLOT(gridLayoutClicked911()));
+    connect(mButt[10][6], SIGNAL(released()), this, SLOT(gridLayoutClicked106()));
+    connect(mButt[10][7], SIGNAL(released()), this, SLOT(gridLayoutClicked107()));
+    connect(mButt[10][8], SIGNAL(released()), this, SLOT(gridLayoutClicked108()));
+    connect(mButt[10][9], SIGNAL(released()), this, SLOT(gridLayoutClicked109()));
+    connect(mButt[10][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1010()));
+    connect(mButt[10][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1011()));
+    connect(mButt[11][6], SIGNAL(released()), this, SLOT(gridLayoutClicked116()));
+    connect(mButt[11][7], SIGNAL(released()), this, SLOT(gridLayoutClicked117()));
+    connect(mButt[11][8], SIGNAL(released()), this, SLOT(gridLayoutClicked118()));
+    connect(mButt[11][9], SIGNAL(released()), this, SLOT(gridLayoutClicked119()));
+    connect(mButt[11][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1110()));
+    connect(mButt[11][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1111()));
+    connect(mButt[12][6], SIGNAL(released()), this, SLOT(gridLayoutClicked126()));
+    connect(mButt[12][7], SIGNAL(released()), this, SLOT(gridLayoutClicked127()));
+    connect(mButt[12][8], SIGNAL(released()), this, SLOT(gridLayoutClicked128()));
+    connect(mButt[12][9], SIGNAL(released()), this, SLOT(gridLayoutClicked129()));
+    connect(mButt[12][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1210()));
+    connect(mButt[12][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1211()));
+    connect(mButt[13][6], SIGNAL(released()), this, SLOT(gridLayoutClicked136()));
+    connect(mButt[13][7], SIGNAL(released()), this, SLOT(gridLayoutClicked137()));
+    connect(mButt[13][8], SIGNAL(released()), this, SLOT(gridLayoutClicked138()));
+    connect(mButt[13][9], SIGNAL(released()), this, SLOT(gridLayoutClicked139()));
+    connect(mButt[13][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1310()));
+    connect(mButt[13][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1311()));
+    connect(mButt[14][6], SIGNAL(released()), this, SLOT(gridLayoutClicked146()));
+    connect(mButt[14][7], SIGNAL(released()), this, SLOT(gridLayoutClicked147()));
+    connect(mButt[14][8], SIGNAL(released()), this, SLOT(gridLayoutClicked148()));
+    connect(mButt[14][9], SIGNAL(released()), this, SLOT(gridLayoutClicked149()));
+    connect(mButt[14][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1410()));
+    connect(mButt[14][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1411()));
+    connect(mButt[15][6], SIGNAL(released()), this, SLOT(gridLayoutClicked156()));
+    connect(mButt[15][7], SIGNAL(released()), this, SLOT(gridLayoutClicked157()));
+    connect(mButt[15][8], SIGNAL(released()), this, SLOT(gridLayoutClicked158()));
+    connect(mButt[15][9], SIGNAL(released()), this, SLOT(gridLayoutClicked159()));
+    connect(mButt[15][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1510()));
+    connect(mButt[15][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1511()));
+    connect(mButt[16][6], SIGNAL(released()), this, SLOT(gridLayoutClicked166()));
+    connect(mButt[16][7], SIGNAL(released()), this, SLOT(gridLayoutClicked167()));
+    connect(mButt[16][8], SIGNAL(released()), this, SLOT(gridLayoutClicked168()));
+    connect(mButt[16][9], SIGNAL(released()), this, SLOT(gridLayoutClicked169()));
+    connect(mButt[16][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1610()));
+    connect(mButt[16][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1611()));
+    connect(mButt[17][6], SIGNAL(released()), this, SLOT(gridLayoutClicked176()));
+    connect(mButt[17][7], SIGNAL(released()), this, SLOT(gridLayoutClicked177()));
+    connect(mButt[17][8], SIGNAL(released()), this, SLOT(gridLayoutClicked178()));
+    connect(mButt[17][9], SIGNAL(released()), this, SLOT(gridLayoutClicked179()));
+    connect(mButt[17][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1710()));
+    connect(mButt[17][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1711()));
+    connect(mButt[18][6], SIGNAL(released()), this, SLOT(gridLayoutClicked186()));
+    connect(mButt[18][7], SIGNAL(released()), this, SLOT(gridLayoutClicked187()));
+    connect(mButt[18][8], SIGNAL(released()), this, SLOT(gridLayoutClicked188()));
+    connect(mButt[18][9], SIGNAL(released()), this, SLOT(gridLayoutClicked189()));
+    connect(mButt[18][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1810()));
+    connect(mButt[18][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1811()));
+    connect(mButt[19][6], SIGNAL(released()), this, SLOT(gridLayoutClicked196()));
+    connect(mButt[19][7], SIGNAL(released()), this, SLOT(gridLayoutClicked197()));
+    connect(mButt[19][8], SIGNAL(released()), this, SLOT(gridLayoutClicked198()));
+    connect(mButt[19][9], SIGNAL(released()), this, SLOT(gridLayoutClicked199()));
+    connect(mButt[19][10], SIGNAL(released()), this, SLOT(gridLayoutClicked1910()));
+    connect(mButt[19][11], SIGNAL(released()), this, SLOT(gridLayoutClicked1911()));
+    connect(mButt[12][0], SIGNAL(released()), this, SLOT(gridLayoutClicked120()));
+    connect(mButt[12][1], SIGNAL(released()), this, SLOT(gridLayoutClicked121()));
+    connect(mButt[12][2], SIGNAL(released()), this, SLOT(gridLayoutClicked122()));
+    connect(mButt[12][3], SIGNAL(released()), this, SLOT(gridLayoutClicked123()));
+    connect(mButt[12][4], SIGNAL(released()), this, SLOT(gridLayoutClicked124()));
+    connect(mButt[12][5], SIGNAL(released()), this, SLOT(gridLayoutClicked125()));
+    connect(mButt[13][0], SIGNAL(released()), this, SLOT(gridLayoutClicked130()));
+    connect(mButt[13][1], SIGNAL(released()), this, SLOT(gridLayoutClicked131()));
+    connect(mButt[13][2], SIGNAL(released()), this, SLOT(gridLayoutClicked132()));
+    connect(mButt[13][3], SIGNAL(released()), this, SLOT(gridLayoutClicked133()));
+    connect(mButt[13][4], SIGNAL(released()), this, SLOT(gridLayoutClicked134()));
+    connect(mButt[13][5], SIGNAL(released()), this, SLOT(gridLayoutClicked135()));
+    connect(mButt[14][0], SIGNAL(released()), this, SLOT(gridLayoutClicked140()));
+    connect(mButt[14][1], SIGNAL(released()), this, SLOT(gridLayoutClicked141()));
+    connect(mButt[14][2], SIGNAL(released()), this, SLOT(gridLayoutClicked142()));
+    connect(mButt[14][3], SIGNAL(released()), this, SLOT(gridLayoutClicked143()));
+    connect(mButt[14][4], SIGNAL(released()), this, SLOT(gridLayoutClicked144()));
+    connect(mButt[14][5], SIGNAL(released()), this, SLOT(gridLayoutClicked145()));
+    connect(mButt[15][0], SIGNAL(released()), this, SLOT(gridLayoutClicked150()));
+    connect(mButt[15][1], SIGNAL(released()), this, SLOT(gridLayoutClicked151()));
+    connect(mButt[15][2], SIGNAL(released()), this, SLOT(gridLayoutClicked152()));
+    connect(mButt[15][3], SIGNAL(released()), this, SLOT(gridLayoutClicked153()));
+    connect(mButt[15][4], SIGNAL(released()), this, SLOT(gridLayoutClicked154()));
+    connect(mButt[15][5], SIGNAL(released()), this, SLOT(gridLayoutClicked155()));
+    connect(mButt[16][0], SIGNAL(released()), this, SLOT(gridLayoutClicked160()));
+    connect(mButt[16][1], SIGNAL(released()), this, SLOT(gridLayoutClicked161()));
+    connect(mButt[16][2], SIGNAL(released()), this, SLOT(gridLayoutClicked162()));
+    connect(mButt[16][3], SIGNAL(released()), this, SLOT(gridLayoutClicked163()));
+    connect(mButt[16][4], SIGNAL(released()), this, SLOT(gridLayoutClicked164()));
+    connect(mButt[16][5], SIGNAL(released()), this, SLOT(gridLayoutClicked165()));
+    connect(mButt[17][0], SIGNAL(released()), this, SLOT(gridLayoutClicked170()));
+    connect(mButt[17][1], SIGNAL(released()), this, SLOT(gridLayoutClicked171()));
+    connect(mButt[17][2], SIGNAL(released()), this, SLOT(gridLayoutClicked172()));
+    connect(mButt[17][3], SIGNAL(released()), this, SLOT(gridLayoutClicked173()));
+    connect(mButt[17][4], SIGNAL(released()), this, SLOT(gridLayoutClicked174()));
+    connect(mButt[17][5], SIGNAL(released()), this, SLOT(gridLayoutClicked175()));
+    connect(mButt[18][0], SIGNAL(released()), this, SLOT(gridLayoutClicked180()));
+    connect(mButt[18][1], SIGNAL(released()), this, SLOT(gridLayoutClicked181()));
+    connect(mButt[18][2], SIGNAL(released()), this, SLOT(gridLayoutClicked182()));
+    connect(mButt[18][3], SIGNAL(released()), this, SLOT(gridLayoutClicked183()));
+    connect(mButt[18][4], SIGNAL(released()), this, SLOT(gridLayoutClicked184()));
+    connect(mButt[18][5], SIGNAL(released()), this, SLOT(gridLayoutClicked185()));
+    connect(mButt[19][0], SIGNAL(released()), this, SLOT(gridLayoutClicked190()));
+    connect(mButt[19][1], SIGNAL(released()), this, SLOT(gridLayoutClicked191()));
+    connect(mButt[19][2], SIGNAL(released()), this, SLOT(gridLayoutClicked192()));
+    connect(mButt[19][3], SIGNAL(released()), this, SLOT(gridLayoutClicked193()));
+    connect(mButt[19][4], SIGNAL(released()), this, SLOT(gridLayoutClicked194()));
+    connect(mButt[19][5], SIGNAL(released()), this, SLOT(gridLayoutClicked195()));
+
     setLayout(grid);
 
     // try to set a frame inside the grid
@@ -914,6 +1084,174 @@ void MainWindow::gridLayoutClicked112(){setColor(mButt,11,2);setColor(pre);curCo
 void MainWindow::gridLayoutClicked113(){setColor(mButt,11,3);setColor(pre);curColor = newColor;setColorToDefault(cur);}
 void MainWindow::gridLayoutClicked114(){setColor(mButt,11,4);setColor(pre);curColor = newColor;setColorToDefault(cur);}
 void MainWindow::gridLayoutClicked115(){setColor(mButt,11,5);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked06(){setColor(mButt,0,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked07(){setColor(mButt,0,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked08(){setColor(mButt,0,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked09(){setColor(mButt,0,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked010(){setColor(mButt,0,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked011(){setColor(mButt,0,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked16(){setColor(mButt,1,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked17(){setColor(mButt,1,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked18(){setColor(mButt,1,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked19(){setColor(mButt,1,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1m10(){setColor(mButt,1,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1m11(){setColor(mButt,1,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked26(){setColor(mButt,2,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked27(){setColor(mButt,2,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked28(){setColor(mButt,2,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked29(){setColor(mButt,2,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked210(){setColor(mButt,2,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked211(){setColor(mButt,2,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked36(){setColor(mButt,3,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked37(){setColor(mButt,3,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked38(){setColor(mButt,3,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked39(){setColor(mButt,3,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked310(){setColor(mButt,3,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked311(){setColor(mButt,3,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked46(){setColor(mButt,4,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked47(){setColor(mButt,4,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked48(){setColor(mButt,4,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked49(){setColor(mButt,4,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked410(){setColor(mButt,4,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked411(){setColor(mButt,4,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked56(){setColor(mButt,5,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked57(){setColor(mButt,5,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked58(){setColor(mButt,5,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked59(){setColor(mButt,5,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked510(){setColor(mButt,5,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked511(){setColor(mButt,5,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked66(){setColor(mButt,6,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked67(){setColor(mButt,6,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked68(){setColor(mButt,6,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked69(){setColor(mButt,6,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked610(){setColor(mButt,6,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked611(){setColor(mButt,6,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked76(){setColor(mButt,7,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked77(){setColor(mButt,7,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked78(){setColor(mButt,7,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked79(){setColor(mButt,7,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked710(){setColor(mButt,7,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked711(){setColor(mButt,7,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked86(){setColor(mButt,8,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked87(){setColor(mButt,8,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked88(){setColor(mButt,8,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked89(){setColor(mButt,8,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked810(){setColor(mButt,8,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked811(){setColor(mButt,8,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked96(){setColor(mButt,9,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked97(){setColor(mButt,9,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked98(){setColor(mButt,9,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked99(){setColor(mButt,9,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked910(){setColor(mButt,9,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked911(){setColor(mButt,9,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked106(){setColor(mButt,10,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked107(){setColor(mButt,10,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked108(){setColor(mButt,10,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked109(){setColor(mButt,10,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1010(){setColor(mButt,10,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1011(){setColor(mButt,10,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked116(){setColor(mButt,11,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked117(){setColor(mButt,11,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked118(){setColor(mButt,11,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked119(){setColor(mButt,11,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1110(){setColor(mButt,11,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1111(){setColor(mButt,11,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked126(){setColor(mButt,12,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked127(){setColor(mButt,12,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked128(){setColor(mButt,12,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked129(){setColor(mButt,12,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1210(){setColor(mButt,12,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1211(){setColor(mButt,12,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked136(){setColor(mButt,13,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked137(){setColor(mButt,13,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked138(){setColor(mButt,13,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked139(){setColor(mButt,13,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1310(){setColor(mButt,13,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1311(){setColor(mButt,13,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked146(){setColor(mButt,14,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked147(){setColor(mButt,14,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked148(){setColor(mButt,14,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked149(){setColor(mButt,14,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1410(){setColor(mButt,14,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1411(){setColor(mButt,14,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked156(){setColor(mButt,15,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked157(){setColor(mButt,15,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked158(){setColor(mButt,15,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked159(){setColor(mButt,15,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1510(){setColor(mButt,15,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1511(){setColor(mButt,15,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked166(){setColor(mButt,16,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked167(){setColor(mButt,16,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked168(){setColor(mButt,16,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked169(){setColor(mButt,16,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1610(){setColor(mButt,16,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1611(){setColor(mButt,16,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked176(){setColor(mButt,17,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked177(){setColor(mButt,17,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked178(){setColor(mButt,17,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked179(){setColor(mButt,17,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1710(){setColor(mButt,17,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1711(){setColor(mButt,17,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked186(){setColor(mButt,18,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked187(){setColor(mButt,18,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked188(){setColor(mButt,18,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked189(){setColor(mButt,18,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1810(){setColor(mButt,18,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1811(){setColor(mButt,18,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked196(){setColor(mButt,19,6);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked197(){setColor(mButt,19,7);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked198(){setColor(mButt,19,8);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked199(){setColor(mButt,19,9);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1910(){setColor(mButt,19,10);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked1911(){setColor(mButt,19,11);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked120(){setColor(mButt,12,0);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked121(){setColor(mButt,12,1);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked122(){setColor(mButt,12,2);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked123(){setColor(mButt,12,3);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked124(){setColor(mButt,12,4);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked125(){setColor(mButt,12,5);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked130(){setColor(mButt,13,0);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked131(){setColor(mButt,13,1);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked132(){setColor(mButt,13,2);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked133(){setColor(mButt,13,3);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked134(){setColor(mButt,13,4);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked135(){setColor(mButt,13,5);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked140(){setColor(mButt,14,0);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked141(){setColor(mButt,14,1);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked142(){setColor(mButt,14,2);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked143(){setColor(mButt,14,3);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked144(){setColor(mButt,14,4);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked145(){setColor(mButt,14,5);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked150(){setColor(mButt,15,0);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked151(){setColor(mButt,15,1);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked152(){setColor(mButt,15,2);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked153(){setColor(mButt,15,3);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked154(){setColor(mButt,15,4);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked155(){setColor(mButt,15,5);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked160(){setColor(mButt,16,0);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked161(){setColor(mButt,16,1);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked162(){setColor(mButt,16,2);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked163(){setColor(mButt,16,3);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked164(){setColor(mButt,16,4);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked165(){setColor(mButt,16,5);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked170(){setColor(mButt,17,0);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked171(){setColor(mButt,17,1);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked172(){setColor(mButt,17,2);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked173(){setColor(mButt,17,3);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked174(){setColor(mButt,17,4);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked175(){setColor(mButt,17,5);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked180(){setColor(mButt,18,0);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked181(){setColor(mButt,18,1);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked182(){setColor(mButt,18,2);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked183(){setColor(mButt,18,3);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked184(){setColor(mButt,18,4);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked185(){setColor(mButt,18,5);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked190(){setColor(mButt,19,0);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked191(){setColor(mButt,19,1);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked192(){setColor(mButt,19,2);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked193(){setColor(mButt,19,3);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked194(){setColor(mButt,19,4);setColor(pre);curColor = newColor;setColorToDefault(cur);}
+void MainWindow::gridLayoutClicked195(){setColor(mButt,19,5);setColor(pre);curColor = newColor;setColorToDefault(cur);}
 
 void MainWindow::printH(QColor color){ // LightSkyBlue 135,206,250
     for (int i = 0; i < 7; ++i) {
@@ -927,7 +1265,7 @@ void MainWindow::printH(QColor color){ // LightSkyBlue 135,206,250
 void MainWindow::printM(QColor color){ // 255,215,0
     for (int i = 0; i < 7; ++i) {
         setColor(mBut2, i, 0, color);
-        setColor(mBut2, i, 3, color);
+        p        setColor(mBut2, i, 3, color);
     }
     for (int i = 1; i < 3; ++i) {        
         setColor(mBut2, 0, i, color);
@@ -975,7 +1313,6 @@ void MainWindow::printE(QColor color){
 void MainWindow::open() {
     QMessageBox::information(this, tr("Information"), tr("Open"));
 }
-
 
 MainWindow::~MainWindow() {
     // release memory resource: memory leak problem

@@ -59,7 +59,7 @@ void MyGridLayout::setColor(int &i, int &j, QColor color) {
 void MyGridLayout::getClicked(int &x, int &y, QColor color) {
     for (int i = 0; i < mRow; ++i) {    
         for (int j = 0; j < mRow; ++j) {
-            if (ptrBtn[i][j]->getLocation().getmX() == x && ptrBtn[i][j]->getLocation().getmY() == y)
+            if (ptrBtn[i][j]->getLocation().getX() == x && ptrBtn[i][j]->getLocation().getY() == y)
                 ptrBtn[i][j]->getMClicked(x, y, color);
         }
     }

@@ -294,7 +294,20 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
      current snampshot:
 
   [[./pic/Screenshot_from_2014-12-04_18:22:35.png]]
-** docs
+*** docs
+- Worked a little bit on the docs;
+** version 0.9 12/18/2014, updates include
+- I got version 2 feedback from the course instructor on Tuesday noon at around 1:00pm, and deadline set to be Thursday 5:00pm; 
+- I updated the docs report according to the instructor's marks and turned it in a moment ago. 
+- Make only minor changes to the Loc class function names;
+- By prints strings out, connected signlas and slots for all left side working area, and decorated with some patterns, like heart, simple ware, and "T" and another shape circling with 90 degree change, just for fun;
+- This will be the last update for this repository, I won't come back to this repository until I feel confident with my algorithms review for my job interviews, which will be at least two months later. 
+- But I will make my own effect to get key issues of this project done, like signal-slots, keyevents, mouseevents, so that I learn. 
+- I had to say I have wasted too much time on this project already, but I did have fun, and I will continu to learn how to solve problems. 
+- A current snapshot is attached followed:
+
+[[./pic/Screenshot_from_2014-12-18_13:48:44.png]]
+
 * Reference
 - Basic layouts
   - http://qt-project.org/doc/qt-4.8/layouts-basiclayouts.html- 
