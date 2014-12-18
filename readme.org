@@ -297,7 +297,7 @@ a good practis of OOD, though quite a few of them still didn't design well, and 
 *** docs
 - Worked a little bit on the docs;
 ** version 0.9 12/18/2014, updates include
-- I got version 2 feedback from the course instructor on Tuesday noon at around 1:00pm, and deadline set to be Thursday 5:00pm; 
+- I got version 2 feedback from the course instructor on Tuesday (12/16/2014) noon at around 1:00pm, and deadline set to be Thursday (12/18/2014) 5:00pm; 
 - I updated the docs report according to the instructor's marks and turned it in a moment ago. 
 - Make only minor changes to the Loc class function names;
 - By prints strings out, connected signlas and slots for all left side working area, and decorated with some patterns, like heart, simple ware, and "T" and another shape circling with 90 degree change, just for fun;
